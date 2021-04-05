@@ -1,0 +1,17 @@
+---
+layout: post
+title: Backing Up Is Important.
+date: '2007-08-27 17:36:26'
+tags:
+- all
+---
+
+When it comes to keeping safe sensible or important data, many people, too many for that matter, think that their computer's hard drive is the safest and most reliable place to keep their files. Think about it: where are YOUR financial documents, income tax declarations, private business emails, or even those precious pictures and videos, memories that you would give anything to protect? On your computer hard drive? It takes only one failure to erase it all, and that isn't considering the threat of viruses and malicious software. On a CD or DVD? I've seen countless scratched backup disks, and even more lost ones. Backups are useless if they cannot be found. On some random webspace that you got for free? I don't know, but I wouldn't post my income reports of the web without some serious encryption... but that's just me.
+
+So if hard drives or removable storage is obsolete, what should you use to backup in a safe and reliable manner? Trust the professionals! <a href="http://www.ibackup.com">IBackup</a>, a website that I just recently discovered, offers such <a href="http://www.ibackup.com">online storage</a>. Think of it as the Godaddy of file redundancy: you pick a plan, from the 5 gigabyte Economy plan at less than 10 dollars per month to the greater plans with up to a whopping 300 gigabytes of raw storage, then you securely transfer your files with an 128 bit SSL connection to the iBackup datacenter, where they rest undisturbed and unaltered in an 256 bit AES secured partition, ready for whenever you need access them.
+
+What really sets IBackup way ahead of the rest of the online backup bandwagon is how many mediums of transfer it offers, and what kind of transfer performance ensues. IBackup had every user in mind, and this is why many transfer solutions are offered, both on Windows or Mac platform. On Windows, users can either use the IBackup client, a small application which behaves like an FTP client or IDrive which emulate your secured IBackup storage space as a local hard  drive, allowing for easier access and simplified click and drop backups. On Mac, previous idisk users will be pleased with IDrive for Mac, which allows for the same easy access as the idisk, with tons of practical features like drag and drop, Unicode file names, and very large (2 GB+) file support. Of course, IBackup also offers an intuitive, full featured secured web interface for managing all your backups. As always, all the above methods are secured with SSL, keeping those pesky snoopers from checking out your files. That's not all: the quality of the applications used coupled with IBackup's optimized network architecture and server setup allows for incredible speed, 30-50% faster than the competition in many cases, making your backups not only easy but also fast.
+
+Data backups are like life insurance: you don't think you need it, then BAM!, it's too late. Don't wait to be in that kind of situation, visit or call the guys and gals at <a href="http://www.ibackup.com">IBackup</a> to get informed on what they offer, and how they can secure your files.
+
+<a href="http://www.ibackup.com"><img src="http://tinyurl.com/ynrapg" align="middle" height="63" width="125" /></a>   <font size="1">This post contains sponsored content. More information can be found on my <a href="http://maximerousseau.com/?p=47">disclosure policy</a></font>.

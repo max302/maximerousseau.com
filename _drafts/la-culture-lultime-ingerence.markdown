@@ -1,0 +1,21 @@
+---
+layout: post
+title: La culture, l'ultime ingerence
+tags:
+- all
+---
+
+Au Canada, mais surtout au Quebec, la culture et sa protection est vue comme une affaire d'etat de la plus haute importance. Alors que le Canada anglais presente l'Americanisation de la culture canadienne comme le fléau a combattre, les francophones eux, se sentent menacés d'extinction par les influences anglophones du reste de l'Amerique du Nord. La langue, cœur de notre culture, est sacrosainte et doit a tout prix etre conserver selon nos dirigeants; tout ceux qui osent critiquer la pertinence du bouclier anti-anglophone que représente la loi 101 sont au pire <a href="http://www.cyberpresse.ca/actualites/quebec-canada/politique-canadienne/201102/06/01-4367524-loi-101-maxime-bernier-enfonce-le-clou.php?utm_categorieinterne=trafficdrivers&amp;utm_contenuinterne=cyberpresse_vous_suggere_4367224_article_POS2">imbeciles</a>, au mieux <a href="http://www.cyberpresse.ca/le-soleil/actualites/politique/201102/05/01-4367413-loi-101-les-propos-de-maxime-bernier-decries.php?utm_categorieinterne=trafficdrivers&amp;utm_contenuinterne=cyberpresse_vous_suggere_4367224_article_POS1">maladroits</a>. Le consensus semble établie: la culture doit a tout prix être protégé, sinon l'assimilation est inévitable. Ce consensus, il existe depuis la conquête , et a atteint son sommet pendant la révolution tranquille. En 2011, le monde a changé: ne serait-il pas le temps de repenser la manière dont nous percevons la culture, et du fait meme notre identite?
+
+<strong>La culture a l'ère de la mondialisation</strong>
+
+La culture, selon sa définition stricte, est "XXX". Dit plus simplement, c'est la moyenne du vécu collectif, l'ensemble des connaissances et experiences communes qui nous définissent, premièrement comme individus puis ensuite comme nation. Traditionnellement, a quelques exceptions près, la culture fut tres locale: grandir dans telle ou telle region impliquait des spécificités culturelles distinctes mais jamais tres differentes a celles des voisins. Jusqu'a la fin de l'ère de Duplessis, le Quebec, isole par sa langue et ses vielles amertumes face au monde anglophone, stagne au niveau culturel, pris dans les vielles valeurs traditionnelles qu'il portait depuis des centenaires. La révolution tranquille, bien qu'elle représente un grand pas vers l'avant dans l'affirmation de notre identité culturelle, etait toujours empreint du même sentiment de haine face au monde anglais; peu pourrait s'aventurer a affirmer que le rejet du ROC et de l'influence anglophone n'est pas en grande partie responsable de la forme qu'a pris la culture Quebecoise contemporaine. 
+
+Avec la venue des technologies de l'information et l'aboutissement de la mondialisation des dernières décennies, cette definition de la culture n'est valide. Tout individu qui s'investi dans la decouverte de ce que le monde a a offrir peut facilement  etre amener a se construire une baggage culturel radicalement different de ce que le modele culturel traditionel lui aurait autrefois impose. Pour la premiere fois dans l'histoire de l'homme, la technologie ne permet pas seulement la diffusion de masse des idees et de la culture, mais le control total au consommateur au bout de la ligne. L'access a toutes sortes d'oeuvres et d'idees est libre sinon controller vainement et de maniere inefficace, et avec un peu de determination tout peut se trouver gratuitement. Avec les bons outils, qui sont de nos jours omnipresents et de plus en plus grand-public, le consommateur peut meme contribuer des idees et du contenu, sans aucun intermediaire moderant ce qu'il exprime. Du fait, nous avons atteint un liberte quasi-totale sur notre choix de consommer et de cree. 
+
+Dans ce nouveau modele, les choses changent vite. La multiplicite des echanges culturels entres groupes fait que la definition de la culture est en mutation constante: les gouts individuels modelent les gouts collectifs et vice-versa, a un echelle local mais aussi planetaire. Cette fluidite du changement qu'amene la liberalisation total du contenu elimine les barrieres culturelles traditionelles; tout devient floue. 
+ 
+<strong>Le Quebec et la culture sur la respiration artificielle</strong>
+-Institutionalisation de la culture contraire a l'evolution naturelle
+
+<strong>Pour un Quebec Moderne...</strong>

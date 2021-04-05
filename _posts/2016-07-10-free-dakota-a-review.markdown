@@ -1,0 +1,41 @@
+---
+layout: post
+title: 'Free Dakota: A Review'
+date: '2016-07-10 01:59:10'
+tags:
+- all
+- book
+- dakota
+- free
+- irwin
+- libertarian
+- libertarianism
+- liberty
+- nationalism
+- review
+- separatism
+- sovereignty
+- william
+---
+
+Let me start this off by stating that I'm probably not the good person to review fiction. Following my review of <em>The Free Market Existentialist</em>, Dr. Irwin offered to send me a review copy of his recently released <em>Free Dakota</em>, and I gladly accepted after highlighting the fact that I hardly a literary savant. Reading non-fiction has the unfortunate opportunity cost of not affording me to read as much fiction as I would like, as a result I would hardly consider myself well-read in fiction in any of the languages I know how to read. Knowing this, take this review with a grain of salt.
+
+<hr />
+
+Not unlike how the key to any good meal is balance, the obvious dilemma in creating any work of fiction with an overt political message is knowing how to properly blend in the message to the plot without leaving too strong an aftertaste. Stating political opinions or preferences in argumentative form is one thing, but using characters as a mouthpiece is a whole other undertaking and definitely has the possibility of back-firing. Thomas More's <em>Utopia</em> is one work that crosses the line, an example of how slathering normative preference in a thin layer of fiction doesn't make it any more palatable. Raphael describes what More would not, and the fictional background seems of little use other than presuming the existence of superior moral beings in the form of the Utopian people. In many ways, the Utopia felt more like reading a Wikipedia page on a non-existent country than following characters on their journey. I read enough non-fiction that when I do start reading something fictional, this is hardly an impression I want to have.
+
+<img class="aligncenter" src="https://pbs.twimg.com/media/CmPH5oHUsAE7c4k.jpg" width="324" height="500" />
+
+From my reading of William Irwin's <em>Free Dakota</em>, it is quite obvious that the author is well aware of this risk, and has taken many steps to mitigate it. For one, characters both present in dialogue and implied are many, and each one of any significance is presented with all its qualities, quirks and flaws. The use of braided plots serves to strengthen the story, by both diluting the more "theoretical" parts and uncovering intrigues which are bound to happen in any political process. The result is an honest effort at story-based advocacy, that for all it's merits, still hasn't quite nailed the balance. The book still has some merits in terms of it's power of conviction and it's ability to plant the seed of ideas, but the ideological content is, according me to, still too overt to make it a mass-market success.
+
+<em>Free Dakota</em> is the story of separatist movements. The main protagonist Don encounters two such movements, one in Vermont which he quickly shuns for it's collectivist tendencies. Later comes a similar effort in North Dakota, a more an-cap collective which grows spontaneously but is rapidly confronted with the reality of politics. With unlikely collaborators, Don rapidly goes from venting his frustrations on blog posts to doing what is necessary to win hearts and minds for his cause. His ragtag entourage, hailing from all walks of life, navigates through conspiracies and power-struggles with a gamut of state- and non-state actors in the pursuit of making North Dakota a beacon of freedom in the United States.
+
+Overall, I saw the book as an allegory for an idea that many defenders of political ideologies, irrespective of their proclivities, tend to forget: politics is in its essence compromise. In an age of Facebook meme wars, niche ideologies have found spaces to grow their following, at the cost of becoming echo-chambers reinforced by content-curation algorithms. Online, compromise is easily recognized as weakness, and granting a point to an opponent is grounds to be considered either defeated or treasonous. Purists have little to lose if not their spare time in defending ideological zealotry, and the impersonal interactions through text make discarding inconvenient rebuttals too easy. In real-life institutionalized politics, hardliners lose. First and foremost for the obvious reason that fringe groups never have the mass appeal to set the political agenda. Secondly because real-world discussions and debates are rarely 100% oppositional and require common ground, which both parties are incentivized to recognize, lest they sound unreasonable to the masses. Thirdly because politics is a messy power-struggle, one in which even the best of plans always get sidetracked.
+
+Despite the idealism that Don shows through his blog posts throughout the novel, the series of events surrounding the pursuit of Free Dakota follows a much more sinuous path. This paths seems to suggest the inevitable fallibility of "pure" libertarianism or anarcho-capitalism, showing some sort of ultra-minimal government as a more likely outcome of a libertarian revolution. <a href="https://maximerousseau.com/2016/05/19/the-free-market-existentialist-review-and-musings/">In his prior work which I reviewed</a>, Irwin manifested a decidedly minarchist conception of libertarianism, so this comes at no surprise. While it might fall short of pressing all the feel-good buttons of convinced Libertarians, I think that avoiding the trap of describing a utopia sends out a more convincing message to fence-sitters: tasting the fruit of freedom will come at a price.
+
+Being a political scientist from Quebec, the subject of separatism and sovereignty certain struck a cord, but not for the reasons you might expect. Here in Quebec, popular support for state-led cultural imperialism and statism for nationalistic ends is precisely what allows repressive policies, a situation hardly comparable with the Free Dakota movement in Irwin's book. For American libertarians and constitutionalists who see their federal government as Goliath and states as their David, this story will surely resonate. It's the story of the revolution all again, the little folk sticking it to the proverbial man in search of liberty. I kept seeing the negative: the imperfection of the pursuit of sovereignty at a smaller scale which still impedes on the ultimate sovereignty, that of the individual. The referendum for Free Dakota passes, but what of the voters who did not consent to secession? They are victims of mob-rule democracy just like libertarians feel they are now. The story doesn't say what happens to them. The situation is imperfect, but that's precisely the point, I think: since we are condemned to choose, in life as in politics, we might as well give ourselves as many options as possible. Secession and the founding of Free Dakota isn't a perfect end in itself, but rather another political option, a way to opt-out of lesser options. Here again, but idea of compromise and the lesser of evils is very present.
+
+If I'm perfectly honest, this is probably not a book I would have picked up for a pleasurable read: the normative charge is apparent from very early on, and Don's ramblings with himself, on his blog and in dialogue are sometimes a bore if what you're looking in a novel is escapism. Despite the fact that they lay down ground rules that might be helpful for initiates, it does distract from the plot and upset the book's balance. This didn't pose enough of a problem to keep me from reading the book in one sitting however. At under 200 relatively light pages, it's an easy read, something I'd feel comfortable putting in anybody's hands as a primer to libertarian thinking. As Irwin's first effort in fiction, I think the result is good, and I'm eager to read more of his output: practice makes perfect.
+
+<a href="https://www.amazon.com/gp/product/1785353268/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1785353268&amp;linkCode=as2&amp;tag=max302-20&amp;linkId=f88b0ae8b6eebba7c2a51b3315fb7c23">You can buy Free Dakota from Amazon</a>, and I also recommend that you check out <a href="https://beinglibertarian.com/can-brexit-cant-texit/">Dr. Irwin's recent commentary on Brexit</a> which ties the event in with the content of the book.

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Raid in Linux: Easier than it Looks – Maxime Rousseau – </title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Disk redundancy is something that I’ve been wanting in my home server for quite a while now, and since I now make (relatively) huge paychecks for working somewhere else than McDonalds, I thought that with the traditional HDD’s prices plumetting because of the increasinly competitive SSD segment taking over, it might be a good time to invest in some RAID1 for protection. I took a deep breath, swiped my debit care, and 200 dollars later I was the pround owner of two Seagate 7200.11 500 gig drives. 
+" />
+    <meta property="og:description" content="Disk redundancy is something that I’ve been wanting in my home server for quite a while now, and since I now make (relatively) huge paychecks for working somewhere else than McDonalds, I thought that with the traditional HDD’s prices plumetting because of the increasinly competitive SSD segment taking over, it might be a good time to invest in some RAID1 for protection. I took a deep breath, swiped my debit care, and 200 dollars later I was the pround owner of two Seagate 7200.11 500 gig drives. 
+" />
+    
+    <meta name="author" content="Maxime Rousseau" />
+
+    
+    <meta property="og:title" content="Raid in Linux: Easier than it Looks" />
+    <meta property="twitter:title" content="Raid in Linux: Easier than it Looks" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Maxime Rousseau - " href="/feed.xml" />
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name"><a href="/">Maxime Rousseau</a></h1>
+        <p class="site-description"></p>
+      </div>
+
+      <nav>
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="https://bitcoinhackers.org/web/accounts/196363">Mastodon</a>
+        
+        
+        
+        <a href="https://www.linkedin.com/in/max302/">LinkedIn</a>
+        
+        
+        
+        <a href="https://github.com/max302">Github</a>
+        
+        
+      </nav>
+    </header>
+  </div>
+</div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Raid in Linux: Easier than it Looks</h1>
+
+  <div>
+    <span class="date">
+      2008-12-28
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#all">
+          all
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#ich9">
+          ich9
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#ich9r">
+          ich9r
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#linux">
+          linux
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#motherboard">
+          motherboard
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#p35">
+          p35
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#raid">
+          raid
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#seagate">
+          seagate
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#software">
+          software
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>Disk redundancy is something that I’ve been wanting in my home server for quite a while now, and since I now make (relatively) huge paychecks for working somewhere else than McDonalds, I thought that with the traditional HDD’s prices plumetting because of the increasinly competitive SSD segment taking over, it might be a good time to invest in some RAID1 for protection. I took a deep breath, swiped my debit care, and 200 dollars later I was the pround owner of two Seagate 7200.11 500 gig drives. </p>
+
+<p>I thought that the ICH9r southbridge on my server motherboard would make things really easy: get into the BIOS, edit a few things, press next and ok a couple of times, and maybe install a driver or two with yum to get the damned thing working. But, it turns out that RAID controllers built into motherboards kinda sucks, and that compared to a real dedicated RAID controllers, they offer no advantage versus software RAID, also called softraid by some. After some further reading, I discovered that the only real perk to chipset raid is the ability to install an OS on a RAID array without being needy of a dedicated controller. Otherwise, it’s pretty much the same thing as software RAID: since there is no dedicated RAID chip controlling where the data flows, the CPU still have to take care of all the operations concerning storage, so there are few to very little gains in terms of performance. Being to poor to afford a dedicated controller that cost in the <a href="http://www.newegg.ca/Product/Product.aspx?Item=N82E16816102085">200$ range</a>, I decided to go the softraid way instead. </p>
+
+<p>What I thought would be a long and tiresome process turned out to be super easy. Linux being super awesome, it has supported software RAID for quite a while, so setting up an array with a recent distro is so easy anybody with minimal skill at the command line can created their own.</p>
+
+<p>First, you plug in your disks (duh), then install the actual software that creates and manages your arrays, called “mdadm”. If you’re under a Red Hat based distro or if you used yum for your software managing needs, just hit up the following at the command line.</p>
+<blockquote>yum install mkinitrd mdadm</blockquote>
+<p>After that, load a couple of modules:</p>
+<blockquote>modprobe raid1
+modprobe linear
+modprobe multipath</blockquote>
+<p>Note that in the previous example, I only loaded a few RAID types, because I was only planning on using RAID 1 anyways. Once that’s done, format  and partition all of your new raid disks with fdisk, <a href="http://www.ehow.com/how_1000631_hard-drive-linux.html">as explained in this tutorial</a>. You’ll want to use fd as partition type, which corresponds to Linux RAID autodetect. Once that is done, all you need is two commands to create your new array. </p>
+<blockquote>mdadm --create /dev/md0 --level=1 --raid-disks=2 /dev/sdd /dev/sde
+mdadm --examine --scan &gt; /etc/mdadm.conf</blockquote>
+<p>The first command will create you array, and from then on you will have a virtual disk called md0 in your /dev/ directory, which can then be mounted wherever you wish. The second command echo’s your RAID configuration in a config file, so that your RAID array is initiated on boot. The devices list above are just the examples I used, use whatever values fit your situation. From then on, the disks will start a bit per bit sync, which according to the drive capacity and how powerful your machine is will take a while. You can monitor your array using the command “cat /proc/mdadm”. Once the sync is done, you can go ahead and do all the regular stuff you will do with a drive, like create files system on it, mount it, add it to fstab for automatic mounting, and there you go, a fully redundant array. You may have to create a filesystem on your created array at some point, which if you followed my examples and common device mounting practices will be mounted at <strong>/mnt/md0</strong>. Just google up the mkfs command, and create an ext3 filesystem on your device. </p>
+
+<p>So far, I have only run into one problem, and that was self-induced. After forgetting to save the raid array’s configuration in a file before rebooting, I attempted to recreate a similar array using <strong>/dev/sdd</strong> notation instead of <strong>/dev/sdd1</strong>. I thought I have rewritten all my drives while they were syncing, but turns out the only thing I messed up are the partition tables, and after rewriting the tables in fdisk and properly reconstructing my array, I had my data back. Big thanks to Google and <a href="http://blog.lostentry.org/2007/12/mdadm-devhdb1-is-too-small-0k.html">this blog entry</a> which helped me get my data back!</p>
+
+<p>Now that I’m running disk redundancy, I sleep better at night thinking that my 4 year’s worth of torrenting is safe. Or not.</p>
+
+  </div>
+
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://maximerousseau.com/open-source-the-next-business-model/">
+            &#xE000; Open Source: The Next Business Model
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://maximerousseau.com/ocn-less-is-the-future-of-computing/">
+            [OCN] Less is The Future of Computing? &#xE001;
+          </a>
+      </span>
+    
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/max302" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/max302" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.twitter.com/max302" class="icon-26 twitter" title="Twitter"><svg viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
+  
+
+  
+
+</ul>
+
+
+
+<p>©2021 Maxime Rousseau</p>
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Bypassing Bell Fibe FTTH Hub with Ubiquiti EdgeMAX Equipment – Maxime Rousseau – </title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Whenever I have to interact with big telcos, I inevitably come to ask myself why they are still in business. It’s a wonder that companies that are so big and so dysfunctional on so many levels still have any customers at all. I’ve recently had to do an ISP switchover from dual Cogeco 100mbps over copper to a single Bell Fibe 250mbps line, and my experience was less than stellar. Apart from getting the usual “oh, we’re sorry, your line isn’t quite active yet on our end” not once, but twice after the install tech’s visit, their business technical support was entirely useless.
+" />
+    <meta property="og:description" content="Whenever I have to interact with big telcos, I inevitably come to ask myself why they are still in business. It’s a wonder that companies that are so big and so dysfunctional on so many levels still have any customers at all. I’ve recently had to do an ISP switchover from dual Cogeco 100mbps over copper to a single Bell Fibe 250mbps line, and my experience was less than stellar. Apart from getting the usual “oh, we’re sorry, your line isn’t quite active yet on our end” not once, but twice after the install tech’s visit, their business technical support was entirely useless.
+" />
+    
+    <meta name="author" content="Maxime Rousseau" />
+
+    
+    <meta property="og:title" content="Bypassing Bell Fibe FTTH Hub with Ubiquiti EdgeMAX Equipment" />
+    <meta property="twitter:title" content="Bypassing Bell Fibe FTTH Hub with Ubiquiti EdgeMAX Equipment" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Maxime Rousseau - " href="/feed.xml" />
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name"><a href="/">Maxime Rousseau</a></h1>
+        <p class="site-description"></p>
+      </div>
+
+      <nav>
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="https://bitcoinhackers.org/web/accounts/196363">Mastodon</a>
+        
+        
+        
+        <a href="https://www.linkedin.com/in/max302/">LinkedIn</a>
+        
+        
+        
+        <a href="https://github.com/max302">Github</a>
+        
+        
+      </nav>
+    </header>
+  </div>
+</div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Bypassing Bell Fibe FTTH Hub with Ubiquiti EdgeMAX Equipment</h1>
+
+  <div>
+    <span class="date">
+      2016-08-01
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#100">
+          100
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#1000">
+          1000
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#2000">
+          2000
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#all">
+          all
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#bell">
+          bell
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#edgerouter">
+          edgerouter
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#fibe">
+          fibe
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#fiber">
+          fiber
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#hub">
+          hub
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#internet">
+          internet
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#isp">
+          isp
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#networking">
+          networking
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#pppoe">
+          pppoe
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#sagemcom">
+          sagemcom
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#tech">
+          tech
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#ubiquiti">
+          ubiquiti
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#ubnt">
+          ubnt
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>Whenever I have to interact with big telcos, I inevitably come to ask myself why they are still in business. It’s a wonder that companies that are so big and so dysfunctional on so many levels still have any customers at all. I’ve recently had to do an ISP switchover from dual Cogeco 100mbps over copper to a single Bell Fibe 250mbps line, and my experience was less than stellar. Apart from getting the usual “oh, we’re sorry, your line isn’t quite active yet on our end” not once, but twice after the install tech’s visit, their business technical support was entirely useless.</p>
+
+<center><a href="https://maximerousseau.files.wordpress.com/2016/07/fst4350.jpg"><img class="size-full wp-image-1119" src="https://maximerousseau.files.wordpress.com/2016/07/fst4350.jpg" alt="Sagemcom FAST4350" width="299" height="337" /></a> 
+
+The dreaded Sagemcom FAST4350 aka Bell Hub 1000. Bell can connect to this to diagnose stuff apparently; you know what they say about back doors... Good riddance.</center>
+
+<p>If you’re a Fibe customer, you probably know that Bell insists that you use their Hub 1000 or 2000 (their name for it, it’s actually a Sagemcom FAST4350 router) in your networking setup, regardless of the fact that as a business customer, you probably have something more suitable for the job. If you try to bypass it, then don’t hope to get any kind of technical support: the mindless automatons that they haven’t managed to outsource or replace with machines at their level one support will absolutely refuse to escalate your call or provide any sort of useful information. The Sagemcom has a bridge modem that can be triggered with button presses: if it’s bridging, they also won’t be supporting it. I’ve heard they have remote access to the router many times from many sources, and I would be tempted to believe it. Since I or my customer wasn’t about to let a 30$ piece of shit router with a back door be the weak link in our connectivity, we found a way to get it working with the Edgerouter we had on site, while completely bypassing the Sagemcom box.</p>
+
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<p><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-format="fluid" data-ad-layout="in-article" data-ad-client="ca-pub-9587657333914786" data-ad-slot="9140171587"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+
+<center><a href="https://maximerousseau.files.wordpress.com/2016/07/img_8614.jpg"><img class="size-large wp-image-1118" src="https://maximerousseau.files.wordpress.com/2016/07/img_8614.jpg?w=480" alt="aa" width="480" height="360" /></a>
+
+The Alcatel-Lucent ONT. This is obviously not optional.</center>
+
+<p>The <a href="http://blog.ngpixel.com/post/104449747538/how-to-bypass-bell-fibe-hub-and-use-your-own-router">VLAN 35 / VLAN 36 trick is well known</a>, albeit completely undocumented by Bell, and seems to work network-wide. Basically, traffic to the Bell ONT is divided into two VLANs, 35 for the internet traffic and 36 for the Fibe TV streams. Our use case only had an internet connection, so getting it to work was as simple as creating a VLAN interface on ethernet interface we used to connect to the Alcatel Lucent ONT, and creating a PPPOE interfaces within this VLAN. Once that’s done, enter your username and password for the PPP connection as provided by Bell, set the firewall rules for your connection and you’re good to go. The commands should look like this:</p>
+<blockquote><strong>set interfaces ethernet ethX vif 35</strong>
+<em>     #creates VLAN 35 on interfaces ethX</em>
+<strong>set interfaces ethernet ethX vif 35 pppoe 0</strong>
+<em>     #creates PPPOE connection zero within the newly created VLAN</em>
+<strong>set interfaces ethernet ethX vif 35 pppoe 0 username thisisyourusername@bellnet.ca</strong>
+<em>     #self-explanatory</em>
+<strong>set interfaces ethernet ethX vif 35 pppoe 0 password thisisyourpassword</strong>
+<em>     #ditto</em>
+<strong>set interfaces ethernet ethX vif 35 pppoe 0 firewall in name WAN_IN</strong>
+<em>     #set firewall inbound firewall rules</em>
+<strong>set interfaces ethernet ethX vif 35 pppoe 0 firewall local name WAN_LOCAL</strong>
+<em>     #set firewall local rules</em>
+<strong>set interfaces ethernet ethX vif 35 pppoe 0 default-route auto</strong>
+<em>     #get your routes from your PPPOE connection</em></blockquote>
+<p>By default, your Edgerouter uses all the right options for connection to PPPOE properly, except for one. MTU was set to 1492 explicitly without my intervention, and name-server to auto also. This will allow you to connect and get an IP, however only certain parts of the internet will be accessible. I thought this had something to do with routes, but both a static interface default route and the PPPOE routes yielded the same results. Connection to Youtube and other Google sites worked great, but half the internet didn’t, with packets stopping 6 or 7 gateways down. Turns out MSS clamping is to blame, so you’ll need to set that in your firewall.</p>
+<blockquote><strong>set firewall options mss-clamp mss 1412</strong></blockquote>
+<p>Without this option, your packets can end up being too large and dropped by certain hops which enforce maximum MTU strictly. What’s funny is that MSS clamping is assumed if you use the wizards to define your WAN as PPPOE, but not one of the assumed options when setting up PPPOE from scratch. Since we were migrating from a load-balanced setup with DHCP being provided by modems, this was not present in our config.</p>
+
+<p>Keep in mind that this will work for setups without Fibe TV only. For setups with it, <a href="http://blog.ngpixel.com/post/104449747538/how-to-bypass-bell-fibe-hub-and-use-your-own-router">you can follow the excellent instructions from here</a>, with the added bonus that you can probably use <a href="https://help.ubnt.com/hc/en-us/articles/204952244-EdgeMAX-How-do-I-bridge-eth2-3-and-4-switch0-with-eth1-on-the-EdgeRouter-POE-">software port bridging functionality</a> in your Edgerouter to eliminate the need for a switch between your ONT and the Bell Hub. This is entirely untested though, so have fun at your own risk.</p>
+
+<p>My primary frustration with Bell in this case, let’s say apart from having to go on-site three times to get a relatively simple job done, is that I’m pretty certain a more senior level 2 technician would have pointed to the MSS stuff in a matter of minutes; it’s just the kind of stuff you know when you work in that stuff all day. I know for a fact that there are some technically competent folks who work at or for Bell, because I’ve had great experiences in the past. I’ve assisted in some pretty hard-core roll-outs of Bell services to entreprise customers, and the techs there were present and helpful. Where they were not, a quick chat with the sales guy  could fix things very rapidly. The problem is that if you don’t have a sales guy, even if you’re a business customer, you have to navigate through the same byzantine system of call-in support as the rest of the plebs, wait a long time and hope for the best. If you’re lucky you’ll get a zealous one who’s willing to break SOP to make you happy; if you’re unlucky, you’ll get another drone who just reads the lines he’s supposed to.</p>
+
+  </div>
+
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://maximerousseau.com/headless-steam-in-home-streaming-pt-1-my-experience/">
+            &#xE000; Headless Steam In-Home Streaming, Pt 1: My Experience
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://maximerousseau.com/the-28-pages-saudi-american-relations/">
+            THE 28 PAGES & SAUDI-AMERICAN RELATIONS &#xE001;
+          </a>
+      </span>
+    
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/max302" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/max302" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.twitter.com/max302" class="icon-26 twitter" title="Twitter"><svg viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
+  
+
+  
+
+</ul>
+
+
+
+<p>©2021 Maxime Rousseau</p>
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

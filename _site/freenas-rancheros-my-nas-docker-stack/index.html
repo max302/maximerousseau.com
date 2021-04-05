@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>FreeNAS + RancherOS, my NAS Docker Stack – Maxime Rousseau – </title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.
+" />
+    <meta property="og:description" content="I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.
+" />
+    
+    <meta name="author" content="Maxime Rousseau" />
+
+    
+    <meta property="og:title" content="FreeNAS + RancherOS, my NAS Docker Stack" />
+    <meta property="twitter:title" content="FreeNAS + RancherOS, my NAS Docker Stack" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Maxime Rousseau - " href="/feed.xml" />
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name"><a href="/">Maxime Rousseau</a></h1>
+        <p class="site-description"></p>
+      </div>
+
+      <nav>
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="https://bitcoinhackers.org/web/accounts/196363">Mastodon</a>
+        
+        
+        
+        <a href="https://www.linkedin.com/in/max302/">LinkedIn</a>
+        
+        
+        
+        <a href="https://github.com/max302">Github</a>
+        
+        
+      </nav>
+    </header>
+  </div>
+</div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>FreeNAS + RancherOS, my NAS Docker Stack</h1>
+
+  <div>
+    <span class="date">
+      2018-04-09
+    </span>
+
+    <ul class="tag">
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.</p>
+
+<p>FreeNAS Corral, aka FreeNAS 10, was supposed to bring native Docker support to the product with the help of a built-in Bhyve + boot2docker setup built right into the new UI. While jails are technically as flexible as FreeBSD and the <a href="https://www.freebsd.org/ports/">ports library</a> are, plugins-jails are a bit more complicated and you are generally dependant on a maintainer for updates. Case in point: as of my writing of this, the PBI jail for Owncloud is stuck at 9.1.2, dating back to November of 2016. To compare, my docker instance of Owncloud is currently on 10.0.7.</p>
+
+<p>Plugin jails have been helpful for me and countless others, but it’s time to admit that Docker is just better at doing what the original system set out to do. Here’s what I’ve done to transition to Docker on FreeNAS.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Setup is <a href="http://doc.freenas.org/11/vms.html#docker-rancher-vm">pretty straight-forward and well-documented in the FreeNAS docs</a>, however it is described in a very procedural fashion which doesn’t really give you any insight of what is being done behind the scene. This makes it very confusing when things break; I was pulling my hair out for hours because of a <a href="https://forums.freenas.org/index.php?threads/freenas-11-1-rancher-server-installation-failed.59898/">corrupt download not completing</a>. For thoroughness’ sake, here is an overview of what following the steps in the guide accomplishes:</p>
+
+<ul>
+  <li>Creates a Bhyve VM</li>
+  <li>Creates a RAW drive image that will be used for storage</li>
+  <li>Downloads the RancherOS image and flashes it (dd?) to your drive image to make it bootable</li>
+  <li>Creates a basic RancherOS configuration file from the options entered in the additional options entered in the storage device menu.</li>
+</ul>
+
+<p>If you can’t get a serial console or can’t get the machine to boot properly, remember this order and use it to diagnose. This should be obvious, but the recommendations regard the provisioning of CPU and RAM resources are just that; depending on what you intend on running within your Docker VM, assign system ressources as necessary. In my case, assigning just one VCPU held back <a href="https://hub.docker.com/r/ruimarinho/bitcoin-core/">my bitcoin node</a> from properly syncing. Adding another one fixed the problem and made all the services running in containers visibly more snappy.</p>
+
+<p>A word of warning on giving the VM more system ressources: I had problems giving the machine more than 2 virtual CPUs; the machine seems to want to boot up, with Bhyve init stuff showing up on the serial console, but the OS stalled shortly before all the services could go up.</p>
+
+<h2 id="storage">Storage</h2>
+
+<p>The modularity of Docker is what makes its strength, but in order to be truly useful, if must be built on a stack that is itself just as modular. For example, in continuity with the spirit of containerizing, I aught to be able to be able to snapshot and replicate individual containers to back them up locally or offsite. Storing everything on the raw disk image just isn’t compatible with that vision of things.</p>
+
+<p>You could store everything on ZFS vdevs through additional VM volume assignments, but then you <a href="http://jrs-s.net/2016/06/16/psa-snapshots-are-better-than-zvols/">lose the ability to snapshot under certain conditions</a>.</p>
+
+<p>Rancher has <a href="https://github.com/rancher/convoy">convoy</a> that can make docker volumes persistent, and store them on a variety of backends, but the additional layer of docker-style volumes doesn’t really need to be there.</p>
+
+<p>I opted instead to use <a href="https://hub.docker.com/r/d3fk/nfs-client/">nfs-client</a> and bind-mounts in my containers to my install of FreeNAS, <a href="https://forums.freenas.org/index.php?threads/howto-freenas-11-rancheros-docker-and-portainer.54595/">with the method detailed here</a>. I modified the steps to fit my application slightly. First of all, I elected to created a child dataset for every container, in order to be able to snapshot and replicate as mentionned above. Secondly, I had to make seperate NFS shares for each container, since NFS will not traverse nested datasets as one would expect. With this larger amount of shares, listing the NFS mounts was done directly in my cloud-config.yml file, as so.</p>
+
+<p><img src="/content/images/2018/03/nfsmounts.png" alt="nfsmounts" /></p>
+
+<p>You might be tempted to use SMB, which is also supported by RancherOS; this isn’t a good idea if you plan on running any container that includes Apache because it is heavily reliant on UNIX-style permissions to function properly, and that just won’t translate over SMB.</p>
+
+<h2 id="networking-and-security">Networking and security</h2>
+
+<p>Using NFS as a link between your Docker VM and your ZFS storage introduces security problems caused by the ways that RancherOS and NFS works. First of all, RancherOS runs all it’s Docker processes as root along with the NFS client; secondly, NFSv3 uses client-side info on the user accessing the share to determine if it has the permission to access the share or not. All this means that you will have to disable root squashing for things to work; I went about this by adding root/wheel to the maproot user/group fields in the advanced settings of my NFS shares.</p>
+
+<p>This is obviously horrible security, because any rogue machine can now access your shares as root if your client ACLs are too loose. The way around this is making sure that the network access to the address that the NFS service is bound to is impossible for everything but your Docker VM. The advanced settings of the individual NFS shares provide a client allow list, which you should use to whitelist ONLY your VM with its IP.</p>
+
+<p>The ideally you’d also want to use a dedicated network bridge to pass the traffic off between your storage and the VM. The problem is that the web UI does not show you bridge interfaces when offering you the options for VM NIC mapping; my workaround was to plug in a dead-end VLAN in an unused interface on my server, and have all the Docker-related traffic come in through this interface.</p>
+
+<h3 id="a-note-on-pre-111-u2">A note on pre-11.1-U2</h3>
+
+<p>Going from one reboot to the next in the 11.1 series of releases (not U2 though), I’ve gotten weird networking issues where the networking interface(s) used by the RancherOS instance would not bind to the correct NIC, making connection to the NAS-provided storage or to the rest of the network impossible. Digging around in the bug tracker, it seems that <a href="https://redmine.ixsystems.com/issues/27122">the way VM NICs are bridge may be sub-optimal</a>. If you are experiencing weird issues after configuring your networking in the RancherOS VM, check your network configuration with <code class="language-plaintext highlighter-rouge">ifconfig</code>. You should get something like this:</p>
+
+<p><img src="/content/images/2018/03/freenasifbridge.png" alt="freenasifbridge" /></p>
+
+<p>The TAP interface is the host-side NIC that gives your VM network access. In my setup, the VLAN interface is the parent interface that can be found in the ==Devices/NIC== menu of the VM. If the binding is properly made, the bridge should group those two interfaces together. If you have many TAP interfaces and bridges that you can’t make sense of, upgrade to 11.1-U2 and reboot, things should clean up.</p>
+
+<h2 id="managing-docker">Managing Docker</h2>
+
+<p>RancherOS kind of suggests that using Rancher to manage your containers might be a good idea, but it seemed a bit clumsy and overkill for a single host setup. I instead opted for <a href="https://portainer.io">Portainer</a>, which I was somewhat already familiar with and is much less intimidating to use and deploy, seeing that it’s really just a nice front end for the docker commands you you know and love.</p>
+
+<p>At the RancherOS command line, run the installation one-liner on the Portainer website, subsituting bind mounts for the volume if necessary, and adding the restart policy if you so desire. Provided the restart-policy is ok, Portainer will start up with RancherOS bootup.</p>
+
+<h2 id="monitoring">Monitoring</h2>
+
+<p>I’ve been building a monitoring system on the <a href="https://www.influxdata.com/blog/introduction-to-influxdatas-influxdb-and-tick-stack/">TICK stack</a> for my home setup, and as it turns out Docker monitoring is quite simple. <a href="https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker">Telegraf has a plugin specifically for docker monitoring</a>, just spin up a Telegraf instance with the docker.sock endpoint mapped through, configure the config file, and you’re good to go.</p>
+
+<p>With the <a href="https://github.com/influxdata/influxdb/blob/master/services/graphite/README.md">intergrated Graphite listener</a> enabled and the ports open, you can also configure FreeNAS to output its metrics to Influx aswell… your Influx instance can of course be within docker if you so desire.</p>
+
+<p>If you want better insights into your NAS’ performance and don’t have a monitoring setup built up, this “FreeNAS monitoring on itself” is not a bad choice, particularly if your FreeNAS server is your only machine.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>If you run anything critical, you might want to run a dedicated docker host. However, if you have spare CPU cycles and memory (although with ZFS, it could be argued that there is no such thing as “spare memory”), why not? Docker absolutely seems like a viable replacement for plugin-jails, and if your FreeNAS box is a backup repo for databases hosted elsewhere, you can now run replication services in containers instead pushing dumps.</p>
+
+<p>I just wish that Docker was native to the base OS, and that the Bhyve + RancherOS + NFS stack could be avoided. Limits on provisionning hardware are also a bit problematic, but it is what it is. There’s a Docker container for everything… have at it!</p>
+
+  </div>
+
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://maximerousseau.com/easy-fix-for-dead-unifi-ac-lite-access-points/">
+            &#xE000; Easy Fix for Dead Unifi AC-Lite Access Points
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://maximerousseau.com/fixing-a-bricked-unifi-security-gateway-usg/">
+            Fixing a Bricked Unifi Security Gateway (USG) &#xE001;
+          </a>
+      </span>
+    
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/max302" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/max302" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.twitter.com/max302" class="icon-26 twitter" title="Twitter"><svg viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
+  
+
+  
+
+</ul>
+
+
+
+<p>©2021 Maxime Rousseau</p>
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

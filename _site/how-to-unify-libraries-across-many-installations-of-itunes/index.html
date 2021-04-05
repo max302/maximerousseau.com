@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>How to: Unify Libraries Across Many Installations of iTunes – Maxime Rousseau – </title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="About may of last year, I built a server for myself, in hopes of centralizing all the storage drives of my house to one constantly on box and simplifying access to files across the four computers on my network. And sure enough, a couple of hours and hundred dollars later I had myself a kick-arse server rig which housed a RAID1 array for my personal use as well as 3 other random storage drives on which the members of my family could store their music, videos and pictures.
+" />
+    <meta property="og:description" content="About may of last year, I built a server for myself, in hopes of centralizing all the storage drives of my house to one constantly on box and simplifying access to files across the four computers on my network. And sure enough, a couple of hours and hundred dollars later I had myself a kick-arse server rig which housed a RAID1 array for my personal use as well as 3 other random storage drives on which the members of my family could store their music, videos and pictures.
+" />
+    
+    <meta name="author" content="Maxime Rousseau" />
+
+    
+    <meta property="og:title" content="How to: Unify Libraries Across Many Installations of iTunes" />
+    <meta property="twitter:title" content="How to: Unify Libraries Across Many Installations of iTunes" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Maxime Rousseau - " href="/feed.xml" />
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name"><a href="/">Maxime Rousseau</a></h1>
+        <p class="site-description"></p>
+      </div>
+
+      <nav>
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="https://bitcoinhackers.org/web/accounts/196363">Mastodon</a>
+        
+        
+        
+        <a href="https://www.linkedin.com/in/max302/">LinkedIn</a>
+        
+        
+        
+        <a href="https://github.com/max302">Github</a>
+        
+        
+      </nav>
+    </header>
+  </div>
+</div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>How to: Unify Libraries Across Many Installations of iTunes</h1>
+
+  <div>
+    <span class="date">
+      2009-02-22
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#all">
+          all
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#installations">
+          installations
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#itunes">
+          itunes
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#lan">
+          lan
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#libraries">
+          libraries
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#library">
+          library
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#management">
+          management
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#many">
+          many
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#network">
+          network
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#software">
+          software
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#unify">
+          unify
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>About may of last year, I built a server for myself, in hopes of centralizing all the storage drives of my house to one constantly on box and simplifying access to files across the four computers on my network. And sure enough, a couple of hours and hundred dollars later I had myself a kick-arse server rig which housed a RAID1 array for my personal use as well as 3 other random storage drives on which the members of my family could store their music, videos and pictures.</p>
+
+<p>While having my music on a network shares was convient because I could access it from any machine on my LAN without running server software on my main box, I quickly found a flaw in my setup just a couple of months after buying it. Sure, all my music files where save on my server, but the iTunes library XML files were still stored on my local disk, which made re-adding all my music to iTunes after an OS reinstallation unbeleivable long (reading iD3’s on 50+ gigs of music isn’t what I would call quick), and reading the music from another installation of iTunes on another computer, say a home theatre PC, impossible.</p>
+
+<p>While iTunes allows the user to choose it’s “iTunes Music” folder, it does not supply such an option for the library files. Ever since, I’ve been looking for a way to get my single library to work with many iTunes installations. Sure, there are some how-tos out there, but even the most popular solutions aren’t elegant and require third party software. Wouldn’t it be great if Windows, <a href="http://homepage.mac.com/paalb/Examples/ln.html">like linux</a>, would allow us to bind symbolic links from one folder to another? Oh wait… there is such a function on Windows Vista. <a href="http://technet.microsoft.com/en-us/library/cc753194.aspx">mklink</a>!</p>
+
+<p>This somewhat obscure command makes everything easier. With mklink, you can simply create a “dummy” iTunes folder in your My Documents folders, and have that folder to point to whatever the heck you want, the latter including network drives. Here’s how it’s done:</p>
+<ul>
+	<li>First, you need to create a folder on your remote server that will be taking the place of the iTunes folder where all the XML files and album art is stored. Under XP, this is usually <em>C:\Documents and Settings\Username\My Documents\My Music\iTunes</em> and under Vista it would look something like <em>C:\Users\Username\Music\iTunes</em>. When that's done, transfer what's in your "iTunes" folder to whatever remote path you are using. In my case, my music files (the "iTunes Music" folder) was <em>R:\Music\iTunes\iTunes Music</em>, so as to not mess around too much with the directory structure I decided to create a folder at <em>R:\Music\sync</em> which would act as the target folder.</li>
+	<li>Next up, you need to transfer all the stuff in your iTunes folder to the target folder, because you will need to delete the actual iTunes folder in order to create the dummy folder. Once the transfer is done, delete the iTunes folder.</li>
+	<li>Lastly, create the dummy folder from the command line using the mklink command. The syntax is pretty simple for this command:
+<blockquote>mklink C:\dummy\folder  D:\target\folder</blockquote>
+So in my case, the actual command I used was this:
+<blockquote>mklink C:\Users\Administrator\Music\iTunes R:\Music\sync</blockquote>
+There are many types of links that you can create via this command, but for our us a symbolic link is enough.</li>
+</ul>
+<p>Once that was done, my <em>C:\Users\Administrator\Music\iTunes</em> folder effectively pointed to <em>R:\Music\sync</em> as intended. iTunes blindly took what XML files were in the destination folder, and loaded my library on first try.</p>
+
+<p>From then on, syncing other instances of iTunes with the current library is a walk in the park: make symbolic links from the iTunes folders of other machines to the same mounted network share, and voila! The other installations of iTunes will read into the library files thinking it is there own, giving you instant access to your music as long as the “iTunes Music” folder path is the same on all the machines. Changes to the library will also be written instantaneously on the unified files, making the changes available on all the other machines.</p>
+
+<p>Before you start unifying your libraries however, there are additional things to take into consideration. Firstly, I would pre-configure the installations of iTunes as I do not know if certain aspects of the configuration (iTunes’s Music folder, adding songs to iTunes’s Music folder when added to library) are set in the registry or in the XML files. Also, keep in mind that you can not open the same file for read/write operations two times simultaneously, which means that opening two iTunes on the same library at the same time will most probably brick your library files if any changes are made.</p>
+
+<p>Despite it’s limitations, this method is the simplest way I found of getting many instances of iTunes to share a same library. No waiting for dropbox or other automated backup software to do it’s thing, no maintaining of two sets of library files, just easy access to your music from anywhere on your lan. Obviously, the biggest bummer about mklink is that it only runs under Vista… but hey, if you don’t have Vista yet, you should really try it out, and if you don’t feel like trying it out, then the very interesting Windows 7 which is right out of bend is your next alternative. Sorry XP users!</p>
+
+<p>Enjoy!</p>
+
+  </div>
+
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://maximerousseau.com/ocn-my-thoughts-on-core-i7/">
+            &#xE000; [OCN] My Thoughts on Core i7
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://maximerousseau.com/6-months-later-my-commuter/">
+            6 Months Later: My Commuter &#xE001;
+          </a>
+      </span>
+    
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/max302" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/max302" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.twitter.com/max302" class="icon-26 twitter" title="Twitter"><svg viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
+  
+
+  
+
+</ul>
+
+
+
+<p>©2021 Maxime Rousseau</p>
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

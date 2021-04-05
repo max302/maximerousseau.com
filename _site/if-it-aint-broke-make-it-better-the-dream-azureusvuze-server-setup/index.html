@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>If it Ain't Broke, Make it Better: The Dream Azureus/Vuze Server Setup – Maxime Rousseau – </title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="As you might know if you’ve been following my Twitter feed, your’s truly is departing Sunday of this week for a 13 year long military career. This is obviously a very big step in my life, in two ways: I’m going in the Army, which itself will surely affect my lifestyle, career and outlook on life forever. But, leaving for the military also invovles moving out of the family home, and into the RMC St. Jean. Knowing that free time is a very rare thing at St. Jean, I decided to clean up a couple of things I had laying around my room, and finalized some long overdue projects, such as my current case mod which is getting done at a snail’s pace, and a couple of routine maintenance operations on stuff on my home network.
+" />
+    <meta property="og:description" content="As you might know if you’ve been following my Twitter feed, your’s truly is departing Sunday of this week for a 13 year long military career. This is obviously a very big step in my life, in two ways: I’m going in the Army, which itself will surely affect my lifestyle, career and outlook on life forever. But, leaving for the military also invovles moving out of the family home, and into the RMC St. Jean. Knowing that free time is a very rare thing at St. Jean, I decided to clean up a couple of things I had laying around my room, and finalized some long overdue projects, such as my current case mod which is getting done at a snail’s pace, and a couple of routine maintenance operations on stuff on my home network.
+" />
+    
+    <meta name="author" content="Maxime Rousseau" />
+
+    
+    <meta property="og:title" content="If it Ain't Broke, Make it Better: The Dream Azureus/Vuze Server Setup" />
+    <meta property="twitter:title" content="If it Ain't Broke, Make it Better: The Dream Azureus/Vuze Server Setup" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Maxime Rousseau - " href="/feed.xml" />
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+</head>
+  <body>
+    <div class="wrapper-masthead">
+  <div class="container">
+    <header class="masthead clearfix">
+      
+
+      <div class="site-info">
+        <h1 class="site-name"><a href="/">Maxime Rousseau</a></h1>
+        <p class="site-description"></p>
+      </div>
+
+      <nav>
+        
+        
+        <a href="/">Home</a>
+        
+        
+        
+        <a href="https://bitcoinhackers.org/web/accounts/196363">Mastodon</a>
+        
+        
+        
+        <a href="https://www.linkedin.com/in/max302/">LinkedIn</a>
+        
+        
+        
+        <a href="https://github.com/max302">Github</a>
+        
+        
+      </nav>
+    </header>
+  </div>
+</div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>If it Ain't Broke, Make it Better: The Dream Azureus/Vuze Server Setup</h1>
+
+  <div>
+    <span class="date">
+      2009-07-30
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#all">
+          all
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#army">
+          army
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#azureus">
+          azureus
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#career">
+          career
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#grub">
+          grub
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#hardware">
+          hardware
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#linux">
+          linux
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#rmc">
+          rmc
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#server">
+          server
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#setup-tag">
+          setup-tag
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://maximerousseau.com/tags#vuze">
+          vuze
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p>As you might know if you’ve been following my Twitter feed, your’s truly is departing Sunday of this week for a 13 year long military career. This is obviously a very big step in my life, in two ways: I’m going in the Army, which itself will surely affect my lifestyle, career and outlook on life forever. But, leaving for the military also invovles moving out of the family home, and into the <a href="http://www.cmrsj-rmcsj.forces.gc.ca/index-eng.asp">RMC St. Jean</a>. Knowing that free time is a very rare thing at St. Jean, I decided to clean up a couple of things I had laying around my room, and finalized some long overdue projects, such as my <a href="http://www.overclock.net/case-mod-work-logs/506842-project-umbra.html">current case mod</a> which is getting done at a snail’s pace, and a couple of routine maintenance operations on stuff on my home network.</p>
+
+<p>One of the first things on my list was changing my home server’s primary OS drive, which was previously a nearly 10 year old Western Digital Caviar 40 gig drive hooked up on IDE. It made sense to recycle the old drive way back when I was just starting to mess around with the idea of a home server, but now that the box hosts<a href="http://twitpic.com/1qjkx"> 5 other network share drives</a>, I really don’t want to risk some downtime or data loss because of an old drive. So I bought a new SATA WD 160 gig drive, and initially set out to copy the old drive to the new one, using Acronis TrueImage.</p>
+
+<p>During the copy, all went OK, but back in the system, the bootloader acted up, and with reason, because I was changing the OS from a drive recognized as /dev/hda to something more amongst the lines of /dev/sda. After numerous attempts at fixing the MBR/GRUB, I gave up, and downloaded the latest Fedora for a fresh install.</p>
+
+<p>Turns out, I really should have thought of doing that beforing even considering a full migration to a new disk. Armed with the determination to get my shit working well once and for all before I head out to St. Jean, I started installing the new OS on the fresh drive. All went well during the installation, which was pretty fast (good job working on Anaconda, Fedora people), and apart from the fact that Palimpsest detected that three of my HDs were crippled with bad sectors, including both drives in my RAID-1 array dedicated to important stuff. Woo.</p>
+
+<p>All hard drive failure aside, it really payed off to restore a fresh OS. For one, Fedora 11 seems WAY snappier. OK, it could be due to the fact that I’m on a much faster boot disk. REgardless, with a newer version OS also comes lots of updated software goodies, including a fresh new kernel (I hadn’t updated mine since F9, I’m a lazy ass). When the fresh install up and running, I set out to get my network shares going. Nothing complicated there, as my RAID1 array was automatically detected, so all there was to do was to create my mountpoints (I used <strong>/storage/whatever</strong> for all drives meant to be shared on network), edit fstab, get the SMB config running, and I was ready to go.</p>
+
+<p>Next up, <span style="text-decoration:line-through;">Azureus</span> Vuze was the tricky part. I download lots of torrents… enough to have my ISP calling me on a regular basis to remind me that they have a cap thing going on (which I’ll discuss in a later article). So obviously, in order to download my stuff easily and efficiently, I have a pretty complex setup when it comes to Vuze.</p>
+
+<p>My old setup, while more complex than necessary, was pretty ghetto. I basically consisted of an installation of Vuze that was called on by rc.local on startup, that ran in command line and shot all of it’s output to null. To control it, I had to used the Swing Web UI, a plugin which gives the user a complete yet simple Java powered web UI. The ports for this UI were onlocked on my router, giving me the ability to upload and manage my torrents from any computer rocking Java and an internet connection. This feature in itself was pretty nice. Downloading, completed, and .torrent files were all stored on my torrent drive, a SATA 320 gigger which I had scored for free at work, given to me by a customer who’s external drive had failed and who didn’t want the internal drive back. Having a dedicated torrent drive helped reduce the load on the already pretty slow OS drive which I was previously using… at some points I had so many simultaneous read/writes going on that I started getting IO errors in Vuze which automatically stopped some of my downloads… not a good thing. Anyways, the torrent drive was then shared via Samba, and mounted on my computer(s), so I could manage, relocation and view/open files. I also had this thing going on where a folder on my network share was monitored by Vuze for any new torrent files to be added… nice for batch uploading.</p>
+
+<p>The setup worked fine, but it really wasn’t ideal. The startup script was a huge fail, because it would run Vuze in root, which apart from the obvious security concerns was pretty lame because any files created/manipulated would be marked as owned by root. This meant that anything on my torrent drive, regardless of if all the folders had been chmoded to 777 beforehand, was listed as read only to the user that Samba used. Removing old files was therefor a pain in the ass, as I had to SSH into the server to change the permissions to whatever files I had to manipulated. In the end, I had a script called 777torrents which I ran whenever I needed to manipulated, that did a recursive chmod of all the torrent files. While all of these quicky fixes worked without a hitch, it isn’t something I wanted to do again on the new install.</p>
+
+<p>So I set out to install Vuze. On Fedora, this was pretty easy.</p>
+<blockquote>yum install azureus</blockquote>
+<p>Yup, the Fedora repo still lists Vuze as Azureus… I’m not fond  of the new name anyways. Once that’s done, there is some slight modification to some core Azureus files that need to get done in order to be able to run the application in text mode. Snatch the latest .jar file as well as complimentary modules <a href="http://azureus.sourceforge.net/index_CVS.php">from this page</a>, dump them in your Azureus install directory, and you should be good to go. In my case, the directory in question was <strong>/usr/share/azureus/</strong>.</p>
+
+<p>At this point, Azureus will be ready to run. Try it out, customize the options to your liking, check out the plugins for added functionalities. For what I needed, I downloaded the Swing Web UI, the HTML Web UI, mod for the latter plugin called <a href="http://www.joeltron.com/izureus/">iZureus</a> as well as the <a href="http://www.openp4p.net/">P4P</a> plugin (also something I’ll be discussing by next post). <strong>BE SURE YOU INSTALL THE PLUGINS WITH THE USER YOU WILL BE RUNNING AZUREUS WITH! </strong>Since configuration information and plugins are stored in the a .azureus folder in your home directory, not doing so will mean that none of your config will carry on to other users. I learned this the hard way the first time I ever messed around with Azureus. Keep in mind that to accomplish the “complete solution” kind of setup that I am sporting, the user using both Azureus and Samba will have to be the same.</p>
+
+<p>Once Azureus is up and running like you want it to, close it, and <a href="http://www.azureuswiki.com/index.php/HeadlessSwingUIAtBoot">go read this wiki page</a> to get the instructions on how to start your fresh new torrent client on boot. Honestly, the instructions there are pretty concise, I don’t know what else to add. Just remember to edit the script to reflect your environment, user, installation directory and all.</p>
+
+<p>When that’s done, the only thing left is to configure the shares for all of your files. Usually Samba comes with any installation of Fedora, but if something messes up or you’re using another distro, you know what to do:</p>
+<blockquote>yum install samba</blockquote>
+<p>&lt;3 yum. As for the configuration of your new service, <a href="http://www.reallylinux.com/docs/sambaserver.shtml">ReallyLinux has a nice tutorial</a> (old a bit, but hey) on setting up the entire thing. Don’t forget to use the same user that’s running the Azureus screen daemon in the “Create Server Users &amp; Directories” part of the process, unless you REALLY want to make setting permissions on your torrent files a pain in the ass. You might want to consider creating a hierarchised torrent folder like I did, with the following structure:</p>
+<blockquote>-torrents
+---complete (completed files get moved here)
+---downloading (incomplete files go here)
+---.torrents (all .torrents files are stored here, even after the torrents are removed)
+---.toadd  (this is the infamous monitored directory in which azureus looks for new .torrent files)</blockquote>
+<p>Last step: change the ownership of all the shares you just created to reflect whatever user you took to run Azureus and Samba. This is usually a one command thing, it will look like this:</p>
+<blockquote>chown -R max302 /storage/torrents</blockquote>
+<p>Voila. The /storage/torrents/ folder and all of it’s content is now mine. I kept the default 775 permissions, but you can always enforce something more radical once the folder is your property, 770 or 700 would make sense.</p>
+
+<p>There you have it, a super clean, automated bittorrent server. There is only ONE thing missing from this setup, and that is a method for automatically moving .torrents from my browser’s download folder directly to the .toadd folder… I’ve thought of a cron/at job that runs a batch script which checks the contents of the folder at regular intervals, but I just don’t like the idea of things running periodically. I’m dreaming up a little program that could do it, but I’d have to learn to code first &gt;:\ .</p>
+
+<p>Have fun, and remember, <a href="http://phoenixlabs.org/pg2/">pratice safe torrenting</a>!</p>
+
+  </div>
+
+  <div class="pagination">
+    
+      <span class="prev" >
+          <a href="https://maximerousseau.com/making-your-paypal-bank-transfers-instant/">
+            &#xE000; Making Your Paypal Bank Transfers Instant!
+          </a>
+      </span>
+    
+    
+      <span class="next" >
+          <a href="https://maximerousseau.com/cogeco-pulls-a-comcast/">
+            Cogeco Pulls a Comcast &#xE001;
+          </a>
+      </span>
+    
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://github.com/max302" class="icon-13 github" title="GitHub"><svg viewBox="0 0 512 512"><path d="M256 70.7c-102.6 0-185.9 83.2-185.9 185.9 0 82.1 53.3 151.8 127.1 176.4 9.3 1.7 12.3-4 12.3-8.9V389.4c-51.7 11.3-62.5-21.9-62.5-21.9 -8.4-21.5-20.6-27.2-20.6-27.2 -16.9-11.5 1.3-11.3 1.3-11.3 18.7 1.3 28.5 19.2 28.5 19.2 16.6 28.4 43.5 20.2 54.1 15.4 1.7-12 6.5-20.2 11.8-24.9 -41.3-4.7-84.7-20.6-84.7-91.9 0-20.3 7.3-36.9 19.2-49.9 -1.9-4.7-8.3-23.6 1.8-49.2 0 0 15.6-5 51.1 19.1 14.8-4.1 30.7-6.2 46.5-6.3 15.8 0.1 31.7 2.1 46.6 6.3 35.5-24 51.1-19.1 51.1-19.1 10.1 25.6 3.8 44.5 1.8 49.2 11.9 13 19.1 29.6 19.1 49.9 0 71.4-43.5 87.1-84.9 91.7 6.7 5.8 12.8 17.1 12.8 34.4 0 24.9 0 44.9 0 51 0 4.9 3 10.7 12.4 8.9 73.8-24.6 127-94.3 127-176.4C441.9 153.9 358.6 70.7 256 70.7z"/></svg><!--[if lt IE 9]><em>GitHub</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.linkedin.com/in/max302" class="icon-17 linkedin" title="LinkedIn"><svg viewBox="0 0 512 512"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/></svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <li><a href="https://www.twitter.com/max302" class="icon-26 twitter" title="Twitter"><svg viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"/></svg><!--[if lt IE 9]><em>Twitter</em><![endif]--></a></li>
+  
+
+  
+
+</ul>
+
+
+
+<p>©2021 Maxime Rousseau</p>
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

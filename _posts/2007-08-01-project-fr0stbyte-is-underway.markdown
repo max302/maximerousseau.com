@@ -1,0 +1,17 @@
+---
+layout: post
+title: Project Fr0stByte is Underway
+date: '2007-08-01 00:57:28'
+tags:
+- all
+---
+
+As you know if you've been reading my blog for the last year or so (which you probably haven't), I purchased my laptop almost exactly 11 months from now, as my very first computer. At the time, I was amazed by the fact that I had my very own computer, where I could install and download whatever the hell I want. Plus, having used a shared Compaq Presario sporting a huge Celeron 1.7 ghz, 386 Mb of RAM and a shittyass motherboard and very limited hard disk space, I thought that my laptop performed like a beast. So for about a year, I've been doing random stuff with my laptop and just generally having fun with my "kickass" hardware. This summer however, with the intense stir about the Core 2 Duos and the wide-spreading of the Nvidia 8 series, I decided that maybe I needed something slightly more powerful: a kickass desktop rig to rock at LAN parties and such.
+
+It's pretty much in mid-march that I started dreaming about the rig I would build for myself. I started buying overclocking and hardware magazines like I was a mag-whore, looking over reviews and suggestions on rigs with the hottest gear available. Of course, in the beggining I thought big: dude, all Asus hardware, 8 gigs of ram, dual 8800 GTX Extreme overclocked, liquid cooling, uber QX6800 quad core, and all. Of course, I was only dreaming: no way my <a href="http://maximerousseau.com/?p=20">job at McD</a>, even for a whole summer's time, was going to pay for such a godlike machine. By the time <a href="http://maximerousseau.com/?p=7">that I wrote this post</a>, I had to come to the realization that I had to be reasonable, and the post was pretty much on track with what I plan on buying now. Only thing was that back then, I was buying a scooter to travel around before I was buying another computer, so I didn't expect any component to be bought until Christmas time. From the previous post to this one, I had plenty of time to change my mind: lets gradually save up for a car instead, and buy a PC in the meantime.
+
+So a meagre week after starting to look over my components list, here goes my first 150$ component that officially commences the project: a <a href="http://www.thermaltakeusa.com/product/Chassis/midtower/armorjr/vc3000bws.asp">Thermaltake Armor JR</a> straight off ebay. I the original article on my desktop system boasted a <a href="http://www.thermaltakeusa.com/product/Chassis/fulltower/armor/va8000bws.asp">Tt Armor full tower version</a>, but because I want this build to be as cheap as possible and that one of my 1337 gamer friends told me that big SLI rigs easily fit into a midtower, I decided to go with the cheaper, lighter and less expensive JR variant.
+
+So yeah, project Fr0stByte definitely has me very excited. And by the way,  the name Fr0stbyte comes to my usual naming process: taking what it looks like, then deforming it till it looks cool. In this case, the chain looked something like this: Blue(case fan colors)-&gt;Ice-&gt;Cold-&gt;Frost-&gt;Frostbite-&gt;random geeky additions = Fr0stbyte! Pretty cool eh?
+
+Let the ebaying begins. Next Thursday just happens to be payday, which means I will be buying the other chassis component: the power supply, an <a href="http://www.ultraproducts.com/product_details.php?cPath=60&amp;pPath=383&amp;productID=388">Ultra Xfinity 600 watts dual-rail</a>. Be on the lookout for other articles on project Fr0stbyte. ETA: October 2007.

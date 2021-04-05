@@ -1,0 +1,27 @@
+---
+layout: post
+title: I Lapped...
+date: '2008-03-14 23:18:38'
+tags:
+- '2'
+- all
+- allendale
+- annabel
+- core
+- cpu
+- duo
+- e4300
+- hardware
+- lapping
+- mod
+- rig
+- sandpaper
+- temp
+- temperatures
+---
+
+I'm such a whore. A temp whore. I finally did it: I lapped <a href="http://maximerousseau.com/?p=84">Annabel's</a> e4300. The temptation had been strong during Fr0stbyte, but I crapped out just thinking about it, probably dued to my modder e-cock not being fully grown at the time. Sanding down a 300$ chip (yeah I know I payed too much for it) and potentially bricking my new rig was a very scary idea to me back then, but with Annabel it's different. I have seen plenty of lap jobs on forums and such, so I figured that I might as well go for it, specially considering that the warranty was already void and that I got it for less than a hundred bucks. What's a nerdger gotta do to shave off a couple of degrees off load temps? The following.
+
+<img src="http://farm3.static.flickr.com/2387/2329321737_d2fe8994de_o.jpg" align="middle" height="190" width="550" />
+
+Grits 320, 600 and 1500 were used... don't know if I'm going to do any more. Turned out pretty well, everything went smoothly, and the finish on the IHS looks much better than on a stock chip. If you'd want to test it out, check out <a href="http://www.overclock.net/other-cooling-discussions/290130-lapping-your-cpu-heatsink.html">this guide from the OCN forums</a>, and <a href="http://www.overclock.net/case-mod-work-logs/287862-project-annabel-fold-box-nas-server.html">my worklog for Annabel</a>. I can't test it yet due to my tube of Arctic Silver 5 being empty, but my guess is that I'll probably loose a degree or two, probably 3 if I'm lucky. Either way, I've never had so much fun with 5$'s worth of sandpaper.

@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'Rethinking Hard Drives and Storage, Redux: Part 1, Consumer storage'
+tags:
+- all
+---
+
+Way back in '08, <a href="http://maximerousseau.com/2008/07/21/ocn-rethinking-hard-drives-and-storage/">I wrote an article</a> were I discussed my gripes against the computer storage offerings of the day, and my vision for what I thought would be better storage products. 2008 might aswell be a million years ago, because back then I was discussing the plummeting of cost/capacity ratio of conventional drive, and totally ignored the appearance of SSD drives (<a href="http://arstechnica.com/gadgets/2008/03/ssds-in-2008-fast-speeds-200mbsec-over-price-cuts/">which were astronomically expensive</a>), substituting in the discussion on smaller short-stroked drives with faster response times as a possible avenue to improve boot drive performance. Back then, the cool kids were <a href="http://www.tomshardware.com/reviews/short-stroking-hdd,2157.html">short stroking data-dense</a> drives to make seek times better... at the cost of a very important fraction of the available drive capacity. Look back, it kind of looks stupid, but then again past fads always look stupid, right?
+
+Back then, I was young, broke, my biggest collection of data was the iTunes Library I could fit on an iPad Nano, but  I still was not satisfied with the single drive 80gb ATA drive in the father's hand-me-down Compaq left me on my appetite. It's 2015, and I'm still not happy with the storage offerings on the market. It's better in terms of performance, and most of all it's cheaper, but I still feel we haven't made any significant breakthroughs that affect user experience, other than the ubiquitous presence of solid state drives. I think it's time to revisit of the subject of storage with a more actual perspective, seeing what works and what doesn't, and propose solutions to a problem which affects us all, that is storing the insane amount of files we manipulate every day.
+
+In this first part, I'll discuss the consumer storage market in general, and how I think it could be improved. In the second part, I will discuss my approach to storing my stuff, and relate it to what I see being the future of storage.
+
+<hr />
+
+&nbsp;
+
+Computers involve incrementally, and so does storage. Moore's law sets a very aggressive pace at which computing is to evolve, and if we are to believe Intel on the matter, the law has been in effect since it was put forward. I also believe that storage has evolved at a similarly fast pace, at least quantitatively in terms of capacity and performance; drives have gotten bigger, faster, more reliable (?) and all for a price that keep's getting cheaper per gigabyte.
+
+What is disappointing however, is that if the hardware has evolved, the idea of what storage hardware has not. In the past seven years, the same metrics have been used to qualitatively assess storage. Capacity, throughput, seeks times, mean times between failure, more or less in that order, are still king. This has two effects which I believe are not contributing to a more use of ressources for the end user.
+
+First, developing things like raw capacity has resulted in products overshooting by a considerable margin the average end user's ability to use them. Browsing the average big-box store, you'd be hard pressed to find a cheap PC with less than a 2TB disk. Undoubtably, one part of the problem with this is that  the manufacturers are very keen to leverage big numbers to get boxes out of the door, and the other part is the average (unknowledgeable) consumer quickly falls into the trap of e-peen stroking at that thought that he has more 'tee-bees and gee-bees' than the next man. But realistically, who needs that much? Today, next to nobody: if there is any proof of this, it's the amount of people who are perfectly content with just a tablet (!) or who are perfectly content with new-gen computers that only have smaller SSD drives. As a power-user, I'm extremely glad for capacity to have gone up as it has, but for the average man, manufacturers are just wasting platters.
+
+Second, concentrating on such metrics of performance brings nothing to the table in terms of value-added features. All the R&amp;D time spent chasing platter density and throughput is R&amp;D not spent on things which could would actually improve the end user's experience. Possibly the only exception to this is WD's Black2 drive, but to my knowledge no OEM packages this product in prebuilts, and I have never actually seen, in my many years of working retail, either interest or purchase of one of these. To be fair, my empirical evidence tells me that reliability has improved over the years, despite the inherent shortcomings of mechanical drives. But what about things like data redundancy, security and resilience?
+
+With this said, the IDEA of how we should store files definitely has changed. The push for cloud hosted services for files which are traditionally the biggest, movies and music, has permeated society : videos are taken to be uploaded to social media, not to be hoarded, Netflix has killed off the Blockbusters of this world in record time, and nobody wants to go through the hassle of maintaining a large collection of files when paying a couple of bucks a month for whatever streaming service is so much more practical. In fact, most people think I'm half-retarded for maintaining so meticulously my 500gb+ iTunes library. Dropbox hosts your files, Facebook hosts your life, and then what else is there to do with a computer if not browse pictures of cats?
+
+But should we really trust third parties with our data? Many things lead me to think that we shouldn't.
