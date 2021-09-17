@@ -88,7 +88,7 @@ The law requires you to attend at least 8 hours of on-track practical instructio
 
 The practice is gear towards getting good enough to complete the "circuit", a choreography designed to test your bike-handling skills at low and average road-going speeds. Here is a video of what this entails: 
 
-{% youtube KNfInlYx57g %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KNfInlYx57g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Most of the difficulty according to all but the most agile learners are the low-speed sections; none of the other motorcycle programs that I know of have such a high bar for obtaining a licence. 
 
