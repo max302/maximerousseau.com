@@ -33,11 +33,11 @@ I'm honestly surprised that it was decided to use a USB drive to hold the softwa
 
 Recognizing the uncanny way in which I somehow dodged Murphy's Law by having a fresh spare on hand, I decided to thank the IT gods by making the image available here. Version info on the restore device told me this is firmware v4.3.33, the older-style firmware with less configurtion options available to an un-adopted device.
 
-You can download the image [here](http://https://drive.google.com/open?id=1B4NQOPfr73h20nbkWwLqWpxrGINYdMLG).
+You can download the image [here](https://drive.google.com/file/d/1VuwwXWYIYRvwOcTyZGs2Xw2k3XIhgifA/view?usp=sharing).
 
 Checksum is as follows: 
 
-> MD5 (UniFiSecurityGateway.ER-e120.v4.3.33.4936086.161203.2031.img) = 83941494d4f9f9fb906e19b8ecf68696
+> 4e0b64d224f818102c53b37fd4051f2d  ./niFiSecurityGateway.ER-e120.v4.3.33.4936086.161203.2031.img.gz (MD5)
 
 You can DD this image directly without specifying any block size, which worked just fine for me.
 
