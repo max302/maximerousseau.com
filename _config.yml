@@ -5,8 +5,8 @@ description: ' '
 navigation:
   - name: Home
     url: /
-  - name: Mastodon
-    url: https://bitcoinhackers.org/web/accounts/196363
+  - name: Photoblog
+    url: https://magoua.international
   - name: LinkedIn
     url: https://www.linkedin.com/in/max302/
   - name: Github
