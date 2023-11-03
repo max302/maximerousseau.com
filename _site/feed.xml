@@ -1,64 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-11T13:06:06+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MaximeRousseau.com</title><subtitle> </subtitle><entry><title type="html">Recovering Lost Wireguard Config on Mac OS</title><link href="http://localhost:4000/recovering-wireguard-config-mac/" rel="alternate" type="text/html" title="Recovering Lost Wireguard Config on Mac OS" /><published>2022-12-06T00:00:00+03:00</published><updated>2022-12-06T00:00:00+03:00</updated><id>http://localhost:4000/recovering-wireguard-config-mac</id><content type="html" xml:base="http://localhost:4000/recovering-wireguard-config-mac/">&lt;p&gt;I was recently confronted with a catastrophic failure of Wireguard that resulted in a tunnel hanging on initialization, a situation that required a full restart to recover from. Upon restarting, my list of tunnels in the tunnel manager had all disappeared.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-03T18:15:37+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MaximeRousseau.com</title><subtitle> </subtitle><entry><title type="html">Lettre sur l’appelation du Bas-du-Cap</title><link href="http://localhost:4000/appelation-bas-du-cap/" rel="alternate" type="text/html" title="Lettre sur l’appelation du Bas-du-Cap" /><published>2023-11-03T00:00:00+03:00</published><updated>2023-11-03T00:00:00+03:00</updated><id>http://localhost:4000/appelation-bas-du-cap</id><content type="html" xml:base="http://localhost:4000/appelation-bas-du-cap/"><![CDATA[<p>La lettre ci-dessous a été envoyé à ma conseillère municipale Sabrina Roy ainsi qu’au cabinet du maire de la Ville de Trois-Rivières et la section d’opinion du Nouvelliste. En date de la publication sur ce site, la lettre n’a pas été selectionnée pour publication.</p>
 
-&lt;p&gt;I spent quite a long time digging through docs and Googling trying to find a way to recover only my tunnel config from a Time Machine backup, so now you don’t have to. The guide below will help you recover your Wireguard configurations should you be facing the same kind of issue.&lt;/p&gt;
+<p>Je pense qu’il est important de souligné que les “citoyens de Trois-Rivières [qui] se questionnent sur l’appellation « Bas-du-Cap » “ que mentionne le reportage de Radio-Canada est en fait une seule personne, un ex-employé de Radio-Canada qui ne semble pas habiter le Bas-du-Cap. Remplir un “slot” de Téléjournal avec l’opinion d’un ex-collègue… c’est le genre de reportage qui me rends vraiment fier qu’on envoie plus d’un milliard à Radio-Canada!</p>
 
-&lt;p&gt;The proposed solution to this whole ordeal of course assumes that you have a backup. Since we are talking about Mac OS here, likely a Time Machine backup, but any backup solution that takes a full backup of your home folder and &lt;em&gt;all subfolders&lt;/em&gt; will do.&lt;/p&gt;
+<blockquote>
+  <p>Bonjour,</p>
 
-&lt;p&gt;The TL;DR is that if you have installed Wireguard through the App Store, you’ve probably been frantically looking through your backups for a config folder that does not exist.&lt;/p&gt;
+  <p>Je suis à l’étranger maintenant et donc dans l’impossibilité de participer en personne aux consultations sur les quartiers. Heureusement pour les défendeurs de l’idée débile qui a fait l’objet d’un reportage le 26 octobre dernier sur le site web de Radio-Canada: https://ici.radio-canada.ca/nouvelle/2021270/trois-rivieres-quartiers-bas-cap</p>
 
-&lt;p&gt;Contrary to the usual configuration in Linux where config can be found at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/wireguard&lt;/code&gt;, the Mac OS client stores configuration in the user’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;login&lt;/code&gt; keychain. There are no keys to speak of, since the private key is contained within this config, and the public key is seemingly derive by the tunnel manager front-end as required.&lt;/p&gt;
+  <p>L’Homme est une machine a régler des problèmes. Tous les espèces le sont pour les problèmes qui sont les leurs, mais ce qui différencie l’homme de l’animal, c’est que son intelligence lui permet de se créer de nouveaux problèmes quand les plus urgents ont étés adressés.</p>
 
-&lt;p&gt;Users who have used &lt;a href=&quot;https://brew.sh&quot;&gt;Brew&lt;/a&gt; to install apparently have their config either at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/local/etc/wireguard&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt/homebrew/etc/wireguard&lt;/code&gt; &lt;a href=&quot;https://blog.scottlowe.org/2021/06/28/using-wireguard-on-mac-via-cli/&quot;&gt;according to this blog&lt;/a&gt;, but chances are that you will find these folders empty.&lt;/p&gt;
+  <p>Imaginez le zénith d’épanouissement nécessaire pour pouvoir avoir le loisir de cogiter ce nouveau non-problème. Il faut véritablement être aux plus vertigineux sommets de la pyramide de Maslow pour s’inquiéter de la nature péjorative du nom du Bas-du-Cap.</p>
 
-&lt;p&gt;Hence to recover your tunnel config, you’re looking for your for your keychain files, not anything Wireguard specific. Unless you have an exotic setup, your default keychain should be available at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/Library/Keychains&lt;/code&gt;. Inside this folder, you will have:&lt;/p&gt;
+  <p>Péjoratif pour qui? Certainement pas pour mon voisin d’un certain âge, qui a vécu toute sa vie dans le quartier. Entre leurs semaines de 60 heures à l’usine et leurs autres obligations, lui et sa famille ont bâti collectivement quasiment un pâté de maison au complet, dont une qui est maintenant mienne. Drette comme une barre malgré avoir de loin dépassé son espérance de vie à la naissance, il viens souvent superviser scrupuleusement les travaux que je fais (plus souvent qu’autrement moi-même) pour pouvoir conserver ce qu’il a légué de sa sueur et de son sang.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;login.keychain-db&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata.keychain-db&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;A folder with a long hex UUID for name&lt;/li&gt;
-&lt;/ul&gt;
+  <p>Devrais-je informer ce brave monsieur du stigmate qu’il a porté à son insu toute sa vie du fait d’être le produit d’un quartier populaire? Devrais-je l’informer que le nom de l’endroit qu’il a contribuer à bâtir est une tare qui doit immédiatement être corrigée?</p>
 
-&lt;p&gt;Go head and copy that entire &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Keychains&lt;/code&gt; folder to a temporary location, and double-click the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;login.keychain-db&lt;/code&gt; within it to open the keychain in Keychain Access. It will appear in a new section called ‘Custom Keychains’.&lt;/p&gt;
+  <p>Assurément que les illuminés qui demandent un changement de nom ne sont pas du quartier, sinon ils auraient assurément des priorités plus pressantes. Comme moi, ils se demanderaient surement pourquoi dans un quartier dense et à relativement bas revenu, les trottoirs NE SONT TOUJOURS PAS DÉNEIGÉS dans l’année de notre Seigneur 2023, et que les rues les sont à peines, au point d’être quasiment impraticables en hiver. Ils se demanderaient aussi pourquoi nos élus considèrent des frivolités comme du mobilier urbain , une nouvelle image de marque et des changements de nom quand la priorité depuis plusieurs décennies est très clairement de trouver le jus de bras pour remettre en valeur un quartier aux bâtiments et aux habitants vieillissants. Certains diront qu’on peut marcher et mâcher de la gomme en même temps… certes, mais quand on a du chemin à faire, il faut surtout marcher.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/additional-keychain.png&quot; alt=&quot;additional keychain&quot; /&gt;&lt;/p&gt;
+  <p>À mes élus municipaux je dis donc catégoriquement: non au changement de nom. C’est une distraction indigne du lègue des familles, dont la mienne, qui ont bâti et habiter le Bas-du-Cap.</p>
 
-&lt;p&gt;From here, you can find your config easily, since the entire Keychain Access app is searchable, and your tunnel configs will be in entries titled &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WireGuard Tunnel: *Name of Tunnel*&lt;/code&gt;. The entire multi-line config entry will be in the password field of the corresponding entires. After you take care of the password prompt to unlock your backup copy of the keychain, you can copy and paste the configs back into Wireguard.&lt;/p&gt;
+  <p>Aux pleurnichards qui formulent cette demande, je dis abandonnez la sémiotique du classisme au profit du sac à outils. Venez verser votre âme et votre argent plutôt que vos larmes et votre indignation dans ce quartier ayant des besoins réels, matériels. En bon voisin, j’irais vous aider, et nous pourrons rigoler ensemble de votre folie toponymique passagère autour d’une bonne Labatt 50, tablette.</p>
 
-&lt;p&gt;No reload the far-side service, no changing keys, you’re back on track! Hope it helped.&lt;/p&gt;</content><author><name></name></author><category term="mac" /><category term="time machine" /><category term="wireguard" /><summary type="html">I was recently confronted with a catastrophic failure of Wireguard that resulted in a tunnel hanging on initialization, a situation that required a full restart to recover from. Upon restarting, my list of tunnels in the tunnel manager had all disappeared.</summary></entry><entry><title type="html">Motorcycle Trip Planning pt 1: The Basics</title><link href="http://localhost:4000/Motorcycle-trip-planning-100/" rel="alternate" type="text/html" title="Motorcycle Trip Planning pt 1: The Basics" /><published>2022-12-04T12:04:14+03:00</published><updated>2022-12-04T12:04:14+03:00</updated><id>http://localhost:4000/Motorcycle-trip-planning-100</id><content type="html" xml:base="http://localhost:4000/Motorcycle-trip-planning-100/">&lt;p&gt;When going on an adventure, determining what is the adequate level of planning is the subject of much debate. For a long time I was on the “no plan is best plan” side of that debate, however the lead-up to my &lt;a href=&quot;https://maximerousseau.com/gulf-to-riviera-lessons/&quot;&gt;unfortunate aborted experience trying to cross the middle east&lt;/a&gt; has forced me to actually try more in depth planning for safety reasons. The extensive planning gave me a new appreciation for the value of planning any trip, no matter the length.&lt;/p&gt;
+  <p>Longue vie au BDC.</p>
+</blockquote>]]></content><author><name></name></author><category term="trois-rivieres" /><category term="politique" /><category term="municipale" /><summary type="html"><![CDATA[La lettre ci-dessous a été envoyé à ma conseillère municipale Sabrina Roy ainsi qu’au cabinet du maire de la Ville de Trois-Rivières et la section d’opinion du Nouvelliste. En date de la publication sur ce site, la lettre n’a pas été selectionnée pour publication.]]></summary></entry><entry><title type="html">Recovering Lost Wireguard Config on Mac OS</title><link href="http://localhost:4000/recovering-wireguard-config-mac/" rel="alternate" type="text/html" title="Recovering Lost Wireguard Config on Mac OS" /><published>2022-12-06T00:00:00+03:00</published><updated>2022-12-06T00:00:00+03:00</updated><id>http://localhost:4000/recovering-wireguard-config-mac</id><content type="html" xml:base="http://localhost:4000/recovering-wireguard-config-mac/"><![CDATA[<p>I was recently confronted with a catastrophic failure of Wireguard that resulted in a tunnel hanging on initialization, a situation that required a full restart to recover from. Upon restarting, my list of tunnels in the tunnel manager had all disappeared.</p>
 
-&lt;p&gt;To communicate my approach to making trip plans, I will be putting out a few posts in this series to underlines my philosophy while planning, and the tools I use to make my trips easier.&lt;/p&gt;
+<p>I spent quite a long time digging through docs and Googling trying to find a way to recover only my tunnel config from a Time Machine backup, so now you don’t have to. The guide below will help you recover your Wireguard configurations should you be facing the same kind of issue.</p>
 
-&lt;h2 id=&quot;objectives-of-this-guide&quot;&gt;Objectives of this guide&lt;/h2&gt;
+<p>The proposed solution to this whole ordeal of course assumes that you have a backup. Since we are talking about Mac OS here, likely a Time Machine backup, but any backup solution that takes a full backup of your home folder and <em>all subfolders</em> will do.</p>
 
-&lt;p&gt;To prevent mission creep in the planning phase that would suck the fun out of exploring, it’s important to define what we want to achieve. This is what I am looking to get out of a planning a trip:&lt;/p&gt;
+<p>The TL;DR is that if you have installed Wireguard through the App Store, you’ve probably been frantically looking through your backups for a config folder that does not exist.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Layout points of interest (POI), including points of origin and destination in a way that enhances your ability to navigate through your trip&lt;/li&gt;
-  &lt;li&gt;Gain familiarity with the general outline of the trip and acquire the confidence necessary to deviate from plans&lt;/li&gt;
-  &lt;li&gt;Provide pre-programmed optionality when faced with unforeseen circumstances, from road closure to catastrophic equipment failure or health conditions&lt;/li&gt;
-  &lt;li&gt;Produce trip documentation that is usable and intelligible to yourself, and potentially anybody else in case of emergency&lt;/li&gt;
-&lt;/ul&gt;
+<p>Contrary to the usual configuration in Linux where config can be found at <code class="language-plaintext highlighter-rouge">/etc/wireguard</code>, the Mac OS client stores configuration in the user’s <code class="language-plaintext highlighter-rouge">login</code> keychain. There are no keys to speak of, since the private key is contained within this config, and the public key is seemingly derive by the tunnel manager front-end as required.</p>
 
-&lt;p&gt;All of this will be done with very basic, publicly accessible and free tools, mostly Google Earth.&lt;/p&gt;
+<p>Users who have used <a href="https://brew.sh">Brew</a> to install apparently have their config either at <code class="language-plaintext highlighter-rouge">/usr/local/etc/wireguard</code> or <code class="language-plaintext highlighter-rouge">/opt/homebrew/etc/wireguard</code> <a href="https://blog.scottlowe.org/2021/06/28/using-wireguard-on-mac-via-cli/">according to this blog</a>, but chances are that you will find these folders empty.</p>
 
-&lt;p&gt;Notice how none of the parts above has to do with meticulously planning stops and producing comprehensive documentation of every turn. It’s about laying out enough things on paper that you can intelligently make decisions about your whereabouts without having to rely on the rigid instructions of your electronic aids at any point.&lt;/p&gt;
+<p>Hence to recover your tunnel config, you’re looking for your for your keychain files, not anything Wireguard specific. Unless you have an exotic setup, your default keychain should be available at <code class="language-plaintext highlighter-rouge">~/Library/Keychains</code>. Inside this folder, you will have:</p>
 
-&lt;p&gt;We’ll be following this general process:&lt;/p&gt;
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">login.keychain-db</code></li>
+  <li><code class="language-plaintext highlighter-rouge">metadata.keychain-db</code></li>
+  <li>A folder with a long hex UUID for name</li>
+</ul>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/planning-cycle.png&quot; alt=&quot;Process chart&quot; /&gt;&lt;/p&gt;
+<p>Go head and copy that entire <code class="language-plaintext highlighter-rouge">Keychains</code> folder to a temporary location, and double-click the <code class="language-plaintext highlighter-rouge">login.keychain-db</code> within it to open the keychain in Keychain Access. It will appear in a new section called ‘Custom Keychains’.</p>
 
-&lt;h2 id=&quot;step-0-determine-constraints&quot;&gt;Step 0: Determine constraints&lt;/h2&gt;
+<p><img src="/images/additional-keychain.png" alt="additional keychain" /></p>
 
-&lt;p&gt;The first step in planning any trip is determining the constraints that you have to work with. Unless you are an old-money millionaire and can afford to gallivant about aimlessly for however long, your hardest constraints will probably be related to time and budget. Time is &lt;em&gt;directly&lt;/em&gt; correlated to the distance you can cover. Budget is &lt;em&gt;generally&lt;/em&gt; correlated to where you can stop to rest, eat or enjoy yourself.&lt;/p&gt;
+<p>From here, you can find your config easily, since the entire Keychain Access app is searchable, and your tunnel configs will be in entries titled <code class="language-plaintext highlighter-rouge">WireGuard Tunnel: *Name of Tunnel*</code>. The entire multi-line config entry will be in the password field of the corresponding entires. After you take care of the password prompt to unlock your backup copy of the keychain, you can copy and paste the configs back into Wireguard.</p>
 
-&lt;p&gt;Another set of relatively rigid constraints will relate to your equipment loadout, including both your bike and the equipment your intend to carry. Your bike has a maintenance schedule, and a fixed fuel capacity, hence max distance between fuel and maintenance stops. Similarly, you as a rider also have fuel and maintenance stops, in the form of food breaks and rest, both overnight and while on the road.&lt;/p&gt;
+<p>No reload the far-side service, no changing keys, you’re back on track! Hope it helped.</p>]]></content><author><name></name></author><category term="mac" /><category term="time machine" /><category term="wireguard" /><summary type="html"><![CDATA[I was recently confronted with a catastrophic failure of Wireguard that resulted in a tunnel hanging on initialization, a situation that required a full restart to recover from. Upon restarting, my list of tunnels in the tunnel manager had all disappeared.]]></summary></entry><entry><title type="html">Motorcycle Trip Planning pt 1: The Basics</title><link href="http://localhost:4000/Motorcycle-trip-planning-100/" rel="alternate" type="text/html" title="Motorcycle Trip Planning pt 1: The Basics" /><published>2022-12-04T12:04:14+03:00</published><updated>2022-12-04T12:04:14+03:00</updated><id>http://localhost:4000/Motorcycle-trip-planning-100</id><content type="html" xml:base="http://localhost:4000/Motorcycle-trip-planning-100/"><![CDATA[<p>When going on an adventure, determining what is the adequate level of planning is the subject of much debate. For a long time I was on the “no plan is best plan” side of that debate, however the lead-up to my <a href="https://maximerousseau.com/gulf-to-riviera-lessons/">unfortunate aborted experience trying to cross the middle east</a> has forced me to actually try more in depth planning for safety reasons. The extensive planning gave me a new appreciation for the value of planning any trip, no matter the length.</p>
 
-&lt;p&gt;A more variable category of constraints, let’s call them punctual constraints, are broader incidents which may or may not have an impact on your trip. This may include weather events, road condition or closure, and any fortuitous or unfortuitous delays. By their nature they really cannot be predicted or avoided by planning, but thinking about such possibilities will help you elaborate options, should you encounter them.&lt;/p&gt;
+<p>To communicate my approach to making trip plans, I will be putting out a few posts in this series to underlines my philosophy while planning, and the tools I use to make my trips easier.</p>
 
-&lt;p&gt;It’s important to mention that the idea here is not only to avoid the worst, but also to give you a way to enjoy the spontaneous opportunities presented to you in your trip without messing up the rest of your plans. If you have a general idea of what being half a day late entails down the road, or where you could pick up the pace to catch up, it’s much less bothersome to stay in a place a bit off your path with a newfound friend.&lt;/p&gt;
+<h2 id="objectives-of-this-guide">Objectives of this guide</h2>
 
-&lt;p&gt;Here’s a matrix that sums up our constraints. The list is in no way exhaustive, I welcome any useful additions (submit a PR &lt;a href=&quot;https://github.com/max302/maximerousseau.com&quot;&gt;on my blog’s Github repo&lt;/a&gt;).&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|----------------------------------------------------------------------------------|
+<p>To prevent mission creep in the planning phase that would suck the fun out of exploring, it’s important to define what we want to achieve. This is what I am looking to get out of a planning a trip:</p>
+
+<ul>
+  <li>Layout points of interest (POI), including points of origin and destination in a way that enhances your ability to navigate through your trip</li>
+  <li>Gain familiarity with the general outline of the trip and acquire the confidence necessary to deviate from plans</li>
+  <li>Provide pre-programmed optionality when faced with unforeseen circumstances, from road closure to catastrophic equipment failure or health conditions</li>
+  <li>Produce trip documentation that is usable and intelligible to yourself, and potentially anybody else in case of emergency</li>
+</ul>
+
+<p>All of this will be done with very basic, publicly accessible and free tools, mostly Google Earth.</p>
+
+<p>Notice how none of the parts above has to do with meticulously planning stops and producing comprehensive documentation of every turn. It’s about laying out enough things on paper that you can intelligently make decisions about your whereabouts without having to rely on the rigid instructions of your electronic aids at any point.</p>
+
+<p>We’ll be following this general process:</p>
+
+<p><img src="/images/moto100/planning-cycle.png" alt="Process chart" /></p>
+
+<h2 id="step-0-determine-constraints">Step 0: Determine constraints</h2>
+
+<p>The first step in planning any trip is determining the constraints that you have to work with. Unless you are an old-money millionaire and can afford to gallivant about aimlessly for however long, your hardest constraints will probably be related to time and budget. Time is <em>directly</em> correlated to the distance you can cover. Budget is <em>generally</em> correlated to where you can stop to rest, eat or enjoy yourself.</p>
+
+<p>Another set of relatively rigid constraints will relate to your equipment loadout, including both your bike and the equipment your intend to carry. Your bike has a maintenance schedule, and a fixed fuel capacity, hence max distance between fuel and maintenance stops. Similarly, you as a rider also have fuel and maintenance stops, in the form of food breaks and rest, both overnight and while on the road.</p>
+
+<p>A more variable category of constraints, let’s call them punctual constraints, are broader incidents which may or may not have an impact on your trip. This may include weather events, road condition or closure, and any fortuitous or unfortuitous delays. By their nature they really cannot be predicted or avoided by planning, but thinking about such possibilities will help you elaborate options, should you encounter them.</p>
+
+<p>It’s important to mention that the idea here is not only to avoid the worst, but also to give you a way to enjoy the spontaneous opportunities presented to you in your trip without messing up the rest of your plans. If you have a general idea of what being half a day late entails down the road, or where you could pick up the pace to catch up, it’s much less bothersome to stay in a place a bit off your path with a newfound friend.</p>
+
+<p>Here’s a matrix that sums up our constraints. The list is in no way exhaustive, I welcome any useful additions (submit a PR <a href="https://github.com/max302/maximerousseau.com">on my blog’s Github repo</a>).</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|----------------------------------------------------------------------------------|
 |                    | Nature of constraint                                        |
 |----------------------------------------------------------------------------------|
 | Type of constraint | Gear                   | Rider                              |
@@ -74,565 +98,555 @@
 |                    | * Bureaucratic mishaps                                      |
 |                    | * Ad-hoc opportunities and invitations                      |
 |----------------------------------------------------------------------------------|
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Material constraints should be clear before you leave. While I did not fully follow my own advice in my last middle east trip, I did due some basic points of due diligence during the break-in period of my Tenere, stuff like finding out what is maximum comfortable cruising speed, what is the fuel range to reserve and to empty, how long I could ride before needing a rest on both back roads and in town, etc. All my visas where also covered in advance for the entirety of my trip. Anything you forget to consider here is entirely on you… these material constraints, if not known, at least COULD have been known.&lt;/p&gt;
+</code></pre></div></div>
+<p>Material constraints should be clear before you leave. While I did not fully follow my own advice in my last middle east trip, I did due some basic points of due diligence during the break-in period of my Tenere, stuff like finding out what is maximum comfortable cruising speed, what is the fuel range to reserve and to empty, how long I could ride before needing a rest on both back roads and in town, etc. All my visas where also covered in advance for the entirety of my trip. Anything you forget to consider here is entirely on you… these material constraints, if not known, at least COULD have been known.</p>
 
-&lt;h2 id=&quot;step-1-determine-objectives&quot;&gt;Step 1: Determine objectives&lt;/h2&gt;
+<h2 id="step-1-determine-objectives">Step 1: Determine objectives</h2>
 
-&lt;p&gt;Unless your trip is an escape, you probably have at least some objectives, some theme. A few years back when I attended &lt;a href=&quot;https://mises.org&quot;&gt;Mises Institute&lt;/a&gt; for &lt;a href=&quot;https://mises.org/library/mises-university&quot;&gt;in-person Mises U&lt;/a&gt;, I drove there in my car and took the opportunity to visit friends in Buffalo, NY and Akron, OH. Looking for a way to make this more fun, I made the theme of this trip “A Chicken Wing Pilgrimage”, and stopped by Atlanta, GA for some lemon-peppers. After this I stretched this definition a bit by going to Austin, TX for a month, because at the time I had relatively few time or budget constraints.&lt;/p&gt;
+<p>Unless your trip is an escape, you probably have at least some objectives, some theme. A few years back when I attended <a href="https://mises.org">Mises Institute</a> for <a href="https://mises.org/library/mises-university">in-person Mises U</a>, I drove there in my car and took the opportunity to visit friends in Buffalo, NY and Akron, OH. Looking for a way to make this more fun, I made the theme of this trip “A Chicken Wing Pilgrimage”, and stopped by Atlanta, GA for some lemon-peppers. After this I stretched this definition a bit by going to Austin, TX for a month, because at the time I had relatively few time or budget constraints.</p>
 
-&lt;p&gt;Here’s a non-exhaustive objectives you might set for yourself.&lt;/p&gt;
+<p>Here’s a non-exhaustive objectives you might set for yourself.</p>
 
-&lt;ul&gt;
-  &lt;li&gt;People you want to visit&lt;/li&gt;
-  &lt;li&gt;Restaurants you want to eat at&lt;/li&gt;
-  &lt;li&gt;Tourist attractions you want to see&lt;/li&gt;
-  &lt;li&gt;Roads you want to ride&lt;/li&gt;
-  &lt;li&gt;Pictures you want to take&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>People you want to visit</li>
+  <li>Restaurants you want to eat at</li>
+  <li>Tourist attractions you want to see</li>
+  <li>Roads you want to ride</li>
+  <li>Pictures you want to take</li>
+</ul>
 
-&lt;p&gt;This is where I suggest you spend a significant part of your time planning. Having a lot of possible objectives is what will give you the choice of routes, and the choice of deviations from that route.&lt;/p&gt;
+<p>This is where I suggest you spend a significant part of your time planning. Having a lot of possible objectives is what will give you the choice of routes, and the choice of deviations from that route.</p>
 
-&lt;h2 id=&quot;step-2-basic-mapping&quot;&gt;Step 2: Basic Mapping&lt;/h2&gt;
+<h2 id="step-2-basic-mapping">Step 2: Basic Mapping</h2>
 
-&lt;p&gt;This is where the planning part starts to become more concrete and visual. We’ll be firing up Google Earth and starting to make some lines on maps. Of course, this could also very well be done on paper maps and tracing paper or transparencies if you really want to go old-school.&lt;/p&gt;
+<p>This is where the planning part starts to become more concrete and visual. We’ll be firing up Google Earth and starting to make some lines on maps. Of course, this could also very well be done on paper maps and tracing paper or transparencies if you really want to go old-school.</p>
 
-&lt;p&gt;I’ll give you a rough idea of how this step goes with a trip I am currently planning for next summer.&lt;/p&gt;
+<p>I’ll give you a rough idea of how this step goes with a trip I am currently planning for next summer.</p>
 
-&lt;h3 id=&quot;step-2a-mapping-constraints&quot;&gt;Step 2.a: Mapping constraints&lt;/h3&gt;
+<h3 id="step-2a-mapping-constraints">Step 2.a: Mapping constraints</h3>
 
-&lt;p&gt;We map out constraints because it will give use a rough visual indication of what is possible and what is not. Generally, start with the hardest constraints first, and work your way through the easier ones. In my case, departure and arrival are not optional. Take a look at the first map.&lt;/p&gt;
+<p>We map out constraints because it will give use a rough visual indication of what is possible and what is not. Generally, start with the hardest constraints first, and work your way through the easier ones. In my case, departure and arrival are not optional. Take a look at the first map.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/2a-map.jpg&quot; alt=&quot;2a map&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/2a-map.jpg" alt="2a map" /></p>
 
-&lt;p&gt;Between my point of departure and arrival, the first, completely straight line represents the “ideal” path between two destinations, not taking into account the curvature of the earth. Still a useful tool to get a rough idea of what a path could look like.&lt;/p&gt;
+<p>Between my point of departure and arrival, the first, completely straight line represents the “ideal” path between two destinations, not taking into account the curvature of the earth. Still a useful tool to get a rough idea of what a path could look like.</p>
 
-&lt;p&gt;Due to the travel documents I have and the current geopolitical situation, it’s not really worth it for me to try to get into Kaliningrad or Belarus; they are represented by the red shaded polygons. This restriction brings me to draw a more realistic direct path, the white line that is broken at the Lithuania-Poland border.&lt;/p&gt;
+<p>Due to the travel documents I have and the current geopolitical situation, it’s not really worth it for me to try to get into Kaliningrad or Belarus; they are represented by the red shaded polygons. This restriction brings me to draw a more realistic direct path, the white line that is broken at the Lithuania-Poland border.</p>
 
-&lt;p&gt;Another of my big constraints is the amount of vacation time I have available. I don’t plan to take more than 3 weeks to get from point A to point B… is this realistic? The white squiggly line is the shortest path between Tallinn and Nice; as pictured, it measures 2817km. This is the minimum distance I am going to cover, not accounting for running around at any destination cities or actually enjoying myself. Let’s crunch some numbers.&lt;/p&gt;
+<p>Another of my big constraints is the amount of vacation time I have available. I don’t plan to take more than 3 weeks to get from point A to point B… is this realistic? The white squiggly line is the shortest path between Tallinn and Nice; as pictured, it measures 2817km. This is the minimum distance I am going to cover, not accounting for running around at any destination cities or actually enjoying myself. Let’s crunch some numbers.</p>
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Target Pace&lt;/td&gt;
-      &lt;td&gt;Very fast (600km/day)&lt;/td&gt;
-      &lt;td&gt;Normal (400km/day) &lt;/td&gt;
-      &lt;td&gt;Leisurely (200km/day)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Hours riding at 50km/h&lt;/td&gt;
-      &lt;td&gt;12&lt;/td&gt;
-      &lt;td&gt; 8&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Hours riding at 100km/h&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Days on the road&lt;/td&gt;
-      &lt;td&gt;4.695&lt;/td&gt;
-      &lt;td&gt;~7&lt;/td&gt;
-      &lt;td&gt;~14&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Delta to max&lt;/td&gt;
-      &lt;td&gt;16.305&lt;/td&gt;
-      &lt;td&gt;~14&lt;/td&gt;
-      &lt;td&gt;~7&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <tbody>
+    <tr>
+      <td>Target Pace</td>
+      <td>Very fast (600km/day)</td>
+      <td>Normal (400km/day) </td>
+      <td>Leisurely (200km/day)</td>
+    </tr>
+    <tr>
+      <td>Hours riding at 50km/h</td>
+      <td>12</td>
+      <td> 8</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Hours riding at 100km/h</td>
+      <td>6</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Days on the road</td>
+      <td>4.695</td>
+      <td>~7</td>
+      <td>~14</td>
+    </tr>
+    <tr>
+      <td>Delta to max</td>
+      <td>16.305</td>
+      <td>~14</td>
+      <td>~7</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;p&gt;Even at an extremely slow pace, I have a week’s worth of overhead! Completely realistic. My pace numbers here are derived from real world experience. On my Tenere (long wheelbase, heavy, stable, full fairings, etc) 600+km/day is within the realm of possibility.&lt;/p&gt;
+<p>Even at an extremely slow pace, I have a week’s worth of overhead! Completely realistic. My pace numbers here are derived from real world experience. On my Tenere (long wheelbase, heavy, stable, full fairings, etc) 600+km/day is within the realm of possibility.</p>
 
-&lt;p&gt;On the bike I am planning to take on this trip, 600km a day WOULD probably be torture. I’m talking about a &lt;a href=&quot;https://www.husqvarna-motorcycles.com/en-us/models/naked/svartpilen/svartpilen-401-2023.html&quot;&gt;Husqvarna Svartpilen 401&lt;/a&gt;, an inherently smaller, less wind protected, more buzzy single cylinder bike.&lt;/p&gt;
+<p>On the bike I am planning to take on this trip, 600km a day WOULD probably be torture. I’m talking about a <a href="https://www.husqvarna-motorcycles.com/en-us/models/naked/svartpilen/svartpilen-401-2023.html">Husqvarna Svartpilen 401</a>, an inherently smaller, less wind protected, more buzzy single cylinder bike.</p>
 
-&lt;p&gt;The bike is also going to be new, which means that it is going to need a break-in oil-change at around the 1000km mark. Despite the fact that I am going to do a &lt;a href=&quot;http://www.mototuneusa.com/break_in_secrets.htm&quot;&gt;hard break-in&lt;/a&gt; in Tallin on arrival (maybe 100km?), I still want to do another one at around the 1000km mark. Coincidentally, the shortest route from Tallinn to Warsaw is 982km on the shortest path… accounting for 25% of slack running around, this puts us just about at the Polish/Lithuanian border. Using a bit of artistic licence, we can draw a rough zone where I have to plan my oil change.&lt;/p&gt;
+<p>The bike is also going to be new, which means that it is going to need a break-in oil-change at around the 1000km mark. Despite the fact that I am going to do a <a href="http://www.mototuneusa.com/break_in_secrets.htm">hard break-in</a> in Tallin on arrival (maybe 100km?), I still want to do another one at around the 1000km mark. Coincidentally, the shortest route from Tallinn to Warsaw is 982km on the shortest path… accounting for 25% of slack running around, this puts us just about at the Polish/Lithuanian border. Using a bit of artistic licence, we can draw a rough zone where I have to plan my oil change.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/2a-oilchange.jpg&quot; alt=&quot;2a oil &quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/2a-oilchange.jpg" alt="2a oil " /></p>
 
-&lt;p&gt;Of course, if we’re being honest I could do a 2 pint oil change pretty much anywhere… but I don’t necessarily want to. If possible, I would also want to have some sort of confirmation that I can get the filter wherever I decide to do it. For this reason I’ve decided to skip ahead and already add a waypoint in Kaunas, the largest city in Lithuania that more than likely has a Husqvarna dealer.&lt;/p&gt;
+<p>Of course, if we’re being honest I could do a 2 pint oil change pretty much anywhere… but I don’t necessarily want to. If possible, I would also want to have some sort of confirmation that I can get the filter wherever I decide to do it. For this reason I’ve decided to skip ahead and already add a waypoint in Kaunas, the largest city in Lithuania that more than likely has a Husqvarna dealer.</p>
 
-&lt;h3 id=&quot;step-2b-mapping-objectives&quot;&gt;Step 2.b: Mapping objectives&lt;/h3&gt;
+<h3 id="step-2b-mapping-objectives">Step 2.b: Mapping objectives</h3>
 
-&lt;p&gt;We can now start adding objectives. In my case, these are in the form of cities that I want to visit, either because I have friends there (blue), because I still haven’t been there (red), or because it’s convenient and probably interesting. The visual cues helps define our order or priority.&lt;/p&gt;
+<p>We can now start adding objectives. In my case, these are in the form of cities that I want to visit, either because I have friends there (blue), because I still haven’t been there (red), or because it’s convenient and probably interesting. The visual cues helps define our order or priority.</p>
 
-&lt;p&gt;Here’s our map so far.&lt;/p&gt;
+<p>Here’s our map so far.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/2b-map.jpg&quot; alt=&quot;2b map&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/2b-map.jpg" alt="2b map" /></p>
 
-&lt;p&gt;This is enough for the first cycle of route tracing, and then going back to previous steps to add, remove or refine our constraints.&lt;/p&gt;
+<p>This is enough for the first cycle of route tracing, and then going back to previous steps to add, remove or refine our constraints.</p>
 
-&lt;h2 id=&quot;step-3-plan-route&quot;&gt;Step 3: Plan route&lt;/h2&gt;
+<h2 id="step-3-plan-route">Step 3: Plan route</h2>
 
-&lt;p&gt;With our potential stops laid out, we are ready to start drawing some paths. I use “plan route” instead of map route because at this point we’re really just using available tools, mostly the Google Earth routing tool figure out routes to see if this makes sense.&lt;/p&gt;
+<p>With our potential stops laid out, we are ready to start drawing some paths. I use “plan route” instead of map route because at this point we’re really just using available tools, mostly the Google Earth routing tool figure out routes to see if this makes sense.</p>
 
-&lt;p&gt;This is more of an art than a science; you’re designing something that sounds fun, has stops you want to visit, and respects your constraints. Where you have choke points, think about branching out.&lt;/p&gt;
+<p>This is more of an art than a science; you’re designing something that sounds fun, has stops you want to visit, and respects your constraints. Where you have choke points, think about branching out.</p>
 
-&lt;p&gt;As you probably recall from 2.a, the most direct path between our departure and arrival points goes through Warsaw, Vienna, then north Italy… but I really want to go to Berlin! In this case, I’ll do a “German” route, by calculating shortest path between Berlin and Nice, then riffing on that.&lt;/p&gt;
+<p>As you probably recall from 2.a, the most direct path between our departure and arrival points goes through Warsaw, Vienna, then north Italy… but I really want to go to Berlin! In this case, I’ll do a “German” route, by calculating shortest path between Berlin and Nice, then riffing on that.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/3-routeBerlinshort.jpg&quot; alt=&quot;3 Berlin Short&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/3-routeBerlinshort.jpg" alt="3 Berlin Short" /></p>
 
-&lt;p&gt;This is suboptimal because I’ve done a lot of Germany and Switzerland already, and I’d much rather see Vienna. I also just remembered that I have a good friend that is around Prague most of the time… let’s adjust to reflect that.&lt;/p&gt;
+<p>This is suboptimal because I’ve done a lot of Germany and Switzerland already, and I’d much rather see Vienna. I also just remembered that I have a good friend that is around Prague most of the time… let’s adjust to reflect that.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/3-routeBerlinDetour.jpg&quot; alt=&quot;3 Berlin Detour&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/3-routeBerlinDetour.jpg" alt="3 Berlin Detour" /></p>
 
-&lt;p&gt;Beautiful, although that detour through Berlin looks extremely long. It’s a good time to sanity check and make sure that we still fit into our constraints. This is where I usually try to find routes for the trip on a per-day basis, eyeballing what looks or feels like reasonable distance.&lt;/p&gt;
+<p>Beautiful, although that detour through Berlin looks extremely long. It’s a good time to sanity check and make sure that we still fit into our constraints. This is where I usually try to find routes for the trip on a per-day basis, eyeballing what looks or feels like reasonable distance.</p>
 
-&lt;p&gt;I am erring on the low side here because I really don’t want to be riding highway the whole way, and this is 100% of what these routes represent. In the next map, the days have been changed colours so as to make out different segments, and the lengths of the routes has been added to the folders containing them on the left.&lt;/p&gt;
+<p>I am erring on the low side here because I really don’t want to be riding highway the whole way, and this is 100% of what these routes represent. In the next map, the days have been changed colours so as to make out different segments, and the lengths of the routes has been added to the folders containing them on the left.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/3-berlindetoursanitycheck.png&quot; alt=&quot;3 Berlin Detour Sanity Check&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/3-berlindetoursanitycheck.png" alt="3 Berlin Detour Sanity Check" /></p>
 
-&lt;p&gt;With the distances as shown, we’re doing an average of 354km/day with the longest run being Warsaw to Berlin at a rather rough 574km of highway riding. If we cut this specific run in half with a stop in Poznan, we’re at 11 days, 322km/day, leaving us with 10 days of slack to do whatever we want with!&lt;/p&gt;
+<p>With the distances as shown, we’re doing an average of 354km/day with the longest run being Warsaw to Berlin at a rather rough 574km of highway riding. If we cut this specific run in half with a stop in Poznan, we’re at 11 days, 322km/day, leaving us with 10 days of slack to do whatever we want with!</p>
 
-&lt;p&gt;I also know from experience that the last two days could easily be condensed into one if they had too. This leaves us a lot of room to zoom in, and define routes that manually on interesting passages.&lt;/p&gt;
+<p>I also know from experience that the last two days could easily be condensed into one if they had too. This leaves us a lot of room to zoom in, and define routes that manually on interesting passages.</p>
 
-&lt;h2 id=&quot;step-4-map-the-route&quot;&gt;Step 4: Map the route&lt;/h2&gt;
+<h2 id="step-4-map-the-route">Step 4: Map the route</h2>
 
-&lt;p&gt;At this point, we could probably stop here and yolo it. Firstly, we have &lt;em&gt;lots&lt;/em&gt; of slack with regards to time. Secondly, this is a trip through the eastern EU where we’re unlikely to encounter major setbacks that can’t be solved relatively quickly. We could most likely get away with putting our destinations into Google Maps on our phone every morning, highways and toll roads disabled, and follow the route. Our distance covered would likely increase by about 25%, our average speed would be lower, but we’d essentially be guarantee to find some cool stuff.&lt;/p&gt;
+<p>At this point, we could probably stop here and yolo it. Firstly, we have <em>lots</em> of slack with regards to time. Secondly, this is a trip through the eastern EU where we’re unlikely to encounter major setbacks that can’t be solved relatively quickly. We could most likely get away with putting our destinations into Google Maps on our phone every morning, highways and toll roads disabled, and follow the route. Our distance covered would likely increase by about 25%, our average speed would be lower, but we’d essentially be guarantee to find some cool stuff.</p>
 
-&lt;p&gt;Any additional planning is really just refining the rough path that we already have, and maximizing whatever could happen in that trip. Since I have several months before departing, I’ll go ahead and map stuff out in detail anyways.&lt;/p&gt;
+<p>Any additional planning is really just refining the rough path that we already have, and maximizing whatever could happen in that trip. Since I have several months before departing, I’ll go ahead and map stuff out in detail anyways.</p>
 
-&lt;p&gt;Since I’m using a scrambler bike for this trip, why not try it out on dirt? Some volunteers are already maintaining ready-made, very well annotated GPX files describing the &lt;a href=&quot;https://transeurotrail.org&quot;&gt;Trans Euro Trail&lt;/a&gt;, and from the Youtube videos I could find most sections are relatively easy dirt and gravel roads that would be completely suitable for my bike. It’s probably not a good idea to try offroading before my break-in oil change is done, so let’s see what there is in Poland.&lt;/p&gt;
+<p>Since I’m using a scrambler bike for this trip, why not try it out on dirt? Some volunteers are already maintaining ready-made, very well annotated GPX files describing the <a href="https://transeurotrail.org">Trans Euro Trail</a>, and from the Youtube videos I could find most sections are relatively easy dirt and gravel roads that would be completely suitable for my bike. It’s probably not a good idea to try offroading before my break-in oil change is done, so let’s see what there is in Poland.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/4-tetpol.jpg&quot; alt=&quot;4 mapping the TET&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/4-tetpol.jpg" alt="4 mapping the TET" /></p>
 
-&lt;p&gt;On the map above, the TET path in Poland relevant to me is in red. This is what I would call a properly mapped route, a turn-by-turn outline of the exact path you’re going to take, with annotated waypoints that include descriptions, warnings, etc. We really don’t need to put any more effort into this for my use case.&lt;/p&gt;
+<p>On the map above, the TET path in Poland relevant to me is in red. This is what I would call a properly mapped route, a turn-by-turn outline of the exact path you’re going to take, with annotated waypoints that include descriptions, warnings, etc. We really don’t need to put any more effort into this for my use case.</p>
 
-&lt;p&gt;I’ve added a few stops along the way at shorter intervals since I obviously won’t be able to cover as much distance on dirty, and some escape paths (purple) from my planned stops in case the trails are too hairy to complete.&lt;/p&gt;
+<p>I’ve added a few stops along the way at shorter intervals since I obviously won’t be able to cover as much distance on dirty, and some escape paths (purple) from my planned stops in case the trails are too hairy to complete.</p>
 
-&lt;h2 id=&quot;step-5-ride&quot;&gt;Step 5: Ride&lt;/h2&gt;
+<h2 id="step-5-ride">Step 5: Ride</h2>
 
-&lt;p&gt;Our full map now looks something like this.&lt;/p&gt;
+<p>Our full map now looks something like this.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/moto100/4-total.jpg&quot; alt=&quot;4 full&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/moto100/4-total.jpg" alt="4 full" /></p>
 
-&lt;p&gt;What we have now is a perfectly actionable high level plan for a trip. What blanks need filling in can easily be filled in on the trip.&lt;/p&gt;
+<p>What we have now is a perfectly actionable high level plan for a trip. What blanks need filling in can easily be filled in on the trip.</p>
 
-&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+<h2 id="next-steps">Next steps</h2>
 
-&lt;p&gt;To perfect this, we’d have to go through other cycles of defining and mapping out constraints and objectives on smaller portions of the trip; we’ll do this in the next posts, with increasingly sophisticated tools.&lt;/p&gt;
+<p>To perfect this, we’d have to go through other cycles of defining and mapping out constraints and objectives on smaller portions of the trip; we’ll do this in the next posts, with increasingly sophisticated tools.</p>
 
-&lt;p&gt;We’ll source data from various external sources, and get a bit tighter on the estimation of distances with isochrones and other cool open-source pieces of software.&lt;/p&gt;</content><author><name></name></author><category term="motorcycle" /><category term="travel" /><category term="gis" /><summary type="html">When going on an adventure, determining what is the adequate level of planning is the subject of much debate. For a long time I was on the “no plan is best plan” side of that debate, however the lead-up to my unfortunate aborted experience trying to cross the middle east has forced me to actually try more in depth planning for safety reasons. The extensive planning gave me a new appreciation for the value of planning any trip, no matter the length.</summary></entry><entry><title type="html">Gulf to Riviera: Lessons From My Failed Motorcycle Trip</title><link href="http://localhost:4000/gulf-to-riviera-lessons/" rel="alternate" type="text/html" title="Gulf to Riviera: Lessons From My Failed Motorcycle Trip" /><published>2022-06-06T12:04:14+03:00</published><updated>2022-06-06T12:04:14+03:00</updated><id>http://localhost:4000/gulf-to-riviera-lessons</id><content type="html" xml:base="http://localhost:4000/gulf-to-riviera-lessons/">&lt;p&gt;I don’t tend to remember much, but I do vividly remember a car sighting that I never thought would happen. I was grabbing coffee and a croissant in Cannes on a quiet Sunday morning, in a residential sector near to the port. On my walk back, I saw an early 90’s Jaguar XJ with plates that I did not recognize: Kuwait. I immediately pictured some older Arab gentleman leisurely driving one of the least reliable automobiles known to man through Iraq, Syria, or both, slowly making his way to his vacation home in the French Riviera.&lt;/p&gt;
+<p>We’ll source data from various external sources, and get a bit tighter on the estimation of distances with isochrones and other cool open-source pieces of software.</p>]]></content><author><name></name></author><category term="motorcycle" /><category term="travel" /><category term="gis" /><summary type="html"><![CDATA[When going on an adventure, determining what is the adequate level of planning is the subject of much debate. For a long time I was on the “no plan is best plan” side of that debate, however the lead-up to my unfortunate aborted experience trying to cross the middle east has forced me to actually try more in depth planning for safety reasons. The extensive planning gave me a new appreciation for the value of planning any trip, no matter the length.]]></summary></entry><entry><title type="html">Gulf to Riviera: Lessons From My Failed Motorcycle Trip</title><link href="http://localhost:4000/gulf-to-riviera-lessons/" rel="alternate" type="text/html" title="Gulf to Riviera: Lessons From My Failed Motorcycle Trip" /><published>2022-06-06T12:04:14+03:00</published><updated>2022-06-06T12:04:14+03:00</updated><id>http://localhost:4000/gulf-to-riviera-lessons</id><content type="html" xml:base="http://localhost:4000/gulf-to-riviera-lessons/"><![CDATA[<p>I don’t tend to remember much, but I do vividly remember a car sighting that I never thought would happen. I was grabbing coffee and a croissant in Cannes on a quiet Sunday morning, in a residential sector near to the port. On my walk back, I saw an early 90’s Jaguar XJ with plates that I did not recognize: Kuwait. I immediately pictured some older Arab gentleman leisurely driving one of the least reliable automobiles known to man through Iraq, Syria, or both, slowly making his way to his vacation home in the French Riviera.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/ruh-nice/canneskuwaiti.png&quot; alt=&quot;image-title-here&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/ruh-nice/canneskuwaiti.png" alt="image-title-here" class="img-responsive" /></p>
 
-&lt;p&gt;Obviously, the gentleman in question had his car freighted in, but I’ve been mulling over this inter-continental route ever since. There are a few anecdotes online of folks driving from London to Amman or other such trips, but that was before the US empire made the Middle East into what it is today; I haven’t looked too hard, but modern examples didn’t seem to abound, adding to the mystique of this voyage.&lt;/p&gt;
+<p>Obviously, the gentleman in question had his car freighted in, but I’ve been mulling over this inter-continental route ever since. There are a few anecdotes online of folks driving from London to Amman or other such trips, but that was before the US empire made the Middle East into what it is today; I haven’t looked too hard, but modern examples didn’t seem to abound, adding to the mystique of this voyage.</p>
 
-&lt;p&gt;Well, I am now based out of the Gulf, and work for a company headquartered in the French Riviera, so what better time to do this than now? For the past 2-3 months I’ve been planning a trip from Riyadh to Monaco on a motorcycle with more serious intent, and on February 28th I left my apartment with the intention to be in Monaco 11 to 19 days later, going through Kuwait, Iraq, Turkey, Greece, Italy and France. I would be riding through on my brand new Tenere 700, packed light and with a somewhat artisanal rigging.&lt;/p&gt;
+<p>Well, I am now based out of the Gulf, and work for a company headquartered in the French Riviera, so what better time to do this than now? For the past 2-3 months I’ve been planning a trip from Riyadh to Monaco on a motorcycle with more serious intent, and on February 28th I left my apartment with the intention to be in Monaco 11 to 19 days later, going through Kuwait, Iraq, Turkey, Greece, Italy and France. I would be riding through on my brand new Tenere 700, packed light and with a somewhat artisanal rigging.</p>
 
-&lt;p&gt;Eight days later, after being denied entry into Iraq from Abdali and essentially being told that I would need to wait for a month to get special authorization from the Iraqi Ministry of Interior to get through (this is embassy speak for never), and being unable to ship the bike from Kuwait to Turkey due to missing paperwork, I am back in Riyadh and have been working out shipping paperwork for the bike for nearly half a week.&lt;/p&gt;
+<p>Eight days later, after being denied entry into Iraq from Abdali and essentially being told that I would need to wait for a month to get special authorization from the Iraqi Ministry of Interior to get through (this is embassy speak for never), and being unable to ship the bike from Kuwait to Turkey due to missing paperwork, I am back in Riyadh and have been working out shipping paperwork for the bike for nearly half a week.</p>
 
-&lt;p&gt;Burning up my paid vacation in an unextraordinary hotel in Kuwait was not exactly the outstanding adventure I had in mind, but my misfortune or lack of foresight does not have to be yours. If you are planning a similar trip, here are some lessons learnt that might be of interest for you, interlaced with that few pictures I have taken in my time on the road.&lt;/p&gt;
+<p>Burning up my paid vacation in an unextraordinary hotel in Kuwait was not exactly the outstanding adventure I had in mind, but my misfortune or lack of foresight does not have to be yours. If you are planning a similar trip, here are some lessons learnt that might be of interest for you, interlaced with that few pictures I have taken in my time on the road.</p>
 
-&lt;h2 id=&quot;paperwork-and-prep&quot;&gt;Paperwork and prep&lt;/h2&gt;
+<h2 id="paperwork-and-prep">Paperwork and prep</h2>
 
-&lt;h3 id=&quot;get-a-carnet-de-passage-cdp-even-if-you-think-you-dont-need-it&quot;&gt;Get a carnet de passage (CDP), even if you THINK you don’t need it&lt;/h3&gt;
-&lt;p&gt;A lot of my time in the trip preparation was browsing online overlanding ressources, once amongst them being the &lt;a href=&quot;https://overlandingassociation.org/carnet-de-passage/&quot;&gt;Overlanding Associations’s Carnet map&lt;/a&gt;. Obtaining a carnet (also called trip ticket in the Arab world) for customs clearance is one of the main paperwork obstacles to international trips like this, and getting the carnet bonded can come at significant cost. You will notice that none of the countries I was intending to pass through have carnet requirements. I was very happy to not have to shell out for insurance or a deposit, so I went on my merry way with just my registration.&lt;/p&gt;
+<h3 id="get-a-carnet-de-passage-cdp-even-if-you-think-you-dont-need-it">Get a carnet de passage (CDP), even if you THINK you don’t need it</h3>
+<p>A lot of my time in the trip preparation was browsing online overlanding ressources, once amongst them being the <a href="https://overlandingassociation.org/carnet-de-passage/">Overlanding Associations’s Carnet map</a>. Obtaining a carnet (also called trip ticket in the Arab world) for customs clearance is one of the main paperwork obstacles to international trips like this, and getting the carnet bonded can come at significant cost. You will notice that none of the countries I was intending to pass through have carnet requirements. I was very happy to not have to shell out for insurance or a deposit, so I went on my merry way with just my registration.</p>
 
-&lt;p&gt;While it is true for entering the country on two (maybe more?) wheels, my shipping broker contact in Kuwait informed me that the bike will not clear outbound customs without a Carnet; there might be a way out of this, but like all things, it will be a cost in both time and money. I am told that this is also pretty normal procedure across several countries that my shipping guy is familiar with: no trip ticket, you vehicle is not boarding a plane. It is unclear if this is shipping company policy or customs policy; I trusted my shipping guy’s experience on this. I of course tried to get a carnet produced in Kuwait: this is impossible.&lt;/p&gt;
+<p>While it is true for entering the country on two (maybe more?) wheels, my shipping broker contact in Kuwait informed me that the bike will not clear outbound customs without a Carnet; there might be a way out of this, but like all things, it will be a cost in both time and money. I am told that this is also pretty normal procedure across several countries that my shipping guy is familiar with: no trip ticket, you vehicle is not boarding a plane. It is unclear if this is shipping company policy or customs policy; I trusted my shipping guy’s experience on this. I of course tried to get a carnet produced in Kuwait: this is impossible.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/ruh-nice/carcass.jpg&quot; alt=&quot;image-title-here&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/ruh-nice/carcass.jpg" alt="image-title-here" class="img-responsive" /></p>
 
-&lt;p&gt;A few days after my return, I got finally a CDP from SATA, the Saudi FIA affiliate, through a broker in a travel agency in order to be able to ship my bike through a local freighter, which also required a carnet. The process took about an hour and cost me just a hair below 1300 SAR; there is no bond to speak of. This was also confirmed by my Kuwaiti shipping contact who has produced CDPs in several countries: &lt;em&gt;none of the Gulf countries (exceptions may apply) require a bond or insurance&lt;/em&gt;, although you are still required to hand back in the carnet. My instinct is that this might have something to do with sharia compliance, but I did not get a clear answer on this. I do not know what the penalties are for not returning the carnet however, and I do not intend to find out the hard way.&lt;/p&gt;
+<p>A few days after my return, I got finally a CDP from SATA, the Saudi FIA affiliate, through a broker in a travel agency in order to be able to ship my bike through a local freighter, which also required a carnet. The process took about an hour and cost me just a hair below 1300 SAR; there is no bond to speak of. This was also confirmed by my Kuwaiti shipping contact who has produced CDPs in several countries: <em>none of the Gulf countries (exceptions may apply) require a bond or insurance</em>, although you are still required to hand back in the carnet. My instinct is that this might have something to do with sharia compliance, but I did not get a clear answer on this. I do not know what the penalties are for not returning the carnet however, and I do not intend to find out the hard way.</p>
 
-&lt;p&gt;Either way, I’ve been alive long enough to know that any bureaucrat, western or otherwise, respects any pleb who dares show up somewhere with a proverbial dagger between his teeth, and a literal stack of documents in his hands. I don’t think it matters if it’s a border crossing or DMV office, if you come in with a plastic folder full of named and organized paperwork, bureaucrats are more likely to take you seriously and be easy on you. The average paper-shuffler has for only weapons his knowledge of arcane forms and procedures; any temptation to assert his power quickly disappears when his opponent shows up with a mission AND the appropriate paperwork. The carnet is at least 10 pages and looks important. Not saying you are going to get out of anything with it, but it does assert paperwork dominance.&lt;/p&gt;
+<p>Either way, I’ve been alive long enough to know that any bureaucrat, western or otherwise, respects any pleb who dares show up somewhere with a proverbial dagger between his teeth, and a literal stack of documents in his hands. I don’t think it matters if it’s a border crossing or DMV office, if you come in with a plastic folder full of named and organized paperwork, bureaucrats are more likely to take you seriously and be easy on you. The average paper-shuffler has for only weapons his knowledge of arcane forms and procedures; any temptation to assert his power quickly disappears when his opponent shows up with a mission AND the appropriate paperwork. The carnet is at least 10 pages and looks important. Not saying you are going to get out of anything with it, but it does assert paperwork dominance.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/ruh-nice/sandstorm.jpg&quot; alt=&quot;image-title-here&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/ruh-nice/sandstorm.jpg" alt="image-title-here" class="img-responsive" /></p>
 
-&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Carnet might not be necessary for land crossing, but required for shipping&lt;/li&gt;
-  &lt;li&gt;In the Gulf, chances are you will not be paying out the nose for this document&lt;/li&gt;
-  &lt;li&gt;Flex paperwork, assert bureaucratic dominance&lt;/li&gt;
-&lt;/ul&gt;
+<p><strong>TL;DR:</strong></p>
+<ul>
+  <li>Carnet might not be necessary for land crossing, but required for shipping</li>
+  <li>In the Gulf, chances are you will not be paying out the nose for this document</li>
+  <li>Flex paperwork, assert bureaucratic dominance</li>
+</ul>
 
-&lt;h3 id=&quot;get-long-form-registration-before-leaving&quot;&gt;Get long form registration before leaving&lt;/h3&gt;
+<h3 id="get-long-form-registration-before-leaving">Get long form registration before leaving</h3>
 
-&lt;p&gt;In the same line of thought as a preventative carnet, it is probably a very good idea to have your long form registration (no just the registration card) printed out at the traffic police so that you can provide it upon request. The document is better laid out, and thus easier to get translated should the need arise.&lt;/p&gt;
+<p>In the same line of thought as a preventative carnet, it is probably a very good idea to have your long form registration (no just the registration card) printed out at the traffic police so that you can provide it upon request. The document is better laid out, and thus easier to get translated should the need arise.</p>
 
-&lt;p&gt;In Saudi, I got mine as a first step in my attempt to ship; after producing a series of notarized letters from my employer and shipping broker using the information on this document, I was given a signed confirmation of registration that is valid for two months; local shippers absolutely need this, third countries might not care at all. While the Zoll (customs) staff in Frankfurt were delighted that I had the foresight to get such a document, the eldest officer who was the only one ever to have seen CDP paperwork told me that it wasn’t strictly necessary and that he could process import without it. In the UK getting off the ferry, the Border Police could not have possibly given less of a hoot about customs paperwork.&lt;/p&gt;
+<p>In Saudi, I got mine as a first step in my attempt to ship; after producing a series of notarized letters from my employer and shipping broker using the information on this document, I was given a signed confirmation of registration that is valid for two months; local shippers absolutely need this, third countries might not care at all. While the Zoll (customs) staff in Frankfurt were delighted that I had the foresight to get such a document, the eldest officer who was the only one ever to have seen CDP paperwork told me that it wasn’t strictly necessary and that he could process import without it. In the UK getting off the ferry, the Border Police could not have possibly given less of a hoot about customs paperwork.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/ruh-nice/dunedroad.jpg&quot; alt=&quot;image-title-here&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/ruh-nice/dunedroad.jpg" alt="image-title-here" class="img-responsive" /></p>
 
-&lt;p&gt;&lt;a href=&quot;https://www.google.com/maps/place/24°40&apos;44.6%22N+46°40&apos;43.7%22E/@24.6789649,46.6784425,19.01z/data=!4m5!3m4!1s0x0:0xd2e235e3447a05b4!8m2!3d24.6790455!4d46.6788085?hl=en&quot;&gt;Elaa Travel Group&lt;/a&gt; in Riyadh is the place where I got me paperwork done, but I believe other travel agencies might be able to complete this. The Saudi Automobile Association (SATA) is the formally recognized FIA affiliate, but they seem to dole our the dirty work to agencies. Ask around!&lt;/p&gt;
+<p><a href="https://www.google.com/maps/place/24°40'44.6%22N+46°40'43.7%22E/@24.6789649,46.6784425,19.01z/data=!4m5!3m4!1s0x0:0xd2e235e3447a05b4!8m2!3d24.6790455!4d46.6788085?hl=en">Elaa Travel Group</a> in Riyadh is the place where I got me paperwork done, but I believe other travel agencies might be able to complete this. The Saudi Automobile Association (SATA) is the formally recognized FIA affiliate, but they seem to dole our the dirty work to agencies. Ask around!</p>
 
-&lt;h3 id=&quot;get-an-international-licence&quot;&gt;Get an international licence&lt;/h3&gt;
+<h3 id="get-an-international-licence">Get an international licence</h3>
 
-&lt;p&gt;This may seem obvious, but my initial idea was to use my arabic licence while in the middle east, and present a european or Canadian driving licence along the rest of my destinations, if they were asked for at all.&lt;/p&gt;
+<p>This may seem obvious, but my initial idea was to use my arabic licence while in the middle east, and present a european or Canadian driving licence along the rest of my destinations, if they were asked for at all.</p>
 
-&lt;p&gt;I ended up getting an FIA approved international licence with all my classes for around 150 SAR.&lt;/p&gt;
+<p>I ended up getting an FIA approved international licence with all my classes for around 150 SAR.</p>
 
-&lt;p&gt;&lt;img src=&quot;/images/ruh-nice/roadpowerlines.jpg&quot; alt=&quot;image-title-here&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/ruh-nice/roadpowerlines.jpg" alt="image-title-here" class="img-responsive" /></p>
 
-&lt;p&gt;Could I have argued my way out of stuff? I would like to think I could. Would any one of my 3 valid licences worked in one of the countries I was passing through? My research leads me to think that they would. Is it worth risking any hassle for the price of a dinner for one at a chain restaurant? Absolutely not.&lt;/p&gt;
+<p>Could I have argued my way out of stuff? I would like to think I could. Would any one of my 3 valid licences worked in one of the countries I was passing through? My research leads me to think that they would. Is it worth risking any hassle for the price of a dinner for one at a chain restaurant? Absolutely not.</p>
 
-&lt;h3 id=&quot;prepare-one-pagers&quot;&gt;Prepare one-pagers&lt;/h3&gt;
+<h3 id="prepare-one-pagers">Prepare one-pagers</h3>
 
-&lt;p&gt;This is especially true when language barrier is going to be an issue. Have one-pagers with all your scanned IDs, licences and registration on a single page ready for any border crossing. The less questions you are asked, even if it’s only “give me this”, the less chances you have of fucking up and aggravating the border agent. My paper work loadout was as follows:&lt;/p&gt;
+<p>This is especially true when language barrier is going to be an issue. Have one-pagers with all your scanned IDs, licences and registration on a single page ready for any border crossing. The less questions you are asked, even if it’s only “give me this”, the less chances you have of fucking up and aggravating the border agent. My paper work loadout was as follows:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;One-pager in one of my breast pockets including: passeport, iqama, licence, registration. When at a border, my original passeport is also in that pocket.&lt;/li&gt;
-  &lt;li&gt;In the manual holder under the seat: same one-pager in several copies in a ziplock bag, along with originals of licence, registration card. Extra local cash currency for any additional &lt;em&gt;border fees&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;In a bag or hard case: a passeport sleeve with passeport (when not crossing a border), residence paperwork, copies of exit visa where required.&lt;/li&gt;
-  &lt;li&gt;All bike export paperwork in a separate backpack, along with all relevant long-form registration, letters etc. Unfolded, in a plastic folder.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>One-pager in one of my breast pockets including: passeport, iqama, licence, registration. When at a border, my original passeport is also in that pocket.</li>
+  <li>In the manual holder under the seat: same one-pager in several copies in a ziplock bag, along with originals of licence, registration card. Extra local cash currency for any additional <em>border fees</em>.</li>
+  <li>In a bag or hard case: a passeport sleeve with passeport (when not crossing a border), residence paperwork, copies of exit visa where required.</li>
+  <li>All bike export paperwork in a separate backpack, along with all relevant long-form registration, letters etc. Unfolded, in a plastic folder.</li>
+</ul>
 
-&lt;h2 id=&quot;general-advice-for-saudi-arabia&quot;&gt;General advice for Saudi Arabia&lt;/h2&gt;
+<h2 id="general-advice-for-saudi-arabia">General advice for Saudi Arabia</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Follow the roads less traveled&lt;/strong&gt;. Mapping software will often try to get you to stick to highways, in the Kingdom this means sharing the road with a lot of people not used to motorcycle traffic, and not seeing much interesting. Whip out the satellite view and find stuff that looks interesting.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Ride Thumamah road out of Riyadh.&lt;/strong&gt; My specific route from Riyadh to Kuwait was made on the Rt 5318 through Rumah, then diagonally directly to Khafji on the way there, then on Rt 550 on my way back. Rt 550 and Thumamah Rd are a much better choice in my opinion.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Relax about arrival estimates.&lt;/strong&gt; Expect Google Maps estimates of arrival to be on the slow side in a country where everyone has a lead foot; most roads, even back roads are now very well paved and drive just fine at highway speeds. Estimates may be based off of lower speed limits in effect in the past.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>Follow the roads less traveled</strong>. Mapping software will often try to get you to stick to highways, in the Kingdom this means sharing the road with a lot of people not used to motorcycle traffic, and not seeing much interesting. Whip out the satellite view and find stuff that looks interesting.</li>
+  <li><strong>Ride Thumamah road out of Riyadh.</strong> My specific route from Riyadh to Kuwait was made on the Rt 5318 through Rumah, then diagonally directly to Khafji on the way there, then on Rt 550 on my way back. Rt 550 and Thumamah Rd are a much better choice in my opinion.</li>
+  <li><strong>Relax about arrival estimates.</strong> Expect Google Maps estimates of arrival to be on the slow side in a country where everyone has a lead foot; most roads, even back roads are now very well paved and drive just fine at highway speeds. Estimates may be based off of lower speed limits in effect in the past.</li>
+</ul>
 
-&lt;h2 id=&quot;general-advice-for-kuwait&quot;&gt;General advice for Kuwait&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Bubiyan Island is CLOSED.&lt;/strong&gt; To me this seems to be the biggest tourist attraction in the country, unfortunately all bridges leading to it are blocked off. Bubiyan bridge is blocked off and labeled as a military zone. Mubarak al-Kabir Bridge is also closed with a manned checkpoint leading to it, and a third bridge just beside it is incomplete. I cannot remember the name of that last one.&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="general-advice-for-kuwait">General advice for Kuwait</h2>
+<ul>
+  <li><strong>Bubiyan Island is CLOSED.</strong> To me this seems to be the biggest tourist attraction in the country, unfortunately all bridges leading to it are blocked off. Bubiyan bridge is blocked off and labeled as a military zone. Mubarak al-Kabir Bridge is also closed with a manned checkpoint leading to it, and a third bridge just beside it is incomplete. I cannot remember the name of that last one.</li>
+</ul>
 
-&lt;p&gt;&lt;img src=&quot;/images/ruh-nice/bubiyanbridgemap.png&quot; alt=&quot;image-title-here&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+<p><img src="/images/ruh-nice/bubiyanbridgemap.png" alt="image-title-here" class="img-responsive" /></p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;You can’t cross the northern border, period.&lt;/strong&gt; Exiting Kuwait through the Iraqi border requires not only clearance from the Iraqi side, but also from the Kuwaiti authorities. I was told by the commander of the Abdali border crossing that this applies regardless of other visa requirements you may be subject to. Getting this permission is a matter of going to the Airport on the Kuwaiti side, on the Iraq side it needs to be done in Baghdad with the ministry of interior. Hope you have good wasta!&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>You can’t cross the northern border, period.</strong> Exiting Kuwait through the Iraqi border requires not only clearance from the Iraqi side, but also from the Kuwaiti authorities. I was told by the commander of the Abdali border crossing that this applies regardless of other visa requirements you may be subject to. Getting this permission is a matter of going to the Airport on the Kuwaiti side, on the Iraq side it needs to be done in Baghdad with the ministry of interior. Hope you have good wasta!</li>
+</ul>
 
-&lt;h2 id=&quot;shipping-advice&quot;&gt;Shipping advice&lt;/h2&gt;
+<h2 id="shipping-advice">Shipping advice</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Leave a key on the bike in the crate.&lt;/strong&gt; Your shipping agent might not thing of this, but customs and the airline will want to check that your bike is not full of fuel. Give them a means of checking this. In some cases pictures of the fuel gauge taken in the crate might be enough, in certain cases they will want to check either by power on the bike, or opening the tank.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Attach the paperwork to the crate.&lt;/strong&gt; My agent did not do this, and as a result I had to wait for 8 additional hours for my paperwork to arrive. A pouch stapled and labeled directly on the crate would have saved me the wait.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Overfill the oil if you need to carry more.&lt;/strong&gt; Most airlines will not allow you to carry extra oil, on the grounds that it’s a dangerous good. Somehow, oil in the sump is perfectly safe. My Tenere has at least one liter of extra space in the crank case. If you’re traveling to a place where appropriate oil is going to be impossible to procure, and if you can be sure that your bike will not be started by transit staff, overfill to the fillplug and drain on arrival.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>Leave a key on the bike in the crate.</strong> Your shipping agent might not thing of this, but customs and the airline will want to check that your bike is not full of fuel. Give them a means of checking this. In some cases pictures of the fuel gauge taken in the crate might be enough, in certain cases they will want to check either by power on the bike, or opening the tank.</li>
+  <li><strong>Attach the paperwork to the crate.</strong> My agent did not do this, and as a result I had to wait for 8 additional hours for my paperwork to arrive. A pouch stapled and labeled directly on the crate would have saved me the wait.</li>
+  <li><strong>Overfill the oil if you need to carry more.</strong> Most airlines will not allow you to carry extra oil, on the grounds that it’s a dangerous good. Somehow, oil in the sump is perfectly safe. My Tenere has at least one liter of extra space in the crank case. If you’re traveling to a place where appropriate oil is going to be impossible to procure, and if you can be sure that your bike will not be started by transit staff, overfill to the fillplug and drain on arrival.</li>
+</ul>
 
-&lt;p&gt;With these tips, hopefully you can make your trip more of a success than mine. Have fun and good luck!&lt;/p&gt;</content><author><name></name></author><category term="expat" /><category term="motorcycle" /><category term="adv" /><summary type="html">I don’t tend to remember much, but I do vividly remember a car sighting that I never thought would happen. I was grabbing coffee and a croissant in Cannes on a quiet Sunday morning, in a residential sector near to the port. On my walk back, I saw an early 90’s Jaguar XJ with plates that I did not recognize: Kuwait. I immediately pictured some older Arab gentleman leisurely driving one of the least reliable automobiles known to man through Iraq, Syria, or both, slowly making his way to his vacation home in the French Riviera.</summary></entry><entry><title type="html">An Expat’s Guide to the French Motorcycle Licence</title><link href="http://localhost:4000/an-expats-guide-to-french-motorcycle-licence/" rel="alternate" type="text/html" title="An Expat’s Guide to the French Motorcycle Licence" /><published>2021-09-17T20:06:14+03:00</published><updated>2021-09-17T20:06:14+03:00</updated><id>http://localhost:4000/an-expats-guide-to-french-motorcycle-licence</id><content type="html" xml:base="http://localhost:4000/an-expats-guide-to-french-motorcycle-licence/">&lt;p&gt;France is beautiful country, the only problem is that way too many french people live there. This will quickly become apparent to you once the novelty of being in a new country has worn off, and/or once you’ve stepped into the 16th pile of dog shit in any given week of being in a major French city.&lt;/p&gt;
+<p>With these tips, hopefully you can make your trip more of a success than mine. Have fun and good luck!</p>]]></content><author><name></name></author><category term="expat" /><category term="motorcycle" /><category term="adv" /><summary type="html"><![CDATA[I don’t tend to remember much, but I do vividly remember a car sighting that I never thought would happen. I was grabbing coffee and a croissant in Cannes on a quiet Sunday morning, in a residential sector near to the port. On my walk back, I saw an early 90’s Jaguar XJ with plates that I did not recognize: Kuwait. I immediately pictured some older Arab gentleman leisurely driving one of the least reliable automobiles known to man through Iraq, Syria, or both, slowly making his way to his vacation home in the French Riviera.]]></summary></entry><entry><title type="html">An Expat’s Guide to the French Motorcycle Licence</title><link href="http://localhost:4000/an-expats-guide-to-french-motorcycle-licence/" rel="alternate" type="text/html" title="An Expat’s Guide to the French Motorcycle Licence" /><published>2021-09-17T20:06:14+03:00</published><updated>2021-09-17T20:06:14+03:00</updated><id>http://localhost:4000/an-expats-guide-to-french-motorcycle-licence</id><content type="html" xml:base="http://localhost:4000/an-expats-guide-to-french-motorcycle-licence/"><![CDATA[<p>France is beautiful country, the only problem is that way too many french people live there. This will quickly become apparent to you once the novelty of being in a new country has worn off, and/or once you’ve stepped into the 16th pile of dog shit in any given week of being in a major French city.</p>
 
-&lt;p&gt;What better way to flee the locals and the dog shit than to hop onto a motorcycle and  hit the road? France has thousands of kilometers of toll-free scenic roads along it’s coastline, an extensive network of relatively well-maintained “departementales” in the seldom-visited but quaint center of the hexagon, plenty of roads in the Alps, the Pyrenees, and easy access to several other European countries in less than a day of highway riding. I can attest personally, it is a beautiful place to ride, and in my six months of drivings, I feel like I’ve barely scratched the surface.&lt;/p&gt;
+<p>What better way to flee the locals and the dog shit than to hop onto a motorcycle and  hit the road? France has thousands of kilometers of toll-free scenic roads along it’s coastline, an extensive network of relatively well-maintained “departementales” in the seldom-visited but quaint center of the hexagon, plenty of roads in the Alps, the Pyrenees, and easy access to several other European countries in less than a day of highway riding. I can attest personally, it is a beautiful place to ride, and in my six months of drivings, I feel like I’ve barely scratched the surface.</p>
 
-&lt;p&gt;So now you want a bike; well, I’m sorry but I lied in my introduction. There are much more problems with France than just it’s inhabitants; the french have invented the central state and perfected bureaucracy to a level that would put Byzantium to shame, so getting in the saddle is going to be slightly harder than just buying a bike. I’ve gone through this process myself, and I’m here to help.&lt;/p&gt;
+<p>So now you want a bike; well, I’m sorry but I lied in my introduction. There are much more problems with France than just it’s inhabitants; the french have invented the central state and perfected bureaucracy to a level that would put Byzantium to shame, so getting in the saddle is going to be slightly harder than just buying a bike. I’ve gone through this process myself, and I’m here to help.</p>
 
-&lt;h2 id=&quot;step-0-who-this-is-for&quot;&gt;Step 0: Who this is for&lt;/h2&gt;
+<h2 id="step-0-who-this-is-for">Step 0: Who this is for</h2>
 
-&lt;p&gt;I am writing this for holders of VLS (visa long séjour, or long stay visa), although it may apply to the holders of other visas. In practical terms, I am not sure that going through any of this bureaucratic rigamarole is worth it on a stay any shorter than six months, unless you are going to return to France regularly and have some reason to hold an EU permit.&lt;/p&gt;
+<p>I am writing this for holders of VLS (visa long séjour, or long stay visa), although it may apply to the holders of other visas. In practical terms, I am not sure that going through any of this bureaucratic rigamarole is worth it on a stay any shorter than six months, unless you are going to return to France regularly and have some reason to hold an EU permit.</p>
 
-&lt;p&gt;The foremost reasons to go through all this cost and hassle for me is to own a motorcycle in my name (licence plates don’t need to renewed for motorcycles), keep it in the EU and more easily ride around when I will be back (likely a few months a year).&lt;/p&gt;
+<p>The foremost reasons to go through all this cost and hassle for me is to own a motorcycle in my name (licence plates don’t need to renewed for motorcycles), keep it in the EU and more easily ride around when I will be back (likely a few months a year).</p>
 
-&lt;p&gt;It is assumed that you have at least a functional understanding of reading, writing and speaking french. If you don’t… you’re probably not going to make it.&lt;/p&gt;
+<p>It is assumed that you have at least a functional understanding of reading, writing and speaking french. If you don’t… you’re probably not going to make it.</p>
 
-&lt;h2 id=&quot;step-1-considering-your-options&quot;&gt;Step 1: Considering your options&lt;/h2&gt;
+<h2 id="step-1-considering-your-options">Step 1: Considering your options</h2>
 
-&lt;p&gt;Before you endeavour getting a french licence, consider the other options that you might have that DON’T involve 30+ hours of instruction and a thousand euros; unless you plan on being a regular resident (spent the majority of your time in France), they are many:&lt;/p&gt;
+<p>Before you endeavour getting a french licence, consider the other options that you might have that DON’T involve 30+ hours of instruction and a thousand euros; unless you plan on being a regular resident (spent the majority of your time in France), they are many:</p>
 
-&lt;p&gt;1) &lt;em&gt;Get a motorcycle permit and an international licence in your home jurisdiction.&lt;/em&gt; In my experience, most of the western licences are easily recognized, and provided that you can provide an international licence or notarized translation, your licence will be recognized without any problem. With my Canadian licence, even putting plates on a vehicle wasn’t a problem. This is by far the easier way to get riding, and saves you the hassle of learning the ropes of a brand new bureaucracy. In hindsight, I really wish I had done this; don’t make the same mistake.&lt;/p&gt;
+<p>1) <em>Get a motorcycle permit and an international licence in your home jurisdiction.</em> In my experience, most of the western licences are easily recognized, and provided that you can provide an international licence or notarized translation, your licence will be recognized without any problem. With my Canadian licence, even putting plates on a vehicle wasn’t a problem. This is by far the easier way to get riding, and saves you the hassle of learning the ropes of a brand new bureaucracy. In hindsight, I really wish I had done this; don’t make the same mistake.</p>
 
-&lt;p&gt;2) &lt;em&gt;Elect to ride a 125cc or smaller bike.&lt;/em&gt; More experienced riders will scoff at this idea, but if you’re new to riding, this might legitimately be a good way to get comfortable. At this engine size most people think of scooters, but the regulations around “light motorcycles” in Europe has encouraged the development of an impressive amount of offerings in this segment. I myself rode a chinese partsbin bike based off a Honda CBF125 engine clone, and there are many variations available (&lt;a href=&quot;https://www.brixton-motorcycles.com/models/&quot;&gt;Brixton&lt;/a&gt;, &lt;a href=&quot;http://www.archivemotorcycle.it&quot;&gt;Archives&lt;/a&gt;), but even more established companies have 125cc offerings that are more well established. The Husqvarna Svartpilen 125 is a good example: twin-cam and water-cooled, it makes 15 HP out of it’s tiny thumper, or 150HP/L, an impressive ratio in any internal combustion engine. If I managed to do highway riding with 9 HP, you’ll be able to do it with 15.&lt;/p&gt;
+<p>2) <em>Elect to ride a 125cc or smaller bike.</em> More experienced riders will scoff at this idea, but if you’re new to riding, this might legitimately be a good way to get comfortable. At this engine size most people think of scooters, but the regulations around “light motorcycles” in Europe has encouraged the development of an impressive amount of offerings in this segment. I myself rode a chinese partsbin bike based off a Honda CBF125 engine clone, and there are many variations available (<a href="https://www.brixton-motorcycles.com/models/">Brixton</a>, <a href="http://www.archivemotorcycle.it">Archives</a>), but even more established companies have 125cc offerings that are more well established. The Husqvarna Svartpilen 125 is a good example: twin-cam and water-cooled, it makes 15 HP out of it’s tiny thumper, or 150HP/L, an impressive ratio in any internal combustion engine. If I managed to do highway riding with 9 HP, you’ll be able to do it with 15.</p>
 
-&lt;p&gt;&lt;a href=&quot;https://www.service-public.fr/particuliers/vosdroits/F45&quot;&gt;You will need a 7-hour class&lt;/a&gt; if you have never ridden a motorcycle before, which will supplement your home state’s car licence with a laminated certificate. Cost is around 200 EUR depending on the market.&lt;/p&gt;
+<p><a href="https://www.service-public.fr/particuliers/vosdroits/F45">You will need a 7-hour class</a> if you have never ridden a motorcycle before, which will supplement your home state’s car licence with a laminated certificate. Cost is around 200 EUR depending on the market.</p>
 
-&lt;p&gt;3) Obtain a french driver’s licence; this is what the rest of this post is about. As with the rest of Europe, motorcycle licences are tiered, so you will apply for an A2 licence, which limits you to just under 50HP for the first two years of riding. To get your full licence, you will need to go through another 7 hour class 2 years after having obtained your A2 licence, at which point you will get your full A permit. Most more powerful bikes can be restricted to A2 power levels at the dealership, which essentially means you can buy nearly anything you want with an A2.&lt;/p&gt;
+<p>3) Obtain a french driver’s licence; this is what the rest of this post is about. As with the rest of Europe, motorcycle licences are tiered, so you will apply for an A2 licence, which limits you to just under 50HP for the first two years of riding. To get your full licence, you will need to go through another 7 hour class 2 years after having obtained your A2 licence, at which point you will get your full A permit. Most more powerful bikes can be restricted to A2 power levels at the dealership, which essentially means you can buy nearly anything you want with an A2.</p>
 
-&lt;h2 id=&quot;step-2-paperwork-considerations&quot;&gt;Step 2: Paperwork considerations&lt;/h2&gt;
+<h2 id="step-2-paperwork-considerations">Step 2: Paperwork considerations</h2>
 
-&lt;p&gt;To defeat your bureaucracy, you need to think like a bureaucrat. Bureaucrats are by nature creatures of habit, unwilling or unable to manage exceptions, which means that your “irregular” application as an immigrant will likely be rejected a few time unless you make it “look” as regular as you possibly can. This is one of the reasons why you should go through this process in your home country if at all possible. Go above and beyond in providing paperwork, without looking like you are trying too hard. It’s a delicate balance, but your driving school will be able to assist you in filing. Here is what you will need:&lt;/p&gt;
+<p>To defeat your bureaucracy, you need to think like a bureaucrat. Bureaucrats are by nature creatures of habit, unwilling or unable to manage exceptions, which means that your “irregular” application as an immigrant will likely be rejected a few time unless you make it “look” as regular as you possibly can. This is one of the reasons why you should go through this process in your home country if at all possible. Go above and beyond in providing paperwork, without looking like you are trying too hard. It’s a delicate balance, but your driving school will be able to assist you in filing. Here is what you will need:</p>
 
-&lt;p&gt;1) A proof of address, generally an electricity or other utility bill&lt;/p&gt;
+<p>1) A proof of address, generally an electricity or other utility bill</p>
 
-&lt;p&gt;2) A proof of immigration status, generally a visa accompanied by a validation or a carte de séjour. As a “PVT” visa holder, you are exempt from receiving a “carte de séjour”… more on this later.&lt;/p&gt;
+<p>2) A proof of immigration status, generally a visa accompanied by a validation or a carte de séjour. As a “PVT” visa holder, you are exempt from receiving a “carte de séjour”… more on this later.</p>
 
-&lt;p&gt;3) ID in the form of a passport, an existing drivers licence.&lt;/p&gt;
+<p>3) ID in the form of a passport, an existing drivers licence.</p>
 
-&lt;p&gt;4) ID photos, preferably in a digital format. Most photo booths can deliver those; they are delivered in the traditional printed format, but a code is also included for easy referencing during your paperwork phases.&lt;/p&gt;
+<p>4) ID photos, preferably in a digital format. Most photo booths can deliver those; they are delivered in the traditional printed format, but a code is also included for easy referencing during your paperwork phases.</p>
 
-&lt;p&gt;Point number 1 is generally the hard one to acquire. Without a power bill, you are nobody in France… which means that if you are in informal rental arrangements or renting short term through things like AirBnB, you are SOL.&lt;/p&gt;
+<p>Point number 1 is generally the hard one to acquire. Without a power bill, you are nobody in France… which means that if you are in informal rental arrangements or renting short term through things like AirBnB, you are SOL.</p>
 
-&lt;p&gt;My way around this was to take out a renter’s insurance policy on the place I was renting, which apart from the cost (about 300 euros, paid once for the year) was relatively painless. I took out my policy through &lt;a href=&quot;https://www.maif.fr&quot;&gt;MAIF&lt;/a&gt;, an insurance mutual with the most helpful staff I’ve ever had the pleasure of dealing with; I highly recommend them. The “attestation d’assurance” document you will get once subscribed is treated as a valid proof of address for all driving-related processes I have gone through.&lt;/p&gt;
+<p>My way around this was to take out a renter’s insurance policy on the place I was renting, which apart from the cost (about 300 euros, paid once for the year) was relatively painless. I took out my policy through <a href="https://www.maif.fr">MAIF</a>, an insurance mutual with the most helpful staff I’ve ever had the pleasure of dealing with; I highly recommend them. The “attestation d’assurance” document you will get once subscribed is treated as a valid proof of address for all driving-related processes I have gone through.</p>
 
-&lt;p&gt;You can also try to &lt;a href=&quot;https://www.service-public.fr/particuliers/vosdroits/R39697&quot;&gt;get a sponsor to fill out an “attestation d’hébergement”&lt;/a&gt;, although this is a bit intrusive for all parties. I have not heard reports of this method working, but it is supposed to be formally recognized.&lt;/p&gt;
+<p>You can also try to <a href="https://www.service-public.fr/particuliers/vosdroits/R39697">get a sponsor to fill out an “attestation d’hébergement”</a>, although this is a bit intrusive for all parties. I have not heard reports of this method working, but it is supposed to be formally recognized.</p>
 
-&lt;h2 id=&quot;step-3-enroll-in-a-motorcycle-driving-school&quot;&gt;Step 3: Enroll in a motorcycle driving school&lt;/h2&gt;
+<h2 id="step-3-enroll-in-a-motorcycle-driving-school">Step 3: Enroll in a motorcycle driving school</h2>
 
-&lt;p&gt;Finding a good school is of utmost importance, and strongly tied to the last two steps. The french have a online management system called &lt;em&gt;Agence nationale des titres sécurisés (ANTS)&lt;/em&gt; that makes obtaining and renewing licences very easy; as an “irregular”, none of these systems will work for you during most of the licensing process; your driving school will essentially be your point of contact for all official communications.&lt;/p&gt;
+<p>Finding a good school is of utmost importance, and strongly tied to the last two steps. The french have a online management system called <em>Agence nationale des titres sécurisés (ANTS)</em> that makes obtaining and renewing licences very easy; as an “irregular”, none of these systems will work for you during most of the licensing process; your driving school will essentially be your point of contact for all official communications.</p>
 
-&lt;p&gt;Most schools will charge between 750 and 1000 euros all inclusive for your training. Put aside some money for gear, as you will need to come equipped with:&lt;/p&gt;
+<p>Most schools will charge between 750 and 1000 euros all inclusive for your training. Put aside some money for gear, as you will need to come equipped with:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;An EU-approved helmet&lt;/li&gt;
-  &lt;li&gt;EU-approved motorcycle gloves&lt;/li&gt;
-  &lt;li&gt;Shoes or boots that cover the scapula (not necessary but recommended)&lt;/li&gt;
-  &lt;li&gt;EU-approved motorcycling vest (not legally necessary, but most schools will not let you ride a bike without one)&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>An EU-approved helmet</li>
+  <li>EU-approved motorcycle gloves</li>
+  <li>Shoes or boots that cover the scapula (not necessary but recommended)</li>
+  <li>EU-approved motorcycling vest (not legally necessary, but most schools will not let you ride a bike without one)</li>
+</ul>
 
-&lt;p&gt;At the time I am writing this, this is at least 300 euros worth of gear. I spent more than this sum on my helmet alone, so prices will vary wildly.&lt;/p&gt;
+<p>At the time I am writing this, this is at least 300 euros worth of gear. I spent more than this sum on my helmet alone, so prices will vary wildly.</p>
 
-&lt;h2 id=&quot;step-35--fight-with-bureaucrats&quot;&gt;Step 3.5 : Fight with bureaucrats&lt;/h2&gt;
+<h2 id="step-35--fight-with-bureaucrats">Step 3.5 : Fight with bureaucrats</h2>
 
-&lt;p&gt;The Ministry of Interior is the organization that manages both immigration status and drivers licences, so you would think that they would now about different visa programs and their particularities… but you’d be wrong. Entirely different offices manage immigration and licences. In practice, if you are a “PVT” visa holder, there is a very high likelyhood that your initial request for a permit, something that is filed when you register with your school, will be rejected. This is because they are expecting to get a “carte de séjour” or a validated visa along with the documents that your are required to provide to your driving school.&lt;/p&gt;
+<p>The Ministry of Interior is the organization that manages both immigration status and drivers licences, so you would think that they would now about different visa programs and their particularities… but you’d be wrong. Entirely different offices manage immigration and licences. In practice, if you are a “PVT” visa holder, there is a very high likelyhood that your initial request for a permit, something that is filed when you register with your school, will be rejected. This is because they are expecting to get a “carte de séjour” or a validated visa along with the documents that your are required to provide to your driving school.</p>
 
-&lt;p&gt;As a VLS holder, you are &lt;a href=&quot;https://administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/vls-ts/demarches/etape/numero-visa&quot;&gt;exempt from validating your visa&lt;/a&gt;, which in turns makes it impossible for you to get a “carte de séjour”, a document usually delivered by local authorities. Your visa, as in the printed page in your passport is your only valid proof of regularity within the country.&lt;/p&gt;
+<p>As a VLS holder, you are <a href="https://administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/vls-ts/demarches/etape/numero-visa">exempt from validating your visa</a>, which in turns makes it impossible for you to get a “carte de séjour”, a document usually delivered by local authorities. Your visa, as in the printed page in your passport is your only valid proof of regularity within the country.</p>
 
-&lt;p&gt;You will likely need to fight to get this recognized. If you’ve ever successfully fought your way through a bureaucracy, the same rules apply: be relentless but polite, keep a very detailed record of who you talk to, what is said and when, ask for things to be put in writing whenever possible. You will of course need a good mastery of French to do this, as all public services are only available in this language. Keep your driving school in the know, as they can also push certain buttons on their side.&lt;/p&gt;
+<p>You will likely need to fight to get this recognized. If you’ve ever successfully fought your way through a bureaucracy, the same rules apply: be relentless but polite, keep a very detailed record of who you talk to, what is said and when, ask for things to be put in writing whenever possible. You will of course need a good mastery of French to do this, as all public services are only available in this language. Keep your driving school in the know, as they can also push certain buttons on their side.</p>
 
-&lt;h2 id=&quot;step-4--theoretical-lessons-and-exam-aka-code&quot;&gt;Step 4 : Theoretical lessons and exam aka “code”&lt;/h2&gt;
+<h2 id="step-4--theoretical-lessons-and-exam-aka-code">Step 4 : Theoretical lessons and exam aka “code”</h2>
 
-&lt;p&gt;This can usually be done in parallel with step 4. As in many other jurisdictions, you need a learner’s permit to ride on the road accompanied by your driving school; the prerequisites for this is passing a theoretical exam, and the first practical exam.&lt;/p&gt;
+<p>This can usually be done in parallel with step 4. As in many other jurisdictions, you need a learner’s permit to ride on the road accompanied by your driving school; the prerequisites for this is passing a theoretical exam, and the first practical exam.</p>
 
-&lt;p&gt;My school had an e-learning platform called &lt;a href=&quot;https://public.codesrousseau.fr&quot;&gt;Codes Rousseau&lt;/a&gt; (not related in any way to my family), which presented a series of quizzes to get familiar with the type of questions on the exam. You can speedrun a 100% completion with passing grades within 4-5 hours if you have any basic knowledge of french traffic signs and motorcycles. This gets you ready for the exam, but is NOT the exam itself! Knowing that I was a driver of 10+ years, my school did not give me any theory in class; your mileage may vary.&lt;/p&gt;
+<p>My school had an e-learning platform called <a href="https://public.codesrousseau.fr">Codes Rousseau</a> (not related in any way to my family), which presented a series of quizzes to get familiar with the type of questions on the exam. You can speedrun a 100% completion with passing grades within 4-5 hours if you have any basic knowledge of french traffic signs and motorcycles. This gets you ready for the exam, but is NOT the exam itself! Knowing that I was a driver of 10+ years, my school did not give me any theory in class; your mileage may vary.</p>
 
-&lt;p&gt;Once you are done with the learning, you or your driving school will need to schedule the “code” exam at a service center or post office. I opted to have my school schedule it, since I did not have the correct documents to register myself.&lt;/p&gt;
+<p>Once you are done with the learning, you or your driving school will need to schedule the “code” exam at a service center or post office. I opted to have my school schedule it, since I did not have the correct documents to register myself.</p>
 
-&lt;p&gt;The exam is a simple, time-limited multiple choice test which you must pass with 80%. There is plenty of time; read the questions carefully and you will be fine. &lt;em&gt;I do not recall seeing an option for going through the test in english!&lt;/em&gt;&lt;/p&gt;
+<p>The exam is a simple, time-limited multiple choice test which you must pass with 80%. There is plenty of time; read the questions carefully and you will be fine. <em>I do not recall seeing an option for going through the test in english!</em></p>
 
-&lt;h2 id=&quot;step-5-practical-lessons&quot;&gt;Step 5: Practical lessons&lt;/h2&gt;
+<h2 id="step-5-practical-lessons">Step 5: Practical lessons</h2>
 
-&lt;p&gt;The law requires you to attend at least 8 hours of on-track practical instruction. In most schools, this means doing the same drills in 2 hours blocks until you are proficient enough to your instructor’s liking. While you could theoretically stack these lessons in a day, most schools will not let you do this, with good reason. Apart from the obvious mental and physical limitations, I do think that you need a bit of time between lessons for the muscle memory and “feel” to set in.&lt;/p&gt;
+<p>The law requires you to attend at least 8 hours of on-track practical instruction. In most schools, this means doing the same drills in 2 hours blocks until you are proficient enough to your instructor’s liking. While you could theoretically stack these lessons in a day, most schools will not let you do this, with good reason. Apart from the obvious mental and physical limitations, I do think that you need a bit of time between lessons for the muscle memory and “feel” to set in.</p>
 
-&lt;p&gt;The practice is gear towards getting good enough to complete the “circuit”, a choreography designed to test your bike-handling skills at low and average road-going speeds. Here is a video of what this entails:&lt;/p&gt;
+<p>The practice is gear towards getting good enough to complete the “circuit”, a choreography designed to test your bike-handling skills at low and average road-going speeds. Here is a video of what this entails:</p>
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/KNfInlYx57g&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KNfInlYx57g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
-&lt;p&gt;Most of the difficulty according to all but the most agile learners are the low-speed sections; none of the other motorcycle programs that I know of have such a high bar for obtaining a licence.&lt;/p&gt;
+<p>Most of the difficulty according to all but the most agile learners are the low-speed sections; none of the other motorcycle programs that I know of have such a high bar for obtaining a licence.</p>
 
-&lt;p&gt;Once you are done, your instructor will put your in a test group and give you a date for testing.&lt;/p&gt;
+<p>Once you are done, your instructor will put your in a test group and give you a date for testing.</p>
 
-&lt;h2 id=&quot;step-6-practical-test-1---circuit&quot;&gt;Step 6: Practical test #1 - “Circuit”&lt;/h2&gt;
+<h2 id="step-6-practical-test-1---circuit">Step 6: Practical test #1 - “Circuit”</h2>
 
-&lt;p&gt;Having your “code” exam is a requirement for this part, despite the practical test not being on the road.&lt;/p&gt;
+<p>Having your “code” exam is a requirement for this part, despite the practical test not being on the road.</p>
 
-&lt;p&gt;You are tested on what you have learned at step 4. The process usually happens on very well paved and well-maintained tracks, which in many cases are slightly larger than your driving school’s practice track. My school didn’t tell me this, which was a quite nice surprise.&lt;/p&gt;
+<p>You are tested on what you have learned at step 4. The process usually happens on very well paved and well-maintained tracks, which in many cases are slightly larger than your driving school’s practice track. My school didn’t tell me this, which was a quite nice surprise.</p>
 
-&lt;p&gt;You have to complete the full “circuit” to satisfactory standards, within two tries, and having put a maximum of two feet on the ground during any given try.&lt;/p&gt;
+<p>You have to complete the full “circuit” to satisfactory standards, within two tries, and having put a maximum of two feet on the ground during any given try.</p>
 
-&lt;p&gt;There is an intimidation factor since most testing days have many schools attending, and chances are that you will see lots of people failing before you have your turn. Chill out, trust your skills and you will be fine. If you do fail, you will have to wait until you can reschedule another test, and you driving school will likely charge you a supplement.&lt;/p&gt;
+<p>There is an intimidation factor since most testing days have many schools attending, and chances are that you will see lots of people failing before you have your turn. Chill out, trust your skills and you will be fine. If you do fail, you will have to wait until you can reschedule another test, and you driving school will likely charge you a supplement.</p>
 
-&lt;p&gt;Be aware that not having the correct mandatory gear is grounds for instant disqualification from this and any other exams; your driving school should have stressed this. This includes not having reflectors on your helmet.&lt;/p&gt;
+<p>Be aware that not having the correct mandatory gear is grounds for instant disqualification from this and any other exams; your driving school should have stressed this. This includes not having reflectors on your helmet.</p>
 
-&lt;h2 id=&quot;step-7-on-road-driving-practice&quot;&gt;Step 7: On-road driving practice&lt;/h2&gt;
+<h2 id="step-7-on-road-driving-practice">Step 7: On-road driving practice</h2>
 
-&lt;p&gt;Once you have your exam results for the “circuit”, your instructor will take you out, most of the times in groups of 3 or 4, to ride on local roads and practice your riding skills in a more realistic environment. You will have to do 12 hours of this.&lt;/p&gt;
+<p>Once you have your exam results for the “circuit”, your instructor will take you out, most of the times in groups of 3 or 4, to ride on local roads and practice your riding skills in a more realistic environment. You will have to do 12 hours of this.</p>
 
-&lt;p&gt;If you have passed the two previous steps, it’s unlikely that you will have any problems with this step. Most issues that foreign drivers have in France are:&lt;/p&gt;
+<p>If you have passed the two previous steps, it’s unlikely that you will have any problems with this step. Most issues that foreign drivers have in France are:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Priority rules, which are completely the opposite of any civilized country. In most urban environments, any vehicle coming from your right has priority, meaning that if you are on a 70kmph road and somebody turns right from an intersecting street in front of you, YOU have to yeild. This may sound absolutely crazy, but it’s how things work… to make things worse, sometimes the priority is explicit, but many times it is implicit. I recommend that you tell your instructor that you are unfamiliar with this system in practice, and that you request additional instructions in this regard during your outings.&lt;/li&gt;
-  &lt;li&gt;Navigating roundabouts, which takes a bit of getting used to but makes perfect sense.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Priority rules, which are completely the opposite of any civilized country. In most urban environments, any vehicle coming from your right has priority, meaning that if you are on a 70kmph road and somebody turns right from an intersecting street in front of you, YOU have to yeild. This may sound absolutely crazy, but it’s how things work… to make things worse, sometimes the priority is explicit, but many times it is implicit. I recommend that you tell your instructor that you are unfamiliar with this system in practice, and that you request additional instructions in this regard during your outings.</li>
+  <li>Navigating roundabouts, which takes a bit of getting used to but makes perfect sense.</li>
+</ul>
 
-&lt;p&gt;Otherwise, the usual rules apply.&lt;/p&gt;
+<p>Otherwise, the usual rules apply.</p>
 
-&lt;h2 id=&quot;step-8-on-road-driving-test&quot;&gt;Step 8: On-road driving test&lt;/h2&gt;
+<h2 id="step-8-on-road-driving-test">Step 8: On-road driving test</h2>
 
-&lt;p&gt;Once your 12 hours are up, you can apply to pass the test. The starting points are usually the same track that you did your circuit exam on. The evaluator and your instructor will follow you around in regular street driving for about 20 to 30 minutes in a variety of different conditions. There is a point threshold, but in my experience the evaluation is actually pretty subjective.&lt;/p&gt;
+<p>Once your 12 hours are up, you can apply to pass the test. The starting points are usually the same track that you did your circuit exam on. The evaluator and your instructor will follow you around in regular street driving for about 20 to 30 minutes in a variety of different conditions. There is a point threshold, but in my experience the evaluation is actually pretty subjective.</p>
 
-&lt;p&gt;You will be judged on your behaviour and technical skills, and ability to read signage; however, there are no points deducted if you misunderstand directions, take a wrong turn or exit, etc. In most places, your instructors will take you on the roads most frequently traveled for testing, and it is a good idea to get familiar with the roads nonetheless; missing an exit will likely have a toll on your mentally even if points aren’t docked.&lt;/p&gt;
+<p>You will be judged on your behaviour and technical skills, and ability to read signage; however, there are no points deducted if you misunderstand directions, take a wrong turn or exit, etc. In most places, your instructors will take you on the roads most frequently traveled for testing, and it is a good idea to get familiar with the roads nonetheless; missing an exit will likely have a toll on your mentally even if points aren’t docked.</p>
 
-&lt;p&gt;My evaluator was looking for a few things that you would normally not expect in a formal evaluation, namely “lively” accelerations (within the limits of reason) and a speed on or slightly above the posted limit. This might be more out of practical concern for getting more types of road covered during our limited time; I would still advise you play it safe and stay a bit under the posted limit, without being too ginger with the throttle when taking off.&lt;/p&gt;
+<p>My evaluator was looking for a few things that you would normally not expect in a formal evaluation, namely “lively” accelerations (within the limits of reason) and a speed on or slightly above the posted limit. This might be more out of practical concern for getting more types of road covered during our limited time; I would still advise you play it safe and stay a bit under the posted limit, without being too ginger with the throttle when taking off.</p>
 
-&lt;p&gt;As a general tip, exaggerate all your head movements, while checking mirrors or your blind spots: this is something they are very particular about.&lt;/p&gt;
+<p>As a general tip, exaggerate all your head movements, while checking mirrors or your blind spots: this is something they are very particular about.</p>
 
-&lt;p&gt;You will get a pass or fail grade only after having completed your examination, and your evaluator cannot give you any feedback.&lt;/p&gt;
+<p>You will get a pass or fail grade only after having completed your examination, and your evaluator cannot give you any feedback.</p>
 
-&lt;p&gt;Here again, if you can negotiate a bit of clemency with the evaluator on the grounds of not knowing the local roads, all the better. They likely won’t be too accommodating, but having advanced warning of directions, or being more explicit about where to turn will let you concentrate on the road.&lt;/p&gt;
+<p>Here again, if you can negotiate a bit of clemency with the evaluator on the grounds of not knowing the local roads, all the better. They likely won’t be too accommodating, but having advanced warning of directions, or being more explicit about where to turn will let you concentrate on the road.</p>
 
-&lt;h2 id=&quot;step-9--request-your-licence-to-be-printed&quot;&gt;Step 9 : Request your licence to be printed&lt;/h2&gt;
+<h2 id="step-9--request-your-licence-to-be-printed">Step 9 : Request your licence to be printed</h2>
 
-&lt;p&gt;You would think that this would be a bit redundant, but once you have successfully passed the practical exam, you need to ask for your licence to be produced, as in a physical copy printed and sent to you. This is done through the ANTS portal, where you will need to provided all your paperwork, in addition to a new, fresh set of pictures.&lt;/p&gt;
+<p>You would think that this would be a bit redundant, but once you have successfully passed the practical exam, you need to ask for your licence to be produced, as in a physical copy printed and sent to you. This is done through the ANTS portal, where you will need to provided all your paperwork, in addition to a new, fresh set of pictures.</p>
 
-&lt;p&gt;Luckily, you can still use your exam report as a provisional licence for a couple months.&lt;/p&gt;
+<p>Luckily, you can still use your exam report as a provisional licence for a couple months.</p>
 
-&lt;p&gt;My licence took two months to get printed and sent, apparently due to a malfunction at the national facility that does the printing. According to the internet, the more “normal” delay is 2 to 4 weeks. Be sure that you can receive mail at the address that you have registered with, because there is no way of changing the address to which the licence is going to be delivered to.&lt;/p&gt;
+<p>My licence took two months to get printed and sent, apparently due to a malfunction at the national facility that does the printing. According to the internet, the more “normal” delay is 2 to 4 weeks. Be sure that you can receive mail at the address that you have registered with, because there is no way of changing the address to which the licence is going to be delivered to.</p>
 
-&lt;h2 id=&quot;step-10--enjoy&quot;&gt;Step 10 : Enjoy!&lt;/h2&gt;
+<h2 id="step-10--enjoy">Step 10 : Enjoy!</h2>
 
-&lt;p&gt;End to end, getting my A2 motorcycle licence in France took the better part of 3 months, including the licence delivery it was more like 5 months. I had the blessing of having a flexible employment arrangement, and not failing any of the exams… any given failure could have set me back a month or more, as exam schedules are not extremely regular, or at least were not where I went.&lt;/p&gt;
+<p>End to end, getting my A2 motorcycle licence in France took the better part of 3 months, including the licence delivery it was more like 5 months. I had the blessing of having a flexible employment arrangement, and not failing any of the exams… any given failure could have set me back a month or more, as exam schedules are not extremely regular, or at least were not where I went.</p>
 
-&lt;p&gt;The TL:DR on all of this is that if you want to ride a motorcycle in France on a one year visa, you need to get to work on your licence as soon as you land, the process is not simple, and can be long.&lt;/p&gt;
+<p>The TL:DR on all of this is that if you want to ride a motorcycle in France on a one year visa, you need to get to work on your licence as soon as you land, the process is not simple, and can be long.</p>
 
-&lt;p&gt;It only made sense to me of a particular set of circumstances, namely being a resident of a jurisdiction where getting a motorcycle permit is incredibly hard, long, and seasonally restricted, and that I am going to go back to France and/or Europe quite a lot in the foreseeable future.&lt;/p&gt;
+<p>It only made sense to me of a particular set of circumstances, namely being a resident of a jurisdiction where getting a motorcycle permit is incredibly hard, long, and seasonally restricted, and that I am going to go back to France and/or Europe quite a lot in the foreseeable future.</p>
 
-&lt;p&gt;Having a driver’s licence that is permanent and recognized everywhere in the EU will likely be a time-saver in the long run, as it greatly facilitates buying a vehicle, getting insurance, and avoids having to getting an international drivers licence and/or a translated and notarized copy for certain jurisdictions.&lt;/p&gt;
+<p>Having a driver’s licence that is permanent and recognized everywhere in the EU will likely be a time-saver in the long run, as it greatly facilitates buying a vehicle, getting insurance, and avoids having to getting an international drivers licence and/or a translated and notarized copy for certain jurisdictions.</p>
 
-&lt;p&gt;If it makes sense for you also and if you need help, please send me an email. If you’re that desperate, I’m sure you’ll find it despite it not being posted. I also welcome any suggestions for amendments.&lt;/p&gt;</content><author><name></name></author><category term="expat" /><category term="motorcycle" /><category term="licence" /><summary type="html">France is beautiful country, the only problem is that way too many french people live there. This will quickly become apparent to you once the novelty of being in a new country has worn off, and/or once you’ve stepped into the 16th pile of dog shit in any given week of being in a major French city.</summary></entry><entry><title type="html">Auto Backup for Unifi CloudKey</title><link href="http://localhost:4000/auto-backup-for-unifi-cloudkey/" rel="alternate" type="text/html" title="Auto Backup for Unifi CloudKey" /><published>2019-08-09T17:15:09+03:00</published><updated>2019-08-09T17:15:09+03:00</updated><id>http://localhost:4000/auto-backup-for-unifi-cloudkey</id><content type="html" xml:base="http://localhost:4000/auto-backup-for-unifi-cloudkey/">&lt;p&gt;Working with Ubiquiti gear is a wild ride; the ecstasy of deploying enterprise-grade gear for the borderline absurd prices that the Edge and Unifi lines enable is all to often ruined by the agony of buggy firmware, features that were promised on GA releases that are still not implemented 2 years later, and questionable business decisions regarding certain product lines. One of the recent frustrations I’ve had was&lt;a href=&quot;https://help.ubnt.com/hc/en-us/articles/360011480554-UniFi-Protect-FAQ#5&quot;&gt;being forced into buying a CloudKey+&lt;/a&gt; in order to run a fully updated version of Unifi Protect, after years of fully self-hosting all my stuff.&lt;/p&gt;
+<p>If it makes sense for you also and if you need help, please send me an email. If you’re that desperate, I’m sure you’ll find it despite it not being posted. I also welcome any suggestions for amendments.</p>]]></content><author><name></name></author><category term="expat" /><category term="motorcycle" /><category term="licence" /><summary type="html"><![CDATA[France is beautiful country, the only problem is that way too many french people live there. This will quickly become apparent to you once the novelty of being in a new country has worn off, and/or once you’ve stepped into the 16th pile of dog shit in any given week of being in a major French city.]]></summary></entry><entry><title type="html">Auto Backup for Unifi CloudKey</title><link href="http://localhost:4000/auto-backup-for-unifi-cloudkey/" rel="alternate" type="text/html" title="Auto Backup for Unifi CloudKey" /><published>2019-08-09T17:15:09+03:00</published><updated>2019-08-09T17:15:09+03:00</updated><id>http://localhost:4000/auto-backup-for-unifi-cloudkey</id><content type="html" xml:base="http://localhost:4000/auto-backup-for-unifi-cloudkey/"><![CDATA[<p>Working with Ubiquiti gear is a wild ride; the ecstasy of deploying enterprise-grade gear for the borderline absurd prices that the Edge and Unifi lines enable is all to often ruined by the agony of buggy firmware, features that were promised on GA releases that are still not implemented 2 years later, and questionable business decisions regarding certain product lines. One of the recent frustrations I’ve had was<a href="https://help.ubnt.com/hc/en-us/articles/360011480554-UniFi-Protect-FAQ#5">being forced into buying a CloudKey+</a> in order to run a fully updated version of Unifi Protect, after years of fully self-hosting all my stuff.</p>
 
-&lt;p&gt;While the bugs that I encountered since the 1st gen. CloudKey days seem to have been fixed, the problems caused by having a physical appliance running the controllers still presents problems regarding backups and service availability in case of a hardware-related issue. While all controllers now have an autobackup feature, the backup files are still hosted on the appliance; this really isn’t a backup in any meaningful sense of the word.&lt;/p&gt;
+<p>While the bugs that I encountered since the 1st gen. CloudKey days seem to have been fixed, the problems caused by having a physical appliance running the controllers still presents problems regarding backups and service availability in case of a hardware-related issue. While all controllers now have an autobackup feature, the backup files are still hosted on the appliance; this really isn’t a backup in any meaningful sense of the word.</p>
 
-&lt;p&gt;If you want any sort of safety at all, you need to get those files off the appliance. ‌‌‌‌Luckily, the CloudKey is basically just a fancy ARM64 computer with a custom image of Debian on it, and it is still fairly extensible, so there are plenty of ways to pull the autobackup files off of the device.&lt;/p&gt;
+<p>If you want any sort of safety at all, you need to get those files off the appliance. ‌‌‌‌Luckily, the CloudKey is basically just a fancy ARM64 computer with a custom image of Debian on it, and it is still fairly extensible, so there are plenty of ways to pull the autobackup files off of the device.</p>
 
-&lt;p&gt;Since the autobackup file retention is managed from within the Unifi controller, all we really need to do is keep an updated copy of those files somewhere else, so I instinctively tried to run an RSYNC over SSH on the device. RSYNC failed, as the service isn’t installed by default on the Cloudkey, but installing this service is as easy as on any other linux device, as the regular Debian Stretch repos were not removed from the appliance. Get root SSH access and run the following commands:&lt;/p&gt;
+<p>Since the autobackup file retention is managed from within the Unifi controller, all we really need to do is keep an updated copy of those files somewhere else, so I instinctively tried to run an RSYNC over SSH on the device. RSYNC failed, as the service isn’t installed by default on the Cloudkey, but installing this service is as easy as on any other linux device, as the regular Debian Stretch repos were not removed from the appliance. Get root SSH access and run the following commands:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;apt-get update &amp;amp;&amp;amp; apt-get install rsync&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>apt-get update &amp;&amp; apt-get install rsync</p>
+</blockquote>
 
-&lt;p&gt;From there, you’ll need to configure the SSH access via password-less authentication on the CloudKey to enable rsync to do it’s job.&lt;/p&gt;
+<p>From there, you’ll need to configure the SSH access via password-less authentication on the CloudKey to enable rsync to do it’s job.</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;cd /root&lt;br /&gt;
-mkdir .ssh &amp;amp;&amp;amp; chmod 755 ./.ssh&lt;br /&gt;
-touch ./.ssh/authorized_keys &amp;amp;&amp;amp; chmod 644 ./.ssh/authorized_keys&lt;br /&gt;
-service sshd restart&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>cd /root<br />
+mkdir .ssh &amp;&amp; chmod 755 ./.ssh<br />
+touch ./.ssh/authorized_keys &amp;&amp; chmod 644 ./.ssh/authorized_keys<br />
+service sshd restart</p>
+</blockquote>
 
-&lt;p&gt;On the machine that will be fetching the backup files (in my case, a FreeNAS box), copy your public key to allow password-less access:  &lt;/p&gt;
+<p>On the machine that will be fetching the backup files (in my case, a FreeNAS box), copy your public key to allow password-less access:  </p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;ssh-copy-id root@INSERT_CLOUDKEY_IP&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>ssh-copy-id root@INSERT_CLOUDKEY_IP</p>
+</blockquote>
 
-&lt;p&gt;You can now pull backups in from another machine to grab the backups. &lt;a href=&quot;https://www.ixsystems.com/documentation/freenas/11.2/tasks.html?highlight=rsync#rsync-tasks&quot;&gt;FreeNAS has a GUI utility to&lt;/a&gt; help  you build RSYNC jobs, but a cron job would work just as well. The paths for the auto-backup folders are the following:&lt;/p&gt;
+<p>You can now pull backups in from another machine to grab the backups. <a href="https://www.ixsystems.com/documentation/freenas/11.2/tasks.html?highlight=rsync#rsync-tasks">FreeNAS has a GUI utility to</a> help  you build RSYNC jobs, but a cron job would work just as well. The paths for the auto-backup folders are the following:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Unifi:&lt;/strong&gt; /srv/unifi/data/backup/autobackup/&lt;br /&gt;
-&lt;strong&gt;Unifi Access:&lt;/strong&gt; /srv/unifi-access/workspace/backup/&lt;br /&gt;
-&lt;strong&gt;Unifi Protect (configuration)&lt;/strong&gt;: /etc/unifi-protect/backups/&lt;br /&gt;
-&lt;strong&gt;Unifi Protect (video files):&lt;/strong&gt; /srv/unifi-protect/video/&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p><strong>Unifi:</strong> /srv/unifi/data/backup/autobackup/<br />
+<strong>Unifi Access:</strong> /srv/unifi-access/workspace/backup/<br />
+<strong>Unifi Protect (configuration)</strong>: /etc/unifi-protect/backups/<br />
+<strong>Unifi Protect (video files):</strong> /srv/unifi-protect/video/</p>
+</blockquote>
 
-&lt;p&gt;These paths only backup the configurations. Seeing that a lot of the problems I’ve had in the past with the Unifi controller was related to the MongoDB backend, I decided that it was probably wiser not to try pulling files from a live database. If the Unifi service was stopped, I don’t see why you couldn’t copy the entire application folder, logs, database and all.&lt;/p&gt;</content><author><name></name></author><category term="unifi" /><category term="ubiquiti" /><category term="rsync" /><category term="cloudkey" /><category term="backup" /><summary type="html">Working with Ubiquiti gear is a wild ride; the ecstasy of deploying enterprise-grade gear for the borderline absurd prices that the Edge and Unifi lines enable is all to often ruined by the agony of buggy firmware, features that were promised on GA releases that are still not implemented 2 years later, and questionable business decisions regarding certain product lines. One of the recent frustrations I’ve had wasbeing forced into buying a CloudKey+ in order to run a fully updated version of Unifi Protect, after years of fully self-hosting all my stuff.</summary></entry><entry><title type="html">Standard TOTP 2nd Factor Authentication (2FA) on AzureAD and Office 365</title><link href="http://localhost:4000/standard-totp-2nd-factor-authentication-2fa-on-azuread-and-office-365/" rel="alternate" type="text/html" title="Standard TOTP 2nd Factor Authentication (2FA) on AzureAD and Office 365" /><published>2019-04-07T02:59:37+03:00</published><updated>2019-04-07T02:59:37+03:00</updated><id>http://localhost:4000/standard-totp-2nd-factor-authentication-2fa-on-azuread-and-office-365</id><content type="html" xml:base="http://localhost:4000/standard-totp-2nd-factor-authentication-2fa-on-azuread-and-office-365/">&lt;p&gt;I recently migrated from Google Apps to Office 365 for my personal emails, and seeing that I wanted to more or less replicate exactly what I had with Google, on the elements on my migration checklist was setting up 2FA.&lt;/p&gt;
+<p>These paths only backup the configurations. Seeing that a lot of the problems I’ve had in the past with the Unifi controller was related to the MongoDB backend, I decided that it was probably wiser not to try pulling files from a live database. If the Unifi service was stopped, I don’t see why you couldn’t copy the entire application folder, logs, database and all.</p>]]></content><author><name></name></author><category term="unifi" /><category term="ubiquiti" /><category term="rsync" /><category term="cloudkey" /><category term="backup" /><summary type="html"><![CDATA[Working with Ubiquiti gear is a wild ride; the ecstasy of deploying enterprise-grade gear for the borderline absurd prices that the Edge and Unifi lines enable is all to often ruined by the agony of buggy firmware, features that were promised on GA releases that are still not implemented 2 years later, and questionable business decisions regarding certain product lines. One of the recent frustrations I’ve had wasbeing forced into buying a CloudKey+ in order to run a fully updated version of Unifi Protect, after years of fully self-hosting all my stuff.]]></summary></entry><entry><title type="html">Standard TOTP 2nd Factor Authentication (2FA) on AzureAD and Office 365</title><link href="http://localhost:4000/standard-totp-2nd-factor-authentication-2fa-on-azuread-and-office-365/" rel="alternate" type="text/html" title="Standard TOTP 2nd Factor Authentication (2FA) on AzureAD and Office 365" /><published>2019-04-07T02:59:37+03:00</published><updated>2019-04-07T02:59:37+03:00</updated><id>http://localhost:4000/standard-totp-2nd-factor-authentication-2fa-on-azuread-and-office-365</id><content type="html" xml:base="http://localhost:4000/standard-totp-2nd-factor-authentication-2fa-on-azuread-and-office-365/"><![CDATA[<p>I recently migrated from Google Apps to Office 365 for my personal emails, and seeing that I wanted to more or less replicate exactly what I had with Google, on the elements on my migration checklist was setting up 2FA.</p>
 
-&lt;p&gt;Sadly, 2FA is another place where Microsoft tried to reinvent the wheel and put out an Authenticator app of their own, completely disregarding the fact that standard TOTP works perfectly fine, totally secure, and familiar to anybody who gives half a hoot about security.  &lt;/p&gt;
+<p>Sadly, 2FA is another place where Microsoft tried to reinvent the wheel and put out an Authenticator app of their own, completely disregarding the fact that standard TOTP works perfectly fine, totally secure, and familiar to anybody who gives half a hoot about security.  </p>
 
-&lt;p&gt;Seeing this, I went scouring through the internet to find an alternative way of doing 2FA, hopefully through FIDO/FIDO2, but sadly this is not yet supported. I did land however on the &lt;a href=&quot;https://support.yubico.com/support/solutions/articles/15000016486-using-yubikeys-with-azure-mfa#Uploading_OATH_Tokens42gbwp&quot;&gt;Yubikey support docs regarding 2FA on Office 365 and AzureAD&lt;/a&gt;, which mentionned the possibility of generating standard TOTP. The docs in question show multiple 2FA options checked, and a user-facing option to “configure app without notifications”.&lt;/p&gt;
+<p>Seeing this, I went scouring through the internet to find an alternative way of doing 2FA, hopefully through FIDO/FIDO2, but sadly this is not yet supported. I did land however on the <a href="https://support.yubico.com/support/solutions/articles/15000016486-using-yubikeys-with-azure-mfa#Uploading_OATH_Tokens42gbwp">Yubikey support docs regarding 2FA on Office 365 and AzureAD</a>, which mentionned the possibility of generating standard TOTP. The docs in question show multiple 2FA options checked, and a user-facing option to “configure app without notifications”.</p>
 
-&lt;figure class=&quot;kg-card kg-image-card kg-card-hascaption&quot;&gt;&lt;img src=&quot;/content/images/2019/04/Lf6QPMAB80FyvD2XFitRiFT7FvU4NJw4ew.png&quot; class=&quot;kg-image&quot; /&gt;&lt;figcaption&gt;Admin-facing 2FA configuration.&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;figure class=&quot;kg-card kg-image-card kg-card-hascaption&quot;&gt;&lt;img src=&quot;/content/images/2019/04/O0871n5RTCnqGBDM3B5fZ1rURt0CwVY5yA-1.png&quot; class=&quot;kg-image&quot; /&gt;&lt;figcaption&gt;User-facing 2FA configuration procedure. &lt;/figcaption&gt;&lt;/figure&gt;
+<figure class="kg-card kg-image-card kg-card-hascaption"><img src="/content/images/2019/04/Lf6QPMAB80FyvD2XFitRiFT7FvU4NJw4ew.png" class="kg-image" /><figcaption>Admin-facing 2FA configuration.</figcaption></figure>
+<figure class="kg-card kg-image-card kg-card-hascaption"><img src="/content/images/2019/04/O0871n5RTCnqGBDM3B5fZ1rURt0CwVY5yA-1.png" class="kg-image" /><figcaption>User-facing 2FA configuration procedure. </figcaption></figure>
 
-&lt;p&gt;Things aren’t exactly like this anymore, probably an attempt by Microsoft to steer users to their own app.&lt;/p&gt;
+<p>Things aren’t exactly like this anymore, probably an attempt by Microsoft to steer users to their own app.</p>
 
-&lt;p&gt;To get the standard TOP, you HAVE to uncheck all other options; the Microsoft OTP app and standard OTP simply cannot coexist. Here is how my Azure 2FA configuration is setup, available in the 365 admin center in Users -&amp;gt; Active Users -&amp;gt; More -&amp;gt; Multifactor Authentication setup -&amp;gt; Service Settings.&lt;/p&gt;
+<p>To get the standard TOP, you HAVE to uncheck all other options; the Microsoft OTP app and standard OTP simply cannot coexist. Here is how my Azure 2FA configuration is setup, available in the 365 admin center in Users -&gt; Active Users -&gt; More -&gt; Multifactor Authentication setup -&gt; Service Settings.</p>
 
-&lt;figure class=&quot;kg-card kg-image-card&quot;&gt;&lt;img src=&quot;/content/images/2019/04/Screen-Shot-2019-04-06-at-10.23.32-PM.png&quot; class=&quot;kg-image&quot; /&gt;&lt;/figure&gt;
+<figure class="kg-card kg-image-card"><img src="/content/images/2019/04/Screen-Shot-2019-04-06-at-10.23.32-PM.png" class="kg-image" /></figure>
 
-&lt;p&gt;Special care with this configuration is to be taken if this method is used since you have no failover in case your OTP info is not available. If I’m honest, phone-based 2FA is not something I’m too keen on activating anyways, considering the amount of hack attemps that I’ve seen, in the bitcoin sphere specifically. On iOS, OTP auth allows you to export the OTP seed, which I have backed up physically, and configured on more than one device. That seems like a much better way of doing things.&lt;/p&gt;
+<p>Special care with this configuration is to be taken if this method is used since you have no failover in case your OTP info is not available. If I’m honest, phone-based 2FA is not something I’m too keen on activating anyways, considering the amount of hack attemps that I’ve seen, in the bitcoin sphere specifically. On iOS, OTP auth allows you to export the OTP seed, which I have backed up physically, and configured on more than one device. That seems like a much better way of doing things.</p>
 
-&lt;p&gt;More advanced plans of Azure AD provide more flexiblity for third-party MFA providers, but I haven’t tested it yet. Passwordless is supposedly available only with Azure AD Premium subscriptions, and at 5$ a month per user, pricing seems a bit steep. In the meantime, you can still use &lt;a href=&quot;https://www.yubico.com/products/services-software/download/yubico-authenticator/&quot;&gt;Yubico’s excellent OTP app&lt;/a&gt; and one of their keys if you want a hardware element integrated to you login routines.&lt;/p&gt;</content><author><name></name></author><category term="microsoft" /><category term="windows" /><category term="otp" /><category term="azureus" /><category term="active-directory" /><category term="yubico" /><category term="yubikey" /><category term="ad" /><summary type="html">I recently migrated from Google Apps to Office 365 for my personal emails, and seeing that I wanted to more or less replicate exactly what I had with Google, on the elements on my migration checklist was setting up 2FA. Sadly, 2FA is another place where Microsoft tried to reinvent the wheel and put out an Authenticator app of their own, completely disregarding the fact that standard TOTP works perfectly fine, totally secure, and familiar to anybody who gives half a hoot about security.  </summary></entry><entry><title type="html">Quitter la plantation</title><link href="http://localhost:4000/quitter-la-plantation/" rel="alternate" type="text/html" title="Quitter la plantation" /><published>2019-03-12T02:32:14+03:00</published><updated>2019-03-12T02:32:14+03:00</updated><id>http://localhost:4000/quitter-la-plantation</id><content type="html" xml:base="http://localhost:4000/quitter-la-plantation/">&lt;p&gt;Aujourd’hui, Catherine Fournier a quitté la politique pour les bonnes raisons, et va probablement en payer le prix d’une défaite électorale cuisante aux prochaines élections provincials, en plus de se faire allégrement invectiver jusqu’à la fin de son mandat.&lt;/p&gt;
+<p>More advanced plans of Azure AD provide more flexiblity for third-party MFA providers, but I haven’t tested it yet. Passwordless is supposedly available only with Azure AD Premium subscriptions, and at 5$ a month per user, pricing seems a bit steep. In the meantime, you can still use <a href="https://www.yubico.com/products/services-software/download/yubico-authenticator/">Yubico’s excellent OTP app</a> and one of their keys if you want a hardware element integrated to you login routines.</p>]]></content><author><name></name></author><category term="microsoft" /><category term="windows" /><category term="otp" /><category term="azureus" /><category term="active-directory" /><category term="yubico" /><category term="yubikey" /><category term="ad" /><summary type="html"><![CDATA[I recently migrated from Google Apps to Office 365 for my personal emails, and seeing that I wanted to more or less replicate exactly what I had with Google, on the elements on my migration checklist was setting up 2FA. Sadly, 2FA is another place where Microsoft tried to reinvent the wheel and put out an Authenticator app of their own, completely disregarding the fact that standard TOTP works perfectly fine, totally secure, and familiar to anybody who gives half a hoot about security.  ]]></summary></entry><entry><title type="html">Quitter la plantation</title><link href="http://localhost:4000/quitter-la-plantation/" rel="alternate" type="text/html" title="Quitter la plantation" /><published>2019-03-12T02:32:14+03:00</published><updated>2019-03-12T02:32:14+03:00</updated><id>http://localhost:4000/quitter-la-plantation</id><content type="html" xml:base="http://localhost:4000/quitter-la-plantation/"><![CDATA[<p>Aujourd’hui, Catherine Fournier a quitté la politique pour les bonnes raisons, et va probablement en payer le prix d’une défaite électorale cuisante aux prochaines élections provincials, en plus de se faire allégrement invectiver jusqu’à la fin de son mandat.</p>
 
-&lt;p&gt;Quand on lit les commentaires sur le &lt;a href=&quot;https://twitter.com/CathFournierQc/status/1105065469344706563&quot;&gt;statut Twitter qui annonce son départ du PQ&lt;/a&gt; ou le &lt;a href=&quot;https://twitter.com/CathFournierQc/status/1105168906803662849&quot;&gt;tweet subséquent&lt;/a&gt;, on comprend rapidement pourquoi elle quitte. La tempête de boomer qui l’accuse de trahison donne entièrement raison à sa démarche, qui pourtant a été présentée d’une manière qui n’aurait pas pu être plus prudente et respectueuse. Son intention est facile à comprendre: elle quitte pour explorer les avenues possible pour l’accession à la souverainté, sans les restrictions associées à une affiliation partisane. Le mouvement souverainiste qui est bien connu pour la décapitation sommaire de ses chefs et des luttes de pouvoir internes qui semblent franchement désagréables; peut-on vraiment lui reprocher de vouloir opérer hors de cet environnement?&lt;/p&gt;
+<p>Quand on lit les commentaires sur le <a href="https://twitter.com/CathFournierQc/status/1105065469344706563">statut Twitter qui annonce son départ du PQ</a> ou le <a href="https://twitter.com/CathFournierQc/status/1105168906803662849">tweet subséquent</a>, on comprend rapidement pourquoi elle quitte. La tempête de boomer qui l’accuse de trahison donne entièrement raison à sa démarche, qui pourtant a été présentée d’une manière qui n’aurait pas pu être plus prudente et respectueuse. Son intention est facile à comprendre: elle quitte pour explorer les avenues possible pour l’accession à la souverainté, sans les restrictions associées à une affiliation partisane. Le mouvement souverainiste qui est bien connu pour la décapitation sommaire de ses chefs et des luttes de pouvoir internes qui semblent franchement désagréables; peut-on vraiment lui reprocher de vouloir opérer hors de cet environnement?</p>
 
-&lt;p&gt;Tous les babounes de boomer sont prévisibles quand ont connait un tant soit peu la culture politique du Québec. &lt;em&gt;Extra Ecclesiam nulla salus&lt;/em&gt;: la politique d’un peuple soumis, incapable d’imaginer quoi que ce soit hors des institutions qui lui est familier, préférant le connu de l’étreinte oppressive (selon l’historiographie officielle, de l’Église, mais aussi et surtout de l’État et de ses agents) aux possibilités qu’offre la liberté de toute contraint de nature politique.  &lt;/p&gt;
+<p>Tous les babounes de boomer sont prévisibles quand ont connait un tant soit peu la culture politique du Québec. <em>Extra Ecclesiam nulla salus</em>: la politique d’un peuple soumis, incapable d’imaginer quoi que ce soit hors des institutions qui lui est familier, préférant le connu de l’étreinte oppressive (selon l’historiographie officielle, de l’Église, mais aussi et surtout de l’État et de ses agents) aux possibilités qu’offre la liberté de toute contraint de nature politique.  </p>
 
-&lt;p&gt;Si les souverainistes n’étaient pas trop occupés à rendre publique sur Twitter leur syndrome de Stockholm pour un parti qui ne leur a rien livré depuis des dizaines d’années et dont la fenêtre d’opportunité se ferme à un rythme effarant, ils aurait pu faire une analyse sobre de la situation. Premièrement, Catherine n’est évidamment pas moins souveraineté qu’avant, et rien n’indique qu’elle sera un obstacle au PQ, que ce soit en chambre ou dans ses démarches de communication. Dans son discours et dans ses réponses aux questions lors de sa présentation d’aujourd’hui, même le pire des cyniques ne pourrait entrevoir une volonté de s’engager dans un messianisme souverainiste à la sauce Aussant et de faire directement compétition au PQ. Des putschs comme ça, ça s’organise en groupe. Deuxièmement, elle ne le fait clairement pas pour l’avancement de sa propre carrière politique. Pour les raisons de culture politique que j’ai soulevées ci-haut, elle vient à tout fin pratique de s’assurer une défaite au prochain cycle, alors qu’elle aurait pu facilement faire comme la majorité des péquistes seniors et se présenter à l’AssNat pour mandat par-dessus mandat, impuissant sinon que pour faire des shows de boucane, seuls mécanismes par lesquels les partis sans pouvoir peuvent se convaincre qu’ils sont pertinents.&lt;/p&gt;
+<p>Si les souverainistes n’étaient pas trop occupés à rendre publique sur Twitter leur syndrome de Stockholm pour un parti qui ne leur a rien livré depuis des dizaines d’années et dont la fenêtre d’opportunité se ferme à un rythme effarant, ils aurait pu faire une analyse sobre de la situation. Premièrement, Catherine n’est évidamment pas moins souveraineté qu’avant, et rien n’indique qu’elle sera un obstacle au PQ, que ce soit en chambre ou dans ses démarches de communication. Dans son discours et dans ses réponses aux questions lors de sa présentation d’aujourd’hui, même le pire des cyniques ne pourrait entrevoir une volonté de s’engager dans un messianisme souverainiste à la sauce Aussant et de faire directement compétition au PQ. Des putschs comme ça, ça s’organise en groupe. Deuxièmement, elle ne le fait clairement pas pour l’avancement de sa propre carrière politique. Pour les raisons de culture politique que j’ai soulevées ci-haut, elle vient à tout fin pratique de s’assurer une défaite au prochain cycle, alors qu’elle aurait pu facilement faire comme la majorité des péquistes seniors et se présenter à l’AssNat pour mandat par-dessus mandat, impuissant sinon que pour faire des shows de boucane, seuls mécanismes par lesquels les partis sans pouvoir peuvent se convaincre qu’ils sont pertinents.</p>
 
-&lt;p&gt;En politique, l’apostasie est pire que la non-croyance. La perte d’une des wonderchild du PQ, la plus jeune femme élue à l’Assemblée Nationale, un symbole de renouveau dans un parti moribond où l’on compte plus de nez de gin que de femmes dans le fleur de l’âge, c’est une grosse perte. Quand en plus elle ÔSE critiquer le parti qui, justement, allait ENFIN amorcer LA transformation interne qui cette fois-ci serait définitivement la bonne et allait assurément reconquérir les Québécois, s’en est trop. J’espère que ma dérision de la réponse du PQ transpire malgré ma plume médiocre.&lt;/p&gt;
+<p>En politique, l’apostasie est pire que la non-croyance. La perte d’une des wonderchild du PQ, la plus jeune femme élue à l’Assemblée Nationale, un symbole de renouveau dans un parti moribond où l’on compte plus de nez de gin que de femmes dans le fleur de l’âge, c’est une grosse perte. Quand en plus elle ÔSE critiquer le parti qui, justement, allait ENFIN amorcer LA transformation interne qui cette fois-ci serait définitivement la bonne et allait assurément reconquérir les Québécois, s’en est trop. J’espère que ma dérision de la réponse du PQ transpire malgré ma plume médiocre.</p>
 
-&lt;p&gt;Possiblement que je projette ma propre évolution politique, mais je pense que nous voyons les conséquences d’une prise de conscience fondamentale sur la nature de la politique chez Catherine. Si elle ne l’avait pas compris avant de quitter le PQ, les prochaines années en tant que &lt;em&gt;persona non grata&lt;/em&gt; du mouvement indépendantiste l’amèneront assurément au constat suivant: par définition, la politique n’est PAS un milieux propice à l’échange d’idées. Il n’y a aucune place pour la dissension dans la politique institutionnalisée; on doit toujours fléchir le genou à quelqu’un, si ce n’est pas à un parti, c’est à l’électeur lambda… je vous épargne ma description de ce dernier. Je ne saurais dire quel est le pire.&lt;/p&gt;
+<p>Possiblement que je projette ma propre évolution politique, mais je pense que nous voyons les conséquences d’une prise de conscience fondamentale sur la nature de la politique chez Catherine. Si elle ne l’avait pas compris avant de quitter le PQ, les prochaines années en tant que <em>persona non grata</em> du mouvement indépendantiste l’amèneront assurément au constat suivant: par définition, la politique n’est PAS un milieux propice à l’échange d’idées. Il n’y a aucune place pour la dissension dans la politique institutionnalisée; on doit toujours fléchir le genou à quelqu’un, si ce n’est pas à un parti, c’est à l’électeur lambda… je vous épargne ma description de ce dernier. Je ne saurais dire quel est le pire.</p>
 
-&lt;p&gt;Pour s’émanciper “en tant que peuple” comme le prétendent les nationalistes, se séparer du Canada est insuffisant; il faut aussi s’émanciper de la politique elle-même. Catherine,&lt;a href=&quot;https://www.youtube.com/watch?v=qc_8jcHYBis&amp;amp;t=1m4s&quot;&gt;comme Kanye&lt;/a&gt;, a quitté la plantation; elle en payera le prix, mais je ne peux qu’applaudir son geste.&lt;/p&gt;</content><author><name></name></author><category term="politique" /><category term="parti-quebecois" /><category term="quebec" /><category term="catherine-fournier" /><category term="independance" /><category term="souverainte" /><summary type="html">Aujourd’hui, Catherine Fournier a quitté la politique pour les bonnes raisons, et va probablement en payer le prix d’une défaite électorale cuisante aux prochaines élections provincials, en plus de se faire allégrement invectiver jusqu’à la fin de son mandat. Quand on lit les commentaires sur le statut Twitter qui annonce son départ du PQ ou le tweet subséquent, on comprend rapidement pourquoi elle quitte. La tempête de boomer qui l’accuse de trahison donne entièrement raison à sa démarche, qui pourtant a été présentée d’une manière qui n’aurait pas pu être plus prudente et respectueuse. Son intention est facile à comprendre: elle quitte pour explorer les avenues possible pour l’accession à la souverainté, sans les restrictions associées à une affiliation partisane. Le mouvement souverainiste qui est bien connu pour la décapitation sommaire de ses chefs et des luttes de pouvoir internes qui semblent franchement désagréables; peut-on vraiment lui reprocher de vouloir opérer hors de cet environnement?</summary></entry><entry><title type="html">Fixing a Bricked Unifi Security Gateway (USG)</title><link href="http://localhost:4000/fixing-a-bricked-unifi-security-gateway-usg/" rel="alternate" type="text/html" title="Fixing a Bricked Unifi Security Gateway (USG)" /><published>2018-09-13T01:37:17+03:00</published><updated>2018-09-13T01:37:17+03:00</updated><id>http://localhost:4000/fixing-a-bricked-unifi-security-gateway-usg</id><content type="html" xml:base="http://localhost:4000/fixing-a-bricked-unifi-security-gateway-usg/">&lt;p&gt;I thought I was being real smart when I hooked up an eBay-bought 802.11af-compliant 12v POE extractor to my Unifi Security Gateway. The whole idea was to get rid of all the power-warts and AC-DC conversion devices hanging off my UPS to make the makeshift rack in my parent’s basement cleaner, in addition to making my router power-resettable through the Unifi control panel.&lt;/p&gt;
+<p>Pour s’émanciper “en tant que peuple” comme le prétendent les nationalistes, se séparer du Canada est insuffisant; il faut aussi s’émanciper de la politique elle-même. Catherine,<a href="https://www.youtube.com/watch?v=qc_8jcHYBis&amp;t=1m4s">comme Kanye</a>, a quitté la plantation; elle en payera le prix, mais je ne peux qu’applaudir son geste.</p>]]></content><author><name></name></author><category term="politique" /><category term="parti-quebecois" /><category term="quebec" /><category term="catherine-fournier" /><category term="independance" /><category term="souverainte" /><summary type="html"><![CDATA[Aujourd’hui, Catherine Fournier a quitté la politique pour les bonnes raisons, et va probablement en payer le prix d’une défaite électorale cuisante aux prochaines élections provincials, en plus de se faire allégrement invectiver jusqu’à la fin de son mandat. Quand on lit les commentaires sur le statut Twitter qui annonce son départ du PQ ou le tweet subséquent, on comprend rapidement pourquoi elle quitte. La tempête de boomer qui l’accuse de trahison donne entièrement raison à sa démarche, qui pourtant a été présentée d’une manière qui n’aurait pas pu être plus prudente et respectueuse. Son intention est facile à comprendre: elle quitte pour explorer les avenues possible pour l’accession à la souverainté, sans les restrictions associées à une affiliation partisane. Le mouvement souverainiste qui est bien connu pour la décapitation sommaire de ses chefs et des luttes de pouvoir internes qui semblent franchement désagréables; peut-on vraiment lui reprocher de vouloir opérer hors de cet environnement?]]></summary></entry><entry><title type="html">Fixing a Bricked Unifi Security Gateway (USG)</title><link href="http://localhost:4000/fixing-a-bricked-unifi-security-gateway-usg/" rel="alternate" type="text/html" title="Fixing a Bricked Unifi Security Gateway (USG)" /><published>2018-09-13T01:37:17+03:00</published><updated>2018-09-13T01:37:17+03:00</updated><id>http://localhost:4000/fixing-a-bricked-unifi-security-gateway-usg</id><content type="html" xml:base="http://localhost:4000/fixing-a-bricked-unifi-security-gateway-usg/"><![CDATA[<p>I thought I was being real smart when I hooked up an eBay-bought 802.11af-compliant 12v POE extractor to my Unifi Security Gateway. The whole idea was to get rid of all the power-warts and AC-DC conversion devices hanging off my UPS to make the makeshift rack in my parent’s basement cleaner, in addition to making my router power-resettable through the Unifi control panel.</p>
 
-&lt;p&gt;This genius scheme worked fine for the better part of a year, before this summer’s grueling heat took it’s toll on the extractor. Naturally, this all took place while I was thousands of kilometers away; luckily, power resets and cooling off the adaptor worked for a while, but at a certain point it gave up the ghost entirely, still drawing current from the switch but making a horrible pulsing sound.&lt;/p&gt;
+<p>This genius scheme worked fine for the better part of a year, before this summer’s grueling heat took it’s toll on the extractor. Naturally, this all took place while I was thousands of kilometers away; luckily, power resets and cooling off the adaptor worked for a while, but at a certain point it gave up the ghost entirely, still drawing current from the switch but making a horrible pulsing sound.</p>
 
-&lt;p&gt;The erratic power delivery was not very well received by my USG, which decided that it would no longer boot correctly, or really boot at all for that matter. The behaviour of the device was as follows:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Interface lights would light up as per normal during the boot sequence&lt;/li&gt;
-  &lt;li&gt;Status LED would NOT light up at all, not even giving the usual boot-time flashing white&lt;/li&gt;
-  &lt;li&gt;As one would expect, the device would not ping or connect over SSH. A Wireshark scan also showed that it didn’t seem to set the LAN interface IP either to it’s last known provisionned value, or default value.&lt;/li&gt;
-  &lt;li&gt;Any form of reset, including a 30-30-30 reset would do absolutely nothing.&lt;/li&gt;
-&lt;/ul&gt;
+<p>The erratic power delivery was not very well received by my USG, which decided that it would no longer boot correctly, or really boot at all for that matter. The behaviour of the device was as follows:</p>
+<ul>
+  <li>Interface lights would light up as per normal during the boot sequence</li>
+  <li>Status LED would NOT light up at all, not even giving the usual boot-time flashing white</li>
+  <li>As one would expect, the device would not ping or connect over SSH. A Wireshark scan also showed that it didn’t seem to set the LAN interface IP either to it’s last known provisionned value, or default value.</li>
+  <li>Any form of reset, including a 30-30-30 reset would do absolutely nothing.</li>
+</ul>
 
-&lt;p&gt;Browsing the UBNT Community forums showed that this was most likely a corrupt USB drive. The firmware on these devices is stored on a 4GB USB stick plugged in internally, as pictured here.&lt;/p&gt;
+<p>Browsing the UBNT Community forums showed that this was most likely a corrupt USB drive. The firmware on these devices is stored on a 4GB USB stick plugged in internally, as pictured here.</p>
 
-&lt;p&gt;&lt;img src=&quot;/content/images/2018/09/IMG_2439.JPG&quot; alt=&quot;IMG_2439&quot; /&gt;&lt;/p&gt;
+<p><img src="/content/images/2018/09/IMG_2439.JPG" alt="IMG_2439" /></p>
 
-&lt;p&gt;Luckily, I had a fresh, out-of-box sample USG with the board entirely out that I had bought to mock up in CAD for some bracket work I wanted to get done. I copied the fresh flash drive to my Mac using DD, imaged it back to the defective USB drive, plugged everything back in and got things working again. After about of minute of what is probably first-use initialisation on post-recovery power-on, the white light status light started flashing, and within normal booting time switch to solid, at which time the device had set it’s default IP address on the LAN interface and was accessible through it’s web UI.&lt;/p&gt;
+<p>Luckily, I had a fresh, out-of-box sample USG with the board entirely out that I had bought to mock up in CAD for some bracket work I wanted to get done. I copied the fresh flash drive to my Mac using DD, imaged it back to the defective USB drive, plugged everything back in and got things working again. After about of minute of what is probably first-use initialisation on post-recovery power-on, the white light status light started flashing, and within normal booting time switch to solid, at which time the device had set it’s default IP address on the LAN interface and was accessible through it’s web UI.</p>
 
-&lt;p&gt;The USB drive has the following partition layout: 
-&lt;img src=&quot;/content/images/2018/09/Unifi-USB-Drive.png&quot; alt=&quot;Unifi-USB-Drive&quot; /&gt;&lt;/p&gt;
+<p>The USB drive has the following partition layout: 
+<img src="/content/images/2018/09/Unifi-USB-Drive.png" alt="Unifi-USB-Drive" /></p>
 
-&lt;p&gt;I’m honestly surprised that it was decided to use a USB drive to hold the software. I’ve had tremendously bad luck with putting bootable software on USB drives; all my BSD-based appliances ate drives at a rate where I quickly found myself using 3 or 4 drive mirror setups to make sure that drive failure wouldn’t break my stuff. However, the advantage is that I didn’t have to break out a serial cable for some complicated console-based restore process, which is fine by me since just FINDING my serial adaptor would have been much longer than DD’ing a 4GB flash drive was.&lt;/p&gt;
+<p>I’m honestly surprised that it was decided to use a USB drive to hold the software. I’ve had tremendously bad luck with putting bootable software on USB drives; all my BSD-based appliances ate drives at a rate where I quickly found myself using 3 or 4 drive mirror setups to make sure that drive failure wouldn’t break my stuff. However, the advantage is that I didn’t have to break out a serial cable for some complicated console-based restore process, which is fine by me since just FINDING my serial adaptor would have been much longer than DD’ing a 4GB flash drive was.</p>
 
-&lt;p&gt;Recognizing the uncanny way in which I somehow dodged Murphy’s Law by having a fresh spare on hand, I decided to thank the IT gods by making the image available here. Version info on the restore device told me this is firmware v4.3.33, the older-style firmware with less configurtion options available to an un-adopted device.&lt;/p&gt;
+<p>Recognizing the uncanny way in which I somehow dodged Murphy’s Law by having a fresh spare on hand, I decided to thank the IT gods by making the image available here. Version info on the restore device told me this is firmware v4.3.33, the older-style firmware with less configurtion options available to an un-adopted device.</p>
 
-&lt;p&gt;You can download the image &lt;a href=&quot;https://drive.google.com/file/d/1VuwwXWYIYRvwOcTyZGs2Xw2k3XIhgifA/view?usp=sharing&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<p>You can download the image <a href="https://drive.google.com/file/d/1VuwwXWYIYRvwOcTyZGs2Xw2k3XIhgifA/view?usp=sharing">here</a>.</p>
 
-&lt;p&gt;Checksum is as follows:&lt;/p&gt;
+<p>Checksum is as follows:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;4e0b64d224f818102c53b37fd4051f2d  ./niFiSecurityGateway.ER-e120.v4.3.33.4936086.161203.2031.img.gz (MD5)&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>4e0b64d224f818102c53b37fd4051f2d  ./niFiSecurityGateway.ER-e120.v4.3.33.4936086.161203.2031.img.gz (MD5)</p>
+</blockquote>
 
-&lt;p&gt;You can DD this image directly without specifying any block size, which worked just fine for me.&lt;/p&gt;
+<p>You can DD this image directly without specifying any block size, which worked just fine for me.</p>
 
-&lt;p&gt;&lt;strong&gt;IMPORTANT NOTE ON COMPATIBILITY&lt;/strong&gt;: I am unaware of any potential incompatiblities with hardware or low-level firmware between the software I uploaded and whatever your USG might be running. What I know is that there did not appear to be incompatibility issues going from firmware 4.4.22 back down to 4.3.33. Use at your own risk. Both units used a PCB that was marked “Copyright 2014”, despite being purchased years from one another.&lt;/p&gt;
+<p><strong>IMPORTANT NOTE ON COMPATIBILITY</strong>: I am unaware of any potential incompatiblities with hardware or low-level firmware between the software I uploaded and whatever your USG might be running. What I know is that there did not appear to be incompatibility issues going from firmware 4.4.22 back down to 4.3.33. Use at your own risk. Both units used a PCB that was marked “Copyright 2014”, despite being purchased years from one another.</p>
 
-&lt;p&gt;Bottom line: Power matters. If you want to centralize power, get a decent rackmount power supply in the appropriate voltages, and if control is what you want, get a relay setup.&lt;/p&gt;</content><author><name></name></author><category term="unifi" /><category term="security" /><category term="gateway" /><category term="networking" /><category term="repair" /><summary type="html">I thought I was being real smart when I hooked up an eBay-bought 802.11af-compliant 12v POE extractor to my Unifi Security Gateway. The whole idea was to get rid of all the power-warts and AC-DC conversion devices hanging off my UPS to make the makeshift rack in my parent’s basement cleaner, in addition to making my router power-resettable through the Unifi control panel.</summary></entry><entry><title type="html">FreeNAS + RancherOS, my NAS Docker Stack</title><link href="http://localhost:4000/freenas-rancheros-my-nas-docker-stack/" rel="alternate" type="text/html" title="FreeNAS + RancherOS, my NAS Docker Stack" /><published>2018-04-09T01:14:41+03:00</published><updated>2018-04-09T01:14:41+03:00</updated><id>http://localhost:4000/freenas-rancheros-my-nas-docker-stack</id><content type="html" xml:base="http://localhost:4000/freenas-rancheros-my-nas-docker-stack/">&lt;p&gt;I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.&lt;/p&gt;
+<p>Bottom line: Power matters. If you want to centralize power, get a decent rackmount power supply in the appropriate voltages, and if control is what you want, get a relay setup.</p>]]></content><author><name></name></author><category term="unifi" /><category term="security" /><category term="gateway" /><category term="networking" /><category term="repair" /><summary type="html"><![CDATA[I thought I was being real smart when I hooked up an eBay-bought 802.11af-compliant 12v POE extractor to my Unifi Security Gateway. The whole idea was to get rid of all the power-warts and AC-DC conversion devices hanging off my UPS to make the makeshift rack in my parent’s basement cleaner, in addition to making my router power-resettable through the Unifi control panel.]]></summary></entry><entry><title type="html">FreeNAS + RancherOS, my NAS Docker Stack</title><link href="http://localhost:4000/freenas-rancheros-my-nas-docker-stack/" rel="alternate" type="text/html" title="FreeNAS + RancherOS, my NAS Docker Stack" /><published>2018-04-09T01:14:41+03:00</published><updated>2018-04-09T01:14:41+03:00</updated><id>http://localhost:4000/freenas-rancheros-my-nas-docker-stack</id><content type="html" xml:base="http://localhost:4000/freenas-rancheros-my-nas-docker-stack/"><![CDATA[<p>I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.</p>
 
-&lt;p&gt;FreeNAS Corral, aka FreeNAS 10, was supposed to bring native Docker support to the product with the help of a built-in Bhyve + boot2docker setup built right into the new UI. While jails are technically as flexible as FreeBSD and the &lt;a href=&quot;https://www.freebsd.org/ports/&quot;&gt;ports library&lt;/a&gt; are, plugins-jails are a bit more complicated and you are generally dependant on a maintainer for updates. Case in point: as of my writing of this, the PBI jail for Owncloud is stuck at 9.1.2, dating back to November of 2016. To compare, my docker instance of Owncloud is currently on 10.0.7.&lt;/p&gt;
+<p>FreeNAS Corral, aka FreeNAS 10, was supposed to bring native Docker support to the product with the help of a built-in Bhyve + boot2docker setup built right into the new UI. While jails are technically as flexible as FreeBSD and the <a href="https://www.freebsd.org/ports/">ports library</a> are, plugins-jails are a bit more complicated and you are generally dependant on a maintainer for updates. Case in point: as of my writing of this, the PBI jail for Owncloud is stuck at 9.1.2, dating back to November of 2016. To compare, my docker instance of Owncloud is currently on 10.0.7.</p>
 
-&lt;p&gt;Plugin jails have been helpful for me and countless others, but it’s time to admit that Docker is just better at doing what the original system set out to do. Here’s what I’ve done to transition to Docker on FreeNAS.&lt;/p&gt;
+<p>Plugin jails have been helpful for me and countless others, but it’s time to admit that Docker is just better at doing what the original system set out to do. Here’s what I’ve done to transition to Docker on FreeNAS.</p>
 
-&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+<h2 id="setup">Setup</h2>
 
-&lt;p&gt;Setup is &lt;a href=&quot;http://doc.freenas.org/11/vms.html#docker-rancher-vm&quot;&gt;pretty straight-forward and well-documented in the FreeNAS docs&lt;/a&gt;, however it is described in a very procedural fashion which doesn’t really give you any insight of what is being done behind the scene. This makes it very confusing when things break; I was pulling my hair out for hours because of a &lt;a href=&quot;https://forums.freenas.org/index.php?threads/freenas-11-1-rancher-server-installation-failed.59898/&quot;&gt;corrupt download not completing&lt;/a&gt;. For thoroughness’ sake, here is an overview of what following the steps in the guide accomplishes:&lt;/p&gt;
+<p>Setup is <a href="http://doc.freenas.org/11/vms.html#docker-rancher-vm">pretty straight-forward and well-documented in the FreeNAS docs</a>, however it is described in a very procedural fashion which doesn’t really give you any insight of what is being done behind the scene. This makes it very confusing when things break; I was pulling my hair out for hours because of a <a href="https://forums.freenas.org/index.php?threads/freenas-11-1-rancher-server-installation-failed.59898/">corrupt download not completing</a>. For thoroughness’ sake, here is an overview of what following the steps in the guide accomplishes:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Creates a Bhyve VM&lt;/li&gt;
-  &lt;li&gt;Creates a RAW drive image that will be used for storage&lt;/li&gt;
-  &lt;li&gt;Downloads the RancherOS image and flashes it (dd?) to your drive image to make it bootable&lt;/li&gt;
-  &lt;li&gt;Creates a basic RancherOS configuration file from the options entered in the additional options entered in the storage device menu.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Creates a Bhyve VM</li>
+  <li>Creates a RAW drive image that will be used for storage</li>
+  <li>Downloads the RancherOS image and flashes it (dd?) to your drive image to make it bootable</li>
+  <li>Creates a basic RancherOS configuration file from the options entered in the additional options entered in the storage device menu.</li>
+</ul>
 
-&lt;p&gt;If you can’t get a serial console or can’t get the machine to boot properly, remember this order and use it to diagnose. This should be obvious, but the recommendations regard the provisioning of CPU and RAM resources are just that; depending on what you intend on running within your Docker VM, assign system ressources as necessary. In my case, assigning just one VCPU held back &lt;a href=&quot;https://hub.docker.com/r/ruimarinho/bitcoin-core/&quot;&gt;my bitcoin node&lt;/a&gt; from properly syncing. Adding another one fixed the problem and made all the services running in containers visibly more snappy.&lt;/p&gt;
+<p>If you can’t get a serial console or can’t get the machine to boot properly, remember this order and use it to diagnose. This should be obvious, but the recommendations regard the provisioning of CPU and RAM resources are just that; depending on what you intend on running within your Docker VM, assign system ressources as necessary. In my case, assigning just one VCPU held back <a href="https://hub.docker.com/r/ruimarinho/bitcoin-core/">my bitcoin node</a> from properly syncing. Adding another one fixed the problem and made all the services running in containers visibly more snappy.</p>
 
-&lt;p&gt;A word of warning on giving the VM more system ressources: I had problems giving the machine more than 2 virtual CPUs; the machine seems to want to boot up, with Bhyve init stuff showing up on the serial console, but the OS stalled shortly before all the services could go up.&lt;/p&gt;
+<p>A word of warning on giving the VM more system ressources: I had problems giving the machine more than 2 virtual CPUs; the machine seems to want to boot up, with Bhyve init stuff showing up on the serial console, but the OS stalled shortly before all the services could go up.</p>
 
-&lt;h2 id=&quot;storage&quot;&gt;Storage&lt;/h2&gt;
+<h2 id="storage">Storage</h2>
 
-&lt;p&gt;The modularity of Docker is what makes its strength, but in order to be truly useful, if must be built on a stack that is itself just as modular. For example, in continuity with the spirit of containerizing, I aught to be able to be able to snapshot and replicate individual containers to back them up locally or offsite. Storing everything on the raw disk image just isn’t compatible with that vision of things.&lt;/p&gt;
+<p>The modularity of Docker is what makes its strength, but in order to be truly useful, if must be built on a stack that is itself just as modular. For example, in continuity with the spirit of containerizing, I aught to be able to be able to snapshot and replicate individual containers to back them up locally or offsite. Storing everything on the raw disk image just isn’t compatible with that vision of things.</p>
 
-&lt;p&gt;You could store everything on ZFS vdevs through additional VM volume assignments, but then you &lt;a href=&quot;http://jrs-s.net/2016/06/16/psa-snapshots-are-better-than-zvols/&quot;&gt;lose the ability to snapshot under certain conditions&lt;/a&gt;.&lt;/p&gt;
+<p>You could store everything on ZFS vdevs through additional VM volume assignments, but then you <a href="http://jrs-s.net/2016/06/16/psa-snapshots-are-better-than-zvols/">lose the ability to snapshot under certain conditions</a>.</p>
 
-&lt;p&gt;Rancher has &lt;a href=&quot;https://github.com/rancher/convoy&quot;&gt;convoy&lt;/a&gt; that can make docker volumes persistent, and store them on a variety of backends, but the additional layer of docker-style volumes doesn’t really need to be there.&lt;/p&gt;
+<p>Rancher has <a href="https://github.com/rancher/convoy">convoy</a> that can make docker volumes persistent, and store them on a variety of backends, but the additional layer of docker-style volumes doesn’t really need to be there.</p>
 
-&lt;p&gt;I opted instead to use &lt;a href=&quot;https://hub.docker.com/r/d3fk/nfs-client/&quot;&gt;nfs-client&lt;/a&gt; and bind-mounts in my containers to my install of FreeNAS, &lt;a href=&quot;https://forums.freenas.org/index.php?threads/howto-freenas-11-rancheros-docker-and-portainer.54595/&quot;&gt;with the method detailed here&lt;/a&gt;. I modified the steps to fit my application slightly. First of all, I elected to created a child dataset for every container, in order to be able to snapshot and replicate as mentionned above. Secondly, I had to make seperate NFS shares for each container, since NFS will not traverse nested datasets as one would expect. With this larger amount of shares, listing the NFS mounts was done directly in my cloud-config.yml file, as so.&lt;/p&gt;
+<p>I opted instead to use <a href="https://hub.docker.com/r/d3fk/nfs-client/">nfs-client</a> and bind-mounts in my containers to my install of FreeNAS, <a href="https://forums.freenas.org/index.php?threads/howto-freenas-11-rancheros-docker-and-portainer.54595/">with the method detailed here</a>. I modified the steps to fit my application slightly. First of all, I elected to created a child dataset for every container, in order to be able to snapshot and replicate as mentionned above. Secondly, I had to make seperate NFS shares for each container, since NFS will not traverse nested datasets as one would expect. With this larger amount of shares, listing the NFS mounts was done directly in my cloud-config.yml file, as so.</p>
 
-&lt;p&gt;&lt;img src=&quot;/content/images/2018/03/nfsmounts.png&quot; alt=&quot;nfsmounts&quot; /&gt;&lt;/p&gt;
+<p><img src="/content/images/2018/03/nfsmounts.png" alt="nfsmounts" /></p>
 
-&lt;p&gt;You might be tempted to use SMB, which is also supported by RancherOS; this isn’t a good idea if you plan on running any container that includes Apache because it is heavily reliant on UNIX-style permissions to function properly, and that just won’t translate over SMB.&lt;/p&gt;
+<p>You might be tempted to use SMB, which is also supported by RancherOS; this isn’t a good idea if you plan on running any container that includes Apache because it is heavily reliant on UNIX-style permissions to function properly, and that just won’t translate over SMB.</p>
 
-&lt;h2 id=&quot;networking-and-security&quot;&gt;Networking and security&lt;/h2&gt;
+<h2 id="networking-and-security">Networking and security</h2>
 
-&lt;p&gt;Using NFS as a link between your Docker VM and your ZFS storage introduces security problems caused by the ways that RancherOS and NFS works. First of all, RancherOS runs all it’s Docker processes as root along with the NFS client; secondly, NFSv3 uses client-side info on the user accessing the share to determine if it has the permission to access the share or not. All this means that you will have to disable root squashing for things to work; I went about this by adding root/wheel to the maproot user/group fields in the advanced settings of my NFS shares.&lt;/p&gt;
+<p>Using NFS as a link between your Docker VM and your ZFS storage introduces security problems caused by the ways that RancherOS and NFS works. First of all, RancherOS runs all it’s Docker processes as root along with the NFS client; secondly, NFSv3 uses client-side info on the user accessing the share to determine if it has the permission to access the share or not. All this means that you will have to disable root squashing for things to work; I went about this by adding root/wheel to the maproot user/group fields in the advanced settings of my NFS shares.</p>
 
-&lt;p&gt;This is obviously horrible security, because any rogue machine can now access your shares as root if your client ACLs are too loose. The way around this is making sure that the network access to the address that the NFS service is bound to is impossible for everything but your Docker VM. The advanced settings of the individual NFS shares provide a client allow list, which you should use to whitelist ONLY your VM with its IP.&lt;/p&gt;
+<p>This is obviously horrible security, because any rogue machine can now access your shares as root if your client ACLs are too loose. The way around this is making sure that the network access to the address that the NFS service is bound to is impossible for everything but your Docker VM. The advanced settings of the individual NFS shares provide a client allow list, which you should use to whitelist ONLY your VM with its IP.</p>
 
-&lt;p&gt;The ideally you’d also want to use a dedicated network bridge to pass the traffic off between your storage and the VM. The problem is that the web UI does not show you bridge interfaces when offering you the options for VM NIC mapping; my workaround was to plug in a dead-end VLAN in an unused interface on my server, and have all the Docker-related traffic come in through this interface.&lt;/p&gt;
+<p>The ideally you’d also want to use a dedicated network bridge to pass the traffic off between your storage and the VM. The problem is that the web UI does not show you bridge interfaces when offering you the options for VM NIC mapping; my workaround was to plug in a dead-end VLAN in an unused interface on my server, and have all the Docker-related traffic come in through this interface.</p>
 
-&lt;h3 id=&quot;a-note-on-pre-111-u2&quot;&gt;A note on pre-11.1-U2&lt;/h3&gt;
+<h3 id="a-note-on-pre-111-u2">A note on pre-11.1-U2</h3>
 
-&lt;p&gt;Going from one reboot to the next in the 11.1 series of releases (not U2 though), I’ve gotten weird networking issues where the networking interface(s) used by the RancherOS instance would not bind to the correct NIC, making connection to the NAS-provided storage or to the rest of the network impossible. Digging around in the bug tracker, it seems that &lt;a href=&quot;https://redmine.ixsystems.com/issues/27122&quot;&gt;the way VM NICs are bridge may be sub-optimal&lt;/a&gt;. If you are experiencing weird issues after configuring your networking in the RancherOS VM, check your network configuration with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt;. You should get something like this:&lt;/p&gt;
+<p>Going from one reboot to the next in the 11.1 series of releases (not U2 though), I’ve gotten weird networking issues where the networking interface(s) used by the RancherOS instance would not bind to the correct NIC, making connection to the NAS-provided storage or to the rest of the network impossible. Digging around in the bug tracker, it seems that <a href="https://redmine.ixsystems.com/issues/27122">the way VM NICs are bridge may be sub-optimal</a>. If you are experiencing weird issues after configuring your networking in the RancherOS VM, check your network configuration with <code class="language-plaintext highlighter-rouge">ifconfig</code>. You should get something like this:</p>
 
-&lt;p&gt;&lt;img src=&quot;/content/images/2018/03/freenasifbridge.png&quot; alt=&quot;freenasifbridge&quot; /&gt;&lt;/p&gt;
+<p><img src="/content/images/2018/03/freenasifbridge.png" alt="freenasifbridge" /></p>
 
-&lt;p&gt;The TAP interface is the host-side NIC that gives your VM network access. In my setup, the VLAN interface is the parent interface that can be found in the ==Devices/NIC== menu of the VM. If the binding is properly made, the bridge should group those two interfaces together. If you have many TAP interfaces and bridges that you can’t make sense of, upgrade to 11.1-U2 and reboot, things should clean up.&lt;/p&gt;
+<p>The TAP interface is the host-side NIC that gives your VM network access. In my setup, the VLAN interface is the parent interface that can be found in the ==Devices/NIC== menu of the VM. If the binding is properly made, the bridge should group those two interfaces together. If you have many TAP interfaces and bridges that you can’t make sense of, upgrade to 11.1-U2 and reboot, things should clean up.</p>
 
-&lt;h2 id=&quot;managing-docker&quot;&gt;Managing Docker&lt;/h2&gt;
+<h2 id="managing-docker">Managing Docker</h2>
 
-&lt;p&gt;RancherOS kind of suggests that using Rancher to manage your containers might be a good idea, but it seemed a bit clumsy and overkill for a single host setup. I instead opted for &lt;a href=&quot;https://portainer.io&quot;&gt;Portainer&lt;/a&gt;, which I was somewhat already familiar with and is much less intimidating to use and deploy, seeing that it’s really just a nice front end for the docker commands you you know and love.&lt;/p&gt;
+<p>RancherOS kind of suggests that using Rancher to manage your containers might be a good idea, but it seemed a bit clumsy and overkill for a single host setup. I instead opted for <a href="https://portainer.io">Portainer</a>, which I was somewhat already familiar with and is much less intimidating to use and deploy, seeing that it’s really just a nice front end for the docker commands you you know and love.</p>
 
-&lt;p&gt;At the RancherOS command line, run the installation one-liner on the Portainer website, subsituting bind mounts for the volume if necessary, and adding the restart policy if you so desire. Provided the restart-policy is ok, Portainer will start up with RancherOS bootup.&lt;/p&gt;
+<p>At the RancherOS command line, run the installation one-liner on the Portainer website, subsituting bind mounts for the volume if necessary, and adding the restart policy if you so desire. Provided the restart-policy is ok, Portainer will start up with RancherOS bootup.</p>
 
-&lt;h2 id=&quot;monitoring&quot;&gt;Monitoring&lt;/h2&gt;
+<h2 id="monitoring">Monitoring</h2>
 
-&lt;p&gt;I’ve been building a monitoring system on the &lt;a href=&quot;https://www.influxdata.com/blog/introduction-to-influxdatas-influxdb-and-tick-stack/&quot;&gt;TICK stack&lt;/a&gt; for my home setup, and as it turns out Docker monitoring is quite simple. &lt;a href=&quot;https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker&quot;&gt;Telegraf has a plugin specifically for docker monitoring&lt;/a&gt;, just spin up a Telegraf instance with the docker.sock endpoint mapped through, configure the config file, and you’re good to go.&lt;/p&gt;
+<p>I’ve been building a monitoring system on the <a href="https://www.influxdata.com/blog/introduction-to-influxdatas-influxdb-and-tick-stack/">TICK stack</a> for my home setup, and as it turns out Docker monitoring is quite simple. <a href="https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker">Telegraf has a plugin specifically for docker monitoring</a>, just spin up a Telegraf instance with the docker.sock endpoint mapped through, configure the config file, and you’re good to go.</p>
 
-&lt;p&gt;With the &lt;a href=&quot;https://github.com/influxdata/influxdb/blob/master/services/graphite/README.md&quot;&gt;intergrated Graphite listener&lt;/a&gt; enabled and the ports open, you can also configure FreeNAS to output its metrics to Influx aswell… your Influx instance can of course be within docker if you so desire.&lt;/p&gt;
+<p>With the <a href="https://github.com/influxdata/influxdb/blob/master/services/graphite/README.md">intergrated Graphite listener</a> enabled and the ports open, you can also configure FreeNAS to output its metrics to Influx aswell… your Influx instance can of course be within docker if you so desire.</p>
 
-&lt;p&gt;If you want better insights into your NAS’ performance and don’t have a monitoring setup built up, this “FreeNAS monitoring on itself” is not a bad choice, particularly if your FreeNAS server is your only machine.&lt;/p&gt;
+<p>If you want better insights into your NAS’ performance and don’t have a monitoring setup built up, this “FreeNAS monitoring on itself” is not a bad choice, particularly if your FreeNAS server is your only machine.</p>
 
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+<h2 id="conclusion">Conclusion</h2>
 
-&lt;p&gt;If you run anything critical, you might want to run a dedicated docker host. However, if you have spare CPU cycles and memory (although with ZFS, it could be argued that there is no such thing as “spare memory”), why not? Docker absolutely seems like a viable replacement for plugin-jails, and if your FreeNAS box is a backup repo for databases hosted elsewhere, you can now run replication services in containers instead pushing dumps.&lt;/p&gt;
+<p>If you run anything critical, you might want to run a dedicated docker host. However, if you have spare CPU cycles and memory (although with ZFS, it could be argued that there is no such thing as “spare memory”), why not? Docker absolutely seems like a viable replacement for plugin-jails, and if your FreeNAS box is a backup repo for databases hosted elsewhere, you can now run replication services in containers instead pushing dumps.</p>
 
-&lt;p&gt;I just wish that Docker was native to the base OS, and that the Bhyve + RancherOS + NFS stack could be avoided. Limits on provisionning hardware are also a bit problematic, but it is what it is. There’s a Docker container for everything… have at it!&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.</summary></entry><entry><title type="html">Easy Fix for Dead Unifi AC-Lite Access Points</title><link href="http://localhost:4000/easy-fix-for-dead-unifi-ac-lite-access-points/" rel="alternate" type="text/html" title="Easy Fix for Dead Unifi AC-Lite Access Points" /><published>2017-11-07T01:21:09+03:00</published><updated>2017-11-07T01:21:09+03:00</updated><id>http://localhost:4000/easy-fix-for-dead-unifi-ac-lite-access-points</id><content type="html" xml:base="http://localhost:4000/easy-fix-for-dead-unifi-ac-lite-access-points/">&lt;p&gt;I’ve been deploying Ubiquiti’s Unifi gear for a while and I absolutely love it. While the development cycle of firmware and software is somewhat uneven, the products are great, inexpensive, run off a self-hosted management portal and don’t have any licensing costs attached to them.&lt;/p&gt;
-
-&lt;p&gt;Except for firmware-induced hiccups, I haven’t heard anything more than anecdotal evidence of systematic failure or any product in their line. One dealer told me of an issue with early SKU 24 port 150W switches’ POE modules, but that’s about it. I personally have had my first failure on ANY Unifi product this week when a UAP-AC-LITE shit the bed, failing to power-on with any POE source. Other symptoms included flashing light on the passive power injector, and a short flash of the white LED if the reset button was held in with the power-injector connected.&lt;/p&gt;
-
-&lt;p&gt;Turns out the problem has already been documented, and comes from a TVS diode in the power circuit that blows up; &lt;a href=&quot;https://www.ifixit.com/Guide/Ubiquiti+UniFi+AP+AC+Lite+TVS+Diode+Replacement/73360&quot;&gt;a kind fellow on iFixit has already documented a fix&lt;/a&gt;. Sure enough, this is exactly how mine broke.&lt;/p&gt;
-
-&lt;p&gt;The guide says that the diode is there to protect other components, but it’s unclear if the failure is due to a cheap component or if it is provoked by some particular incident. In my setup, the AP was powered by a Unifi US-8-150W switch, which itself was connected to a high quality UPS; the likelyhood of a power-related incident is low. There has been an acknowledged bug in firmware in the past that has made certain 24V devices get 48V during reboots, but this problem is long since fixed, or at least this was my impression. &lt;a href=&quot;https://community.ubnt.com/t5/UniFi-Routing-Switching/UniFi-Switch-24v-Passive-PoE/m-p/2103593/highlight/true#M61755&quot;&gt;This post&lt;/a&gt; seems to indicate that there is no fix. Having missed the &lt;a href=&quot;https://community.ubnt.com/t5/UniFi-Wireless/Warning-UAP-AC-LITE-and-UAP-AC-LR-with-UniFi-Switch-on-PoE/m-p/1771809#U1771809&quot;&gt;original announcement and the giveaway of 802.3af adapters&lt;/a&gt;, I’ve missed the boat.&lt;/p&gt;
-
-&lt;p&gt;I’ve reached out to UBNT for warranty support, and they don’t seem to have any intention to warranty this kind of fault, or to admit that the diode blowing up is the expected mode of failure.&lt;/p&gt;
-
-&lt;p&gt;This might be good news for deal hunters with connections to recyclers. Considering that the AP is the lowest-end AC offering in the Unifi lineup and that there are quite possibly tens of thousands of affected units in the wild, a spool of diodes for a few bucks and a cheap broken APs might be a terrific score for somebody intending to use the APs without a POE switch, or with a seperated 802.3af adaptor. The AC-Lite was a terrific deal at it’s inital MSRP, and remains one of the most competitive offerings even in it’s later 48V, 802.3af compliant version priced the same at around 100$.&lt;/p&gt;</content><author><name></name></author><category term="ubnt" /><category term="ubiquiti" /><category term="networking" /><category term="no-power" /><category term="ac-lite" /><category term="repair" /><summary type="html">I’ve been deploying Ubiquiti’s Unifi gear for a while and I absolutely love it. While the development cycle of firmware and software is somewhat uneven, the products are great, inexpensive, run off a self-hosted management portal and don’t have any licensing costs attached to them.</summary></entry></feed>
+<p>I just wish that Docker was native to the base OS, and that the Bhyve + RancherOS + NFS stack could be avoided. Limits on provisionning hardware are also a bit problematic, but it is what it is. There’s a Docker container for everything… have at it!</p>]]></content><author><name></name></author><summary type="html"><![CDATA[I’ve been a FreeNAS user since the 8.x days, having decided to ditch a self-hosted file server based off Fedora with a pretty basic MDADM + ext3fs storage setup. Running on commodity hardware, the prior setup was fine, but little other than an extensible NAS that was somewhat of a hassle to manage and keep updated. FreeNAS and it’s plugins jails promised to do most of what I was doing beforehand, in an appliance format that is much easier to maintain.]]></summary></entry></feed>
