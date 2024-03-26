@@ -31,3 +31,9 @@ Je pense qu'il est important de souligné que les "citoyens de Trois-Rivières [
 > Aux pleurnichards qui formulent cette demande, je dis abandonnez la sémiotique du classisme au profit du sac à outils. Venez verser votre âme et votre argent plutôt que vos larmes et votre indignation dans ce quartier ayant des besoins réels, matériels. En bon voisin, j’irais vous aider, et nous pourrons rigoler ensemble de votre folie toponymique passagère autour d’une bonne Labatt 50, tablette. 
 >
 > Longue vie au BDC.
+
+# Addendum: # 
+
+Le Nouvelliste a finalement [publié mon éditorial](https://www.lenouvelliste.ca/opinions/parole-aux-lecteurs/2023/11/05/longue-vie-au-bas-du-cap-KTCBDGLA6RFHXDYGZIC2REF2IY/), sans m'en informer d'une part, et sans faire approuver des modifications éditoriales non-signifiées. "L'année de notre Seigneur 2023" est devenue simplement "2023" dans la version publiée. Je suis déçu mais pas surpris de cette modification. [(copie de la version papier dispo ici)](/content/news/202311-LonguevieauBDC.pdf)
+
+[L'ex-Radio-Canadien a aussi répondu](https://www.lenouvelliste.ca/opinions/parole-aux-lecteurs/2023/11/11/bas-du-cap-nouvelle-appellation-et-revitalisation-vont-de-pair-HVS3DFBPINAG5I76VQT76Y5DLY/), et n'a manifestement pas compris ni mon argument contre le changement de nom, ni mon invitation à mettre de sa sueur et son trésor dans le quartier avant de penser à le renommer. Par contre, il a bien fait de nous situer avec son festival de clounes et ses consultations publiques... considérons-nous situés! [(copie de la version papier dispo ici)](/content/news/202311-Nouvelleappelation-rev.pdf)
